@@ -1,0 +1,70 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+#fond{
+  height: 100%;
+  width: 100%;
+  background-image: url(asset_path('fond.jpg'));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+}
+
+.pos-alert{
+  position: sticky;
+  max-width: 100%;
+  z-index: 23;
+  left: 10%;
+  top: 10%;
+}
+
+.rectangle1{
+  position: relative;
+  max-width: 100%;
+  z-index: 23;
+  margin-left: 7px;
+}
+
+.rectangle2{
+  position: absolute;
+  max-width: 100%;
+  z-index: 24;
+  left: 5%;
+  top: 0;
+}
+
+.rectangle3{
+  position: absolute;
+  max-width: 100%;
+  z-index: 25;
+  left: 37%;
+  top: 9%;
+}
+
+.rectangle4{
+  position: absolute;
+  max-width: 100%;
+  z-index: 26;
+  right: 0;
+  top: 2%;
+}
+
+.rectangle5{
+  position: absolute;
+  max-width: 100%;
+  z-index: 27;
+  right: 4%;
+  top: 0;
+}
+
+.rectangle6{
+  position: absolute;
+  max-width: 100%;
+  z-index: 28;
+  right: 8px;
+  top: 0;
+}

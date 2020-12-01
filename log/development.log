@@ -112,3 +112,581 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 24ms (Views: 12.7ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dylanpecqueux/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dylanpecqueux/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dylanpecqueux/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dylanpecqueux/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dylanpecqueux/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dylanpecqueux/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/dylanpecqueux/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dylanpecqueux/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/dylanpecqueux/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dylanpecqueux/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/dylanpecqueux/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (62.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "kasu_project_development"[0m
+  ↳ /Users/dylanpecqueux/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (47.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "kasu_project_test"[0m
+  ↳ /Users/dylanpecqueux/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (233.3ms)[0m  [1m[35mCREATE DATABASE "kasu_project_development" ENCODING = 'unicode'[0m
+  ↳ /Users/dylanpecqueux/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (91.1ms)[0m  [1m[35mCREATE DATABASE "kasu_project_test" ENCODING = 'unicode'[0m
+  ↳ /Users/dylanpecqueux/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35mSQL (6.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (1.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "library_items" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "library_items" ("id" bigserial primary key, "state" character varying, "state_description" text, "token_price" integer, "user_id" bigint, "manga_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_library_items_on_manga_id" ON "library_items"  ("manga_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_library_items_on_user_id" ON "library_items"  ("user_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "mangas" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "mangas" ("id" bigserial primary key, "title" character varying, "author" character varying, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:38
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "name" character varying, "token_state" integer DEFAULT 1, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:38
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:38
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/schema.rb:38
+  [1m[35m (26.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20201201172315)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20201201170029),
+(20201201171650);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (1.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (4.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-12-01 19:16:54.829241"], ["updated_at", "2020-12-01 19:16:54.829241"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/dylanpecqueux/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/dylanpecqueux/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/dylanpecqueux/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "library_items" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "library_items" ("id" bigserial primary key, "state" character varying, "state_description" text, "token_price" integer, "user_id" bigint, "manga_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_library_items_on_manga_id" ON "library_items"  ("manga_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_library_items_on_user_id" ON "library_items"  ("user_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "mangas" CASCADE[0m
+  ↳ db/schema.rb:30
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "mangas" ("id" bigserial primary key, "title" character varying, "author" character varying, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:30
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:38
+  [1m[35m (12.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "name" character varying, "token_state" integer DEFAULT 1, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:38
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:38
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/schema.rb:38
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20201201172315)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20201201170029),
+(20201201171650);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-12-01 19:16:54.971472"], ["updated_at", "2020-12-01 19:16:54.971472"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/dylanpecqueux/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/dylanpecqueux/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Update (1.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-12-01 19:16:54.977023"], ["key", "environment"]]
+  ↳ /Users/dylanpecqueux/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/dylanpecqueux/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dylanpecqueux/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dylanpecqueux/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Started GET "/" for ::1 at 2020-12-01 20:37:40 +0100
+  [1m[35m (6.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dylanpecqueux/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (4.8ms)
+  Rendered static_pages/index.html.erb within layouts/application (2164.1ms)
+Completed 200 OK in 2298ms (Views: 2260.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:38:00 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (3.3ms)
+  Rendered static_pages/index.html.erb within layouts/application (34.8ms)
+Completed 200 OK in 123ms (Views: 116.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:38:17 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (7.6ms)
+  Rendered static_pages/index.html.erb within layouts/application (45.3ms)
+Completed 200 OK in 133ms (Views: 129.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:38:20 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (1.3ms)
+  Rendered static_pages/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 84ms (Views: 77.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:38:22 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (3.4ms)
+  Rendered static_pages/index.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 77ms (Views: 74.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:38:25 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (1.4ms)
+  Rendered static_pages/index.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 97ms (Views: 95.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:38:28 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (2.4ms)
+  Rendered static_pages/index.html.erb within layouts/application (37.1ms)
+Completed 200 OK in 118ms (Views: 109.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:38:30 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (5.0ms)
+  Rendered static_pages/index.html.erb within layouts/application (32.7ms)
+Completed 200 OK in 102ms (Views: 100.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:38:35 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (4.0ms)
+  Rendered static_pages/index.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 76ms (Views: 73.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:38:38 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (2.2ms)
+  Rendered static_pages/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 69ms (Views: 63.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:38:43 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (1.3ms)
+  Rendered static_pages/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 60ms (Views: 58.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:38:45 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (2.4ms)
+  Rendered static_pages/index.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 69ms (Views: 67.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:38:48 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (1.7ms)
+  Rendered static_pages/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 68ms (Views: 66.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:38:51 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (2.2ms)
+  Rendered static_pages/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 64ms (Views: 61.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:38:53 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (1.7ms)
+  Rendered static_pages/index.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 70ms (Views: 68.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:38:54 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (5.3ms)
+  Rendered static_pages/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 67ms (Views: 65.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:38:56 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (2.7ms)
+  Rendered static_pages/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 69ms (Views: 67.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:38:58 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (2.2ms)
+  Rendered static_pages/index.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 72ms (Views: 69.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:39:00 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (3.6ms)
+  Rendered static_pages/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 66ms (Views: 63.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:39:02 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (2.6ms)
+  Rendered static_pages/index.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 65ms (Views: 62.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:39:04 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (2.6ms)
+  Rendered static_pages/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 69ms (Views: 66.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:39:05 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (3.0ms)
+  Rendered static_pages/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 73ms (Views: 70.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:39:07 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (3.1ms)
+  Rendered static_pages/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 55ms (Views: 53.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:39:14 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (2.1ms)
+  Rendered static_pages/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 71ms (Views: 67.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:39:16 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (5.0ms)
+  Rendered static_pages/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 68ms (Views: 66.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:39:26 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (1.4ms)
+  Rendered static_pages/index.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 79ms (Views: 76.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:40:58 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (2.8ms)
+  Rendered static_pages/index.html.erb within layouts/application (40.9ms)
+Completed 200 OK in 103ms (Views: 100.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:44:09 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dylanpecqueux/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (345.8ms)
+  Rendered static_pages/index.html.erb within layouts/application (350.5ms)
+Completed 500 Internal Server Error in 374ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (navbar.js):
+    41:   </div>
+    42: </nav>
+    43: 
+    44: <%= javascript_include_tag "navbar.js" %>
+  
+app/views/shared/_navbar.html.erb:44:in `_app_views_shared__navbar_html_erb___924300831040855484_64860'
+app/views/static_pages/index.html.erb:2:in `_app_views_static_pages_index_html_erb___1526590230601856783_64840'
+Started GET "/" for ::1 at 2020-12-01 20:44:34 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (158.6ms)
+  Rendered static_pages/index.html.erb within layouts/application (177.2ms)
+Completed 500 Internal Server Error in 217ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (navbar.js):
+    41:   </div>
+    42: </nav>
+    43: 
+    44: <%= javascript_include_tag "navbar" %>
+  
+app/views/shared/_navbar.html.erb:44:in `_app_views_shared__navbar_html_erb___924300831040855484_65560'
+app/views/static_pages/index.html.erb:2:in `_app_views_static_pages_index_html_erb___1526590230601856783_65540'
+Started GET "/" for ::1 at 2020-12-01 20:45:05 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (88.7ms)
+  Rendered static_pages/index.html.erb within layouts/application (89.9ms)
+Completed 500 Internal Server Error in 100ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (navbar.js):
+    41:   </div>
+    42: </nav>
+    43: 
+    44: <%= javascript_include_tag "navbar" %>
+  
+app/views/shared/_navbar.html.erb:44:in `_app_views_shared__navbar_html_erb___924300831040855484_66140'
+app/views/static_pages/index.html.erb:2:in `_app_views_static_pages_index_html_erb___1526590230601856783_66120'
+Started GET "/" for ::1 at 2020-12-01 20:46:11 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (1.5ms)
+  Rendered static_pages/index.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 162ms (Views: 159.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:46:58 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (1.1ms)
+  Rendered static_pages/index.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 69ms (Views: 67.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:47:17 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (1.2ms)
+  Rendered static_pages/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 94ms (Views: 92.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:48:14 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (1.4ms)
+  Rendered static_pages/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 75ms (Views: 72.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:48:46 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (78.8ms)
+  Rendered static_pages/index.html.erb within layouts/application (81.0ms)
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (static_pages.js):
+    41:   </div>
+    42: </nav>
+    43: 
+    44: <%= javascript_include_tag 'static_pages'%>
+  
+app/views/shared/_navbar.html.erb:44:in `_app_views_shared__navbar_html_erb___924300831040855484_67160'
+app/views/static_pages/index.html.erb:2:in `_app_views_static_pages_index_html_erb___1526590230601856783_67140'
+Started GET "/" for ::1 at 2020-12-01 20:49:51 +0100
+  [1m[35m (6.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dylanpecqueux/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (287.9ms)
+  Rendered static_pages/index.html.erb within layouts/application (295.7ms)
+Completed 500 Internal Server Error in 309ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (static_pages.js):
+    41:   </div>
+    42: </nav>
+    43: 
+    44: <%= javascript_include_tag 'static_pages'%>
+  
+app/views/shared/_navbar.html.erb:44:in `_app_views_shared__navbar_html_erb__4317301357875335712_64860'
+app/views/static_pages/index.html.erb:2:in `_app_views_static_pages_index_html_erb__1645652418556240814_64840'
+Started GET "/" for ::1 at 2020-12-01 20:49:55 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (37.4ms)
+  Rendered static_pages/index.html.erb within layouts/application (39.9ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (static_pages.js):
+    41:   </div>
+    42: </nav>
+    43: 
+    44: <%= javascript_include_tag 'static_pages'%>
+  
+app/views/shared/_navbar.html.erb:44:in `_app_views_shared__navbar_html_erb__4317301357875335712_65560'
+app/views/static_pages/index.html.erb:2:in `_app_views_static_pages_index_html_erb__1645652418556240814_65540'
+Started GET "/" for ::1 at 2020-12-01 20:51:40 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dylanpecqueux/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (157.5ms)
+  Rendered static_pages/index.html.erb within layouts/application (186.5ms)
+Completed 200 OK in 322ms (Views: 313.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:52:08 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (7.4ms)
+  Rendered static_pages/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 63ms (Views: 60.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:52:39 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (1.0ms)
+  Rendered static_pages/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 59ms (Views: 56.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:53:21 +0100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dylanpecqueux/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (170.6ms)
+  Rendered static_pages/index.html.erb within layouts/application (222.7ms)
+Completed 200 OK in 468ms (Views: 461.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-01 20:54:18 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (14.8ms)
+  Rendered static_pages/index.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 73ms (Views: 71.3ms | ActiveRecord: 0.0ms)
+
+
