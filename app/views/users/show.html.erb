@@ -1,2 +1,12 @@
 <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
+
+
+<ul>
+<% @user_collection.each do |manga| %>
+    <li> <%= manga.title %> <%= manga.author %></li>
+
+<% end %>
+
+</ul>
+<%= link_to "Editer mon profil", edit_user_path(@user.id) %>
