@@ -3,6 +3,7 @@ class MangasController < ApplicationController
   end
 
   def show
+<<<<<<< HEAD
     @manga = Manga.find(params[:id])
   end
   
@@ -17,6 +18,17 @@ class MangasController < ApplicationController
   
   def new
     @manga = Manga.new
+=======
+  end
+
+  def edit
+  end
+
+  def create
+  end
+
+  def new
+>>>>>>> develop
   end
 
   def update
@@ -24,6 +36,7 @@ class MangasController < ApplicationController
 
   def destroy
   end
+<<<<<<< HEAD
 
   def manga_params
     manga_params = params.require(:manga).permit(:title, :author, :description, :cover)
@@ -31,3 +44,6 @@ class MangasController < ApplicationController
 
 end
 
+=======
+end
+>>>>>>> develop

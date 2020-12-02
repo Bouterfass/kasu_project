@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  resources :mangas
   devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root "static_pages#index", page: "home"
   resources :users, only: [:show] do 
     resources :avatars, only: [:create]
   end
