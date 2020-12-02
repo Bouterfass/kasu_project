@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navbar">
+  <a class="brand text-prim" href="/">Kasu</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse " id="navbarColor03">
+  
+    <ul class="navbar-nav navbar-center">
+      
+    
+    </ul>
+
+
+    <ul class="navbar-nav ml-auto">
+    <% if current_user && current_user.is_admin == true%>
+    <li class="nav-item active">
+      <a class="nav-link" <%= link_to 'Dashboard Admin', admin_orders_path%></a>
+    </li>
+    <% end %>
+    <% if user_signed_in?%>
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Profil/Quitter</a>
+        <div class="dropdown-menu menu-nav" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item menu-nav" <%= link_to "Sign out", destroy_user_session_path, method: :delete %></a>
+          <a class="dropdown-item menu-nav" <%= link_to "Profil", user_path(current_user) %></a>
+        </div>
+      </li>
+      <% if current_user.carts[0] %>
+        <li class="mx-3 pt-2 text-secondary"><%= link_to ('<i class="fas fa-shopping-cart fa-lg"></i>').html_safe, cart_path(current_user.carts.last) ,class:"text-secondary" %></li>
+      <% end %>
+      <% else %>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Se Connecter/S'inscrire</a>
+        <div class="dropdown-menu menu-nav" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item menu-nav" href="<%=new_user_session_path%>">Se connecter</a>
+          <a class="dropdown-item menu-nav" href="<%=new_user_registration_path%>">S'inscrire</a>
+        </div>
+    </ul> 
+    <% end %>
+  </div>
+</nav>
+
+<%= javascript_include_tag 'navbar'%>
