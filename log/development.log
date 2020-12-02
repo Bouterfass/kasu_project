@@ -799,3 +799,119 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2020-12-02 18:54:18 +0100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:15
+  Rendered shared/_navbar.html.erb (32.7ms)
+  Rendered static_pages/index.html.erb within layouts/application (35.5ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 5.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `is_admin' for #<User:0x00007fe61e2248e8>
+Did you mean?  is_a?):
+    12: 
+    13: 
+    14:     <ul class="navbar-nav ml-auto">
+    15:     <% if current_user && current_user.is_admin == true%>
+    16:     <li class="nav-item active">
+    17:       <a class="nav-link" <%= link_to 'Dashboard Admin', admin_orders_path%></a>
+    18:     </li>
+  
+app/views/shared/_navbar.html.erb:15:in `_app_views_shared__navbar_html_erb__1159106006712400492_67000'
+app/views/static_pages/index.html.erb:2:in `_app_views_static_pages_index_html_erb__1264167203776303762_66980'
+Started GET "/" for ::1 at 2020-12-02 18:55:07 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:16
+  Rendered shared/_navbar.html.erb (11.5ms)
+  Rendered static_pages/index.html.erb within layouts/application (13.7ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `carts' for #<User:0x00007fe619a45b30>):
+    22:           <a class="dropdown-item menu-nav" <%= link_to "Profil", user_path(current_user) %></a>
+    23:         </div>
+    24:       </li>
+    25:       <% if current_user.carts[0] %>
+    26:         <li class="mx-3 pt-2 text-secondary"><%= link_to ('<i class="fas fa-shopping-cart fa-lg"></i>').html_safe, cart_path(current_user.carts.last) ,class:"text-secondary" %></li>
+    27:       <% end %>
+    28:       <% else %>
+  
+app/views/shared/_navbar.html.erb:25:in `_app_views_shared__navbar_html_erb__1159106006712400492_67760'
+app/views/static_pages/index.html.erb:2:in `_app_views_static_pages_index_html_erb__1264167203776303762_67740'
+Started GET "/" for ::1 at 2020-12-02 18:55:24 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:16
+  Rendered shared/_navbar.html.erb (277.7ms)
+  Rendered static_pages/index.html.erb within layouts/application (341.3ms)
+Completed 200 OK in 3220ms (Views: 3217.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mangas/new" for ::1 at 2020-12-02 18:55:48 +0100
+  
+SyntaxError (/Users/victoriapiazzalonga/Google Drive/THP_Project/Projet d'équipe/kasu_project/app/controllers/mangas_controller.rb:6: syntax error, unexpected <<
+<<<<<<< HEAD
+^~
+/Users/victoriapiazzalonga/Google Drive/THP_Project/Projet d'équipe/kasu_project/app/controllers/mangas_controller.rb:21: syntax error, unexpected ===, expecting `end'
+=======
+^~~
+/Users/victoriapiazzalonga/Google Drive/THP_Project/Projet d'équipe/kasu_project/app/controllers/mangas_controller.rb:31: syntax error, unexpected >>
+>>>>>>> develop
+^~
+/Users/victoriapiazzalonga/Google Drive/THP_Project/Projet d'équipe/kasu_project/app/controllers/mangas_controller.rb:39: syntax error, unexpected <<, expecting `end'
+<<<<<<< HEAD
+^~
+/Users/victoriapiazzalonga/Google Drive/THP_Project/Projet d'équipe/kasu_project/app/controllers/mangas_controller.rb:47: syntax error, unexpected ===, expecting `end'
+=======
+^~~
+):
+  
+app/controllers/mangas_controller.rb:6: syntax error, unexpected <<
+app/controllers/mangas_controller.rb:21: syntax error, unexpected ===, expecting `end'
+app/controllers/mangas_controller.rb:31: syntax error, unexpected >>
+app/controllers/mangas_controller.rb:39: syntax error, unexpected <<, expecting `end'
+app/controllers/mangas_controller.rb:47: syntax error, unexpected ===, expecting `end'
+Started GET "/mangas/new" for ::1 at 2020-12-02 18:56:25 +0100
+Processing by MangasController#new as HTML
+  Rendering mangas/new.html.erb within layouts/application
+  Rendered mangas/new.html.erb within layouts/application (251.6ms)
+Completed 200 OK in 319ms (Views: 280.5ms | ActiveRecord: 12.9ms)
+
+
+Started POST "/mangas" for ::1 at 2020-12-02 18:56:46 +0100
+Processing by MangasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"St6XmiT/PtgJ80zQg7sUaq19oHTQ0Dz5zNtnNcbM+Ev05SccC8FUnnENk6+c74RkLaQNpq8lTzv6EWyeXG54rA==", "manga"=>{"title"=>"Mon 3e manga", "author"=>"Iam", "description"=>"Pas d'image"}, "commit"=>"Create Manga"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/mangas_controller.rb:14
+  [1m[36mManga Create (0.9ms)[0m  [1m[32mINSERT INTO "mangas" ("title", "author", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Mon 3e manga"], ["author", "Iam"], ["description", "Pas d'image"], ["created_at", "2020-12-02 17:56:46.128413"], ["updated_at", "2020-12-02 17:56:46.128413"]]
+  ↳ app/controllers/mangas_controller.rb:14
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/mangas_controller.rb:14
+Redirected to http://localhost:3000/mangas/3
+Completed 302 Found in 16ms (ActiveRecord: 9.1ms)
+
+
+Started GET "/mangas/3" for ::1 at 2020-12-02 18:56:46 +0100
+Processing by MangasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mManga Load (0.4ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/mangas_controller.rb:6
+  Rendering mangas/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Manga"], ["name", "cover"], ["LIMIT", 1]]
+  ↳ app/views/mangas/show.html.erb:1
+  Rendered mangas/show.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 43ms (Views: 34.5ms | ActiveRecord: 4.0ms)
+
+
