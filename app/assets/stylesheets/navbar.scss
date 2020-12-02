@@ -3,6 +3,20 @@
   margin: 0;
 }
 
+.brand {
+  position: absolute;
+  left: 50%;
+  margin-left: -50px !important;  /* 50% of your logo width */
+  display: block;
+  color: #990100;
+  font-size: 50px;
+}
+
+.brand:hover{
+  text-decoration: none;
+  color: #333333;
+}
+
 .fixed-top.scrolled {
   background-color: rgb(255, 255, 255) !important;
   transition: background-color 200ms linear;

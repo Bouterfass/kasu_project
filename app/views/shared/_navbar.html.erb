@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navbar">
-  <a class="navbar-brand" href="/">Kasu</a>
+  <a class="brand text-prim" href="/">Kasu</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -7,7 +7,7 @@
   
     <ul class="navbar-nav navbar-center">
       
-
+    
     </ul>
 
 
@@ -20,10 +20,10 @@
     <% if user_signed_in?%>
       
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Profil/Quitter</a>
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Profil/Quitter</a>
         <div class="dropdown-menu menu-nav" aria-labelledby="dropdownMenuLink">
-          <a class="dropdown-item menu-nav text-white" <%= link_to "Sign out", destroy_user_session_path, method: :delete %></a>
-          <a class="dropdown-item menu-nav text-white" <%= link_to "Profil", user_path(current_user) %></a>
+          <a class="dropdown-item menu-nav" <%= link_to "Sign out", destroy_user_session_path, method: :delete %></a>
+          <a class="dropdown-item menu-nav" <%= link_to "Profil", user_path(current_user) %></a>
         </div>
       </li>
       <% if current_user.carts[0] %>
@@ -33,8 +33,8 @@
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Se Connecter/S'inscrire</a>
         <div class="dropdown-menu menu-nav" aria-labelledby="dropdownMenuLink">
-          <a class="dropdown-item menu-nav text-white" href="<%=new_user_session_path%>">Se connecter</a>
-          <a class="dropdown-item menu-nav text-white" href="<%=new_user_registration_path%>">S'inscrire</a>
+          <a class="dropdown-item menu-nav" href="<%=new_user_session_path%>">Se connecter</a>
+          <a class="dropdown-item menu-nav" href="<%=new_user_registration_path%>">S'inscrire</a>
         </div>
     </ul> 
     <% end %>
