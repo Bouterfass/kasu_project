@@ -5,3 +5,113 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+require 'nokogiri'
+require 'rubygems'
+require 'open-uri'
+require 'faker'
+
+Manga.delete_all
+Manga.reset_pk_sequence
+
+
+def manga_scraper
+
+    mangas = []
+
+    page = Nokogiri::HTML(URI.open("https://www.manga-news.com/index.php/series/A"))
+
+    arr_title = page.xpath('//*[@id="seriesList"]/tbody/tr/td[1]/div/a/@title').to_a
+    titles = []
+
+    arr_title.each do |t|
+        titles << t.to_s
+    end
+
+    puts "titles = " + titles.length.to_s
+
+    arr_image = page.xpath('.//*[@id="seriesList"]/tbody/tr/td[1]/div/img/@src').to_a
+
+    images = []
+
+    arr_image.each do |i|
+        images << i.text
+    end
+
+    puts "images = " + images.length.to_s
+
+    arr_authors = page.xpath('//*[@id="seriesList"]/tbody/tr/td[2]').to_a
+
+    authors = []
+    arr_authors.each do |aut|
+        if aut.text.include? "-" 
+            authors << aut.text.split("-")[1].gsub("\n", "").gsub("-","").strip!
+        else
+            authors << aut.text.gsub("\n", "").strip!
+        end
+    end
+
+    puts "authors = " + authors.length.to_s
+
+    categories = []
+    page.xpath('//*[@id="seriesList"]/tbody/tr/td[5]/text()').each do |c|
+        categories << c.to_s.strip!
+    end
+
+    puts "categories = " +categories.length.to_s
+
+    volumes = []
+
+    page.xpath('//*[@id="seriesList"]/tbody/tr/td[4]/text()').each do |v|
+        volumes << v.text.to_i
+    end
+
+    puts "volumes = " +volumes.length.to_s
+
+    links = page.xpath('//*[@id="seriesList"]/tbody/tr/td[1]/div/a[1]/@href').to_a
+
+    descriptions = []
+
+    links.each do |l|
+        page_manga = Nokogiri::HTML(URI.open(l))
+        descriptions << page_manga.xpath('//*[@id="summary"]/p/text()').text
+    end
+
+    puts "descriptions = " + descriptions.length.to_s
+
+    manga_array = []
+    i = 0 
+
+    while i < titles.length
+        hash = {
+            :title => titles[i],
+            :author => authors[i],
+            :category => categories[i],
+            :image_url => images[i],
+            :volume => volumes[i],
+            :description => descriptions[i]
+        }
+        manga_array.push(hash)
+        i = i + 1
+    end
+    return manga_array
+end
+
+all_mangas = manga_scraper
+
+
+all_mangas.each do |m|
+    Manga.create(
+        title: m[:title],
+        author: m[:author],
+        description: m[:description]
+    )
+end
+
+
+User.create(
+    email: "test@test.test",
+    name: "XxD4rK-s4suK€xX",
+    password: "motdepasse"
+)
