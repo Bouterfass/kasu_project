@@ -1,0 +1,9 @@
+<% if @manga.cover.attached?%>
+<%= image_tag @manga.cover %>
+<%else%>
+  <p>=== Il n'y a pas encore d'image liée à ce manga ===</p>
+<%end%>
+
+<%= @manga.title %>
+<%= @manga.description %>
+<%= @manga.author %>
