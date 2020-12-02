@@ -1,5 +1,5 @@
 <h2>Resend confirmation instructions</h2>
-
+<div class="container">
 <%= simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
   <%= f.error_notification %>
   <%= f.full_error :confirmation_token %>
@@ -16,5 +16,6 @@
     <%= f.button :submit, "Resend confirmation instructions" %>
   </div>
 <% end %>
+</div>
 
 <%= render "users/shared/links" %>
