@@ -1,6 +1,4 @@
 <header>
-  <%= render "shared/navbar" %>
-
   <div class="container-fluid" id="fond">
     <%= image_tag 'rectangle1.png', class:"rectangle1 animate__animated animate__fadeInDownBig"%>
     <%= image_tag 'rouge1.png', class:"rouge1 animate__animated animate__fadeInUpBig"%>
@@ -13,6 +11,34 @@
   </div>
 </header>
 
-<div style="height: 1000px">
+<main>
+  <div class="container-fluid section1">
+    <h2 class="text-center">Créer une communauté grâce à l'échange de manga !</h2>
+    <div class="container d-flex justify-content-around all-icon">
+      <div class="text-center mr-5">
+        <a class="" href="#"><%= image_tag 'echange.png', class:"icon-explication icon1 mb-4"%></a>
+        <p>Met en ligne les mangas <br /> que tu ne veux plus.</p>
+      </div>
+      <div class="text-center mr-5">
+        <a class="" href="#"><%= image_tag 'recois.png', class:"icon-explication icon1 mb-4"%></a>
+        <p>Reçois des kasu points<br />une fois ton vieux manga échangé.</p>
+      </div>
+      <div class="text-center">
+        <a class="" href="#"><%= image_tag 'achete.png', class:"icon-explication icon1 mb-4"%></a>
+        <p>Achète les mangas que tu veux<br />grâce à tes kasu points !</p>
+      </div>
+    </div>
+  </div>
 
-</div>
+  <div class="section2">
+    <h2 class="text-center">Les derniers mangas ajoutés</h2>
+    <%= render "card" %>
+  </div>
+
+  <div class="section3">
+    <h2 class="text-center">Les membres du mois</h2>
+    <%= render "card-user" %>
+  </div>
+
+
+</main>
