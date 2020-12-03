@@ -1,9 +1,9 @@
-<div class="container mt-2">*
+<div class="container mt-2">
 	<div class="row m-2">
 		<% @mangas.each do |manga|%>
 				<div class="col-md-3 col-sm-6 ">
 					<div class="card p-3 card-block ">
-						<img src="https://static.pexels.com/photos/7096/people-woman-coffee-meeting.jpg" alt="Photo of sunset">
+						<img src="https://static.pexels.com/photos/7096/people-woman-coffee-meeting.jpg" class="img-card" alt="Photo of sunset">
 						<h4 class="card-title mt-3 mb-3"><%= manga.title%></h4>
 						<h5 class="card-title  mb-3">Auteur: <%= manga.author%></h5>
 						<div class='btn btn-info'>Go to manga page</div>
