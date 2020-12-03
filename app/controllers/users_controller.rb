@@ -5,16 +5,19 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-
     @user_collection = @user.mangas
   end
 
   def edit
-    @user = User.find(params[:id])
-
     @user_collection = LibraryItem.where(user: current_user)
+    @user = User.find(params[:id])
+  end
 
-    puts @user_collection
+  def update
+    @user = User.find(params[:id])
+    if @user.update(name: params[:user][:name])
+      redirect_to '/'
+    end
   end
 
   private
@@ -27,4 +30,5 @@ class UsersController < ApplicationController
     end
   end
 
+  
 end

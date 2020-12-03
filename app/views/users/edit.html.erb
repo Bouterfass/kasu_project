@@ -1,7 +1,7 @@
-<p> Salut <%= current_user.name %>, modifie ton profil <%= current_user.id %> </p>
 
 
 
+ 
 
 <ul>
 <% @user_collection.each do |item| %>
@@ -13,3 +13,9 @@
 
 <%= link_to "Ajouter un manga à votre collection", mangas_path, class: 'btn btn-primary' %>
 </ul>
+
+<h4>Changer de pseudo</h4>
+<%= simple_form_for @user do |f| %>
+      <%= f.input :name %>
+      <%= f.button :submit, class: "btn-primary" %>
+<% end %>

@@ -3,7 +3,7 @@
 		<% @mangas.each do |manga|%>
 				<div class="col-md-3 col-sm-6 ">
 					<div class="card p-3 card-block ">
-						<img class="image-partial" src="<%= manga.image_url %>" alt="Photo of sunset">
+						<img class="img-card" src="<%= manga.image_url %>" alt="Photo of sunset">
 						<h4 class="card-title mt-3 mb-3"><%= manga.title.capitalize %></h4>
 						<h5 class="card-title  mb-3">Auteur: <%= manga.author%></h5>
 						<%= link_to "Accéder à la page manga", manga_path(manga.id), class: "btn btn-info" %>
