@@ -3,8 +3,8 @@
 		<% @mangas.each do |manga|%>
 				<div class="col-md-3 col-sm-6 ">
 					<div class="card p-3 card-block ">
-						<img src="https://static.pexels.com/photos/7096/people-woman-coffee-meeting.jpg" alt="Photo of sunset">
-						<h4 class="card-title mt-3 mb-3"><%= manga.title%></h4>
+						<img src="<%= manga.image_url %>" alt="Photo of sunset">
+						<h4 class="card-title mt-3 mb-3"><%= manga.title.capitalize %></h4>
 						<h5 class="card-title  mb-3">Auteur: <%= manga.author%></h5>
 						<%= link_to "Ajouter à la bibliothèque", library_items_path(manga_id: manga.id), method: 'POST', class: "btn btn-block btn-outline-info" %>
 					</div>
