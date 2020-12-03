@@ -38,6 +38,7 @@ gem 'stripe'
 gem "mini_magick"
 gem 'mailjet'
 gem "dotenv"
+gem "pagy"
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
