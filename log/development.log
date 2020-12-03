@@ -1928,3 +1928,92 @@ Processing by UsersController#edit as HTML
 Completed 200 OK in 42ms (Views: 37.5ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/users/sign_up" for ::1 at 2020-12-03 09:44:41 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/stephen/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.0ms)
+  Rendered users/registrations/new.html.erb within layouts/application (425.5ms)
+Completed 200 OK in 1237ms (Views: 1159.8ms | ActiveRecord: 8.4ms)
+
+
+Started POST "/users" for ::1 at 2020-12-03 09:45:04 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EQ1HORGMxtnbQzpEkFM9wGINflEWY8OvpNU1xEU7LqWryL07HxuWf0yKej2aWg7Tj2iPoXONxj2U0kHiMunVpA==", "user"=>{"email"=>"stephen@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/stephen/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (2.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "stephen@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/stephen/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (2.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "stephen@gmail.com"], ["encrypted_password", "$2a$12$9Wwqsyyx08YgPHB.W5jFnOhh0WwvM3WYtWmC7TRemOX6aLZiL4Oia"], ["created_at", "2020-12-03 08:45:05.532315"], ["updated_at", "2020-12-03 08:45:05.532315"]]
+  ↳ /home/stephen/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/stephen/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 577ms (ActiveRecord: 11.4ms)
+
+
+Started GET "/" for ::1 at 2020-12-03 09:45:05 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  Rendering static_pages/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:16
+  Rendered shared/_navbar.html.erb (20.8ms)
+  Rendered static_pages/index.html.erb within layouts/application (53.9ms)
+Completed 200 OK in 149ms (Views: 140.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/users/2" for ::1 at 2020-12-03 09:45:14 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mManga Load (3.3ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/users/show.html.erb:6
+  Rendered users/show.html.erb within layouts/application (95.1ms)
+Completed 200 OK in 345ms (Views: 195.5ms | ActiveRecord: 22.0ms)
+
+
+Started GET "/users/2/edit" for ::1 at 2020-12-03 09:45:17 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+  [1m[36mLibraryItem Load (1.1ms)[0m  [1m[34mSELECT "library_items".* FROM "library_items" WHERE "library_items"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:14
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 129ms (Views: 105.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/mangas" for ::1 at 2020-12-03 10:41:37 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/stephen/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by MangasController#index as HTML
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "mangas"[0m
+  ↳ app/controllers/mangas_controller.rb:3
+  Rendering mangas/index.html.erb within layouts/application
+  [1m[36mManga Load (0.5ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/mangas/_mangaCard.html.erb:3
+  Rendered mangas/_mangaCard.html.erb (18.5ms)
+  Rendered mangas/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 401ms (Views: 382.4ms | ActiveRecord: 5.1ms)
+
+
+Started POST "/library_items?manga_id=1" for ::1 at 2020-12-03 10:42:52 +0100
+Processing by LibraryItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"C/arvF64zkwrMQ3NcbvJ7oPudyjgchrLtWvb1EsOuBjDxUcxS1/cnPWjE6nVWvttpl3YYy47Yx1esX6gKphczQ==", "manga_id"=>"1"}
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:13
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 11.1ms)
+
+
+  
+NoMethodError (undefined method `create' for #<LibraryItem:0x0000557985b1d6c8>
+Did you mean?  created_at):
+  
+app/controllers/library_items_controller.rb:13:in `create'
