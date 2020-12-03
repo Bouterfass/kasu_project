@@ -2,13 +2,19 @@
 	<div class="row m-2 card-all">
 		<% @manga.each do |manga|%>
 				
-					<div class="card p-3 card-block ">
-						<img src="<%= manga.image_url %>" alt="Photo of sunset" class="card-img-top">
-						<h4 class="card-title mt-3 mb-3"><%= manga.title%></h4>
-						<h5 class="card-title  mb-3">Auteur: <%= manga.author%></h5>
-						<button href="#" class='btn-card'>Go to manga page</button>
-					</div>
+      <article class="card-last-manga card--1">
+        <div class="card__img" style="background-image: url('<%= manga.manga.image_url %>')"></div>
+        <a href="#" class="card_link">
+          <div class="card__img--hover" style="background-image: url('<%= manga.manga.image_url %>')"></div>
+        </a>
+        <div class="card__info">
+          <h3 class="card__title"><%=manga.manga.title%></h3>
+          <span class="card__by">by <a href="#" class="card__author" title="author"><%=manga.manga.author%></a></span>
+        </div>
+      </article>
 				
 		<% end %>
 	</div>
 </div>
+
+

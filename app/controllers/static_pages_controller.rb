@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def index
-    @manga = Manga.last(5)
-    
+    @manga = LibraryItem.last(5)
+    @user = User.last(3)
   end
 end
