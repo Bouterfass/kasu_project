@@ -6,7 +6,7 @@
 						<img src="https://static.pexels.com/photos/7096/people-woman-coffee-meeting.jpg" alt="Photo of sunset">
 						<h4 class="card-title mt-3 mb-3"><%= manga.title%></h4>
 						<h5 class="card-title  mb-3">Auteur: <%= manga.author%></h5>
-						<%= link_to "Ajouter à la bibliothèque", library_items_path(manga_id: manga.id), method: 'POST', class: "btn btn-secondary" %>
+						<%= link_to "Ajouter à la bibliothèque", library_items_path(manga_id: manga.id), method: 'POST', class: "btn btn-block btn-outline-info" %>
 					</div>
 				</div>
 		<% end %>
