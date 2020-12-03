@@ -1,0 +1,12 @@
+<p> Salut <%= @user.name %>, modifie ton profil </p>
+
+
+
+
+<ul>
+<% @user_collection.each do |item| %>
+    <li> <%= item.manga.title %> <%= item.manga.author %>   <%= link_to "Supprimer de votre liste", library_item_path(item.id), method: "delete",  :data => {:confirm => 'Are you sure?'} %></li>
+
+<% end %>
+
+</ul>

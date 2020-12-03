@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'mangas#index'
-  resources :mangas
-  resources :users, only: [:show] do 
-    resources :avatars, only: [:create]
-  end
+  root "static_pages#index", page: "home"
+  resources :users
+  resources :library_items
+
+
+  resources :mangas, except: [:destroy] 
 end
