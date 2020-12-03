@@ -8,5 +8,11 @@ class User < ApplicationRecord
 
   has_many :library_items
   has_many :mangas, through: :library_items
+
+  after_create :welcome_send
+  
+    def welcome_send
+      UserMailer.welcome_email(self).deliver_now
+    end
   
 end

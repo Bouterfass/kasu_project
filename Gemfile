@@ -36,9 +36,9 @@ gem 'devise'
 gem 'activerecord-reset-pk-sequence'
 gem 'stripe'
 gem "mini_magick"
-gem 'mailjet'
 gem "dotenv"
 gem "pagy"
+gem "letter_opener", :group => :development
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
