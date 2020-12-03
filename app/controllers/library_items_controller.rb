@@ -4,6 +4,7 @@ class LibraryItemsController < ApplicationController
     def index
         @pagy, @items = pagy(LibraryItem.all)
     end
+    
     def create
         puts "Hola!!"
         puts params

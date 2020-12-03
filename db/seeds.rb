@@ -117,6 +117,7 @@ all_mangas.each do |m|
     )
 end
 =end
+
 gaetan = User.create(email: "badgaga@test.com", name: "Gaetan", password: "azerty")
 stephen = User.create(email: "stephen@test.com", name: "Stephen", password: "azerty")
 jules = User.create(email: "jules@test.com", name: "Jules", password: "azerty")

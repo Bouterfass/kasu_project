@@ -3,10 +3,10 @@
 		<% @items.each do |item|%>
 				<div class="col-md-3 col-sm-6 ">
 					<div class="card p-3 card-block ">
-						<img src="https://static.pexels.com/photos/7096/people-woman-coffee-meeting.jpg" alt="Photo of sunset">
+						<img src="<%= item.manga.image_url %> " alt="Photo of sunset">
 						<h4 class="card-title mt-3 mb-3"><%= item.manga.title%></h4>
-						<h5 class="card-title  mb-3">Auteur: <%= item.manga.author%></h5>
-						<button class="btn btn-block btn-outline-secondary" data-toggle="modal" data-target="#user">Utilisateurs qui possèdent ce manga</button>
+						<h5 class="card-title mt-3 mb-3"><%= item.manga.author%></h5>
+						<%= link_to 'voir', manga_path(item.manga), class:%>
 					</div>
 				</div>
 		<% end %>
@@ -14,25 +14,3 @@
 	<%= pagy_bootstrap_nav(@pagy).html_safe%>
 </div>
 
-<!-- Modal -->
-
-<div class="modal" id="user">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Les utilisateurs qui possèdent ce mangas</h5>
-        <button class="close" data-dismiss="modal">
-          <span>&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <img class="w-100" src="https://believemy.com/uploads/34eaaa344edf7411a830f8946dc5fe67_ba6103b0bb201f60b88b8e033db25c7e.jpeg" />
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-        <button class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="boot teste">Ajouter au panier</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal End-->
