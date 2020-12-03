@@ -12,6 +12,13 @@ require 'rubygems'
 require 'open-uri'
 require 'faker'
 
+User.delete_all
+User.reset_pk_sequence
+
+LibraryItem.delete_all
+LibraryItem.reset_pk_sequence
+
+=begin
 Manga.delete_all
 Manga.reset_pk_sequence
 
@@ -105,13 +112,21 @@ all_mangas.each do |m|
     Manga.create(
         title: m[:title],
         author: m[:author],
-        description: m[:description]
+        description: m[:description],
+        image_url: m[:image_url]
     )
 end
+=end
+gaetan = User.create(email: "badgaga@test.com", name: "Gaetan", password: "azerty")
+stephen = User.create(email: "stephen@test.com", name: "Stephen", password: "azerty")
+jules = User.create(email: "jules@test.com", name: "Jules", password: "azerty")
+dylan = User.create(email: "dylan@test.com", name: "Dylan", password: "azerty")
+youcef = User.create(email: "youcef@test.com", name: "Youcef", password: "azerty")
 
-
-User.create(
-    email: "test@test.test",
-    name: "XxD4rK-s4suK€xX",
-    password: "motdepasse"
-)
+10.times do 
+    LibraryItem.create(user: gaetan, manga: Manga.find(rand(1..458)), state_description: Faker::Lorem.paragraph(sentence_count: 3))
+    LibraryItem.create(user: stephen, manga: Manga.find(rand(1..458)), state_description: Faker::Lorem.paragraph(sentence_count: 3))
+    LibraryItem.create(user: jules, manga: Manga.find(rand(1..458)), state_description: Faker::Lorem.paragraph(sentence_count: 3))
+    LibraryItem.create(user: dylan, manga: Manga.find(rand(1..458)), state_description: Faker::Lorem.paragraph(sentence_count: 3))
+    LibraryItem.create(user: youcef, manga: Manga.find(rand(1..458)), state_description: Faker::Lorem.paragraph(sentence_count: 3))
+end
