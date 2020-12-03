@@ -103,6 +103,23 @@
 }
 
 .section2{
-  
-  height: 500px;
+  padding: 30px;
+  margin-bottom: 20px;
+  background-color: rgb(219, 217, 217);
+}
+
+.section2 h2{
+  color: rgb(73, 73, 73);
+  margin: 30px 0;
+}
+
+.card-all{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.section2 .card{
+  margin-top: 50px;
+  width: 250px;
 }

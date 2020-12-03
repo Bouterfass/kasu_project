@@ -4,17 +4,20 @@
 ============================*/
 .img-card{
     height:150px;
-    width:100%;
+    max-width:100%;
   }
   
   div [class^="col-"]{
     padding-left:5px;
     padding-right:5px;
+    margin: 20px;
   }
   .card{
     transition:0.5s;
     cursor:pointer;
+    border: 1px solid;
   }
+
   .card-title{  
     font-size:15px;
     transition:1s;
@@ -25,6 +28,7 @@
     transform: scale(1.05);
     box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
   }
+
   .card-text{
     height:80px;  
   }
@@ -41,12 +45,27 @@
     content: '';
     pointer-events: none;
   }
+
   .card::before {
     transform-origin: left top;
   }
+
   .card::after {
     transform-origin: right bottom;
   }
+
   .card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
     transform: scale3d(1, 1, 1);
+  }
+
+  .btn-card{
+      background-color:  #ffffff;
+      border: 1px solid;
+      border-color:  #ff1016;
+      color: #333333;
+      padding: 10px 40px;
+      text-align: center;
+      display: inline-block;
+      border-radius: 20px;
+      font-size: 15px;
   }
