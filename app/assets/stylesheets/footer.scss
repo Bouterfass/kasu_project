@@ -1,0 +1,21 @@
+footer {
+  display: flex;
+  align-items: flex-end;;
+  background-color: rgb(94, 94, 94);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  margin: auto;
+  color: white;
+  width: 100%;
+  }
+
+footer a{
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover{
+  text-decoration: none;
+  color: #ff1016;
+}

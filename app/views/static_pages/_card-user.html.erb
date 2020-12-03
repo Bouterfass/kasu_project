@@ -1,0 +1,16 @@
+<div class="container-fluid mt-2">
+	<div class="row m-2 card-all">
+		<% @user.each do |user|%>
+				
+					<div class="">
+            <%if user.avatar.attached?%>
+              <%= image_tag user.avatar, class: "img-user" %>
+            <% else %>
+              <%= image_tag "kirua.jpg", class: "img-user" %>
+            <%end%>
+						<h4 class="card-title mt-3 mb-3"><%= user.name %></h4>
+					</div>
+				
+		<% end %>
+	</div>
+</div>
