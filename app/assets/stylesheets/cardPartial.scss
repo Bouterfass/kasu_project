@@ -1,6 +1,7 @@
-// Place all the styles related to the Mangas controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*==========================
+    Card template
+============================*/
 img{
     height:150px;
     width:100%;
@@ -20,11 +21,6 @@ img{
     cursor:pointer;
   }
 
-  .card-title i:hover{
-    transform: scale(1.25) rotate(100deg); 
-    color:#18d4ca;
-    
-  }
   .card:hover{
     transform: scale(1.05);
     box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
