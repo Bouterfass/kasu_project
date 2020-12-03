@@ -18,7 +18,6 @@ User.reset_pk_sequence
 LibraryItem.delete_all
 LibraryItem.reset_pk_sequence
 
-=begin
 Manga.delete_all
 Manga.reset_pk_sequence
 
@@ -116,7 +115,7 @@ all_mangas.each do |m|
         image_url: m[:image_url]
     )
 end
-=end
+
 gaetan = User.create(email: "badgaga@test.com", name: "Gaetan", password: "azerty")
 stephen = User.create(email: "stephen@test.com", name: "Stephen", password: "azerty")
 jules = User.create(email: "jules@test.com", name: "Jules", password: "azerty")
