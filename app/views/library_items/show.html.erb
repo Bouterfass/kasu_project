@@ -1,0 +1,33 @@
+<h4> <strong><%= @item.manga.title.capitalize %></strong> de <strong><%= @item.user.name %></strong></h4>
+
+
+<div class="container pt-5">
+
+    <div class="row">
+        <div class="col d-flex justify-content-end">
+            <img src="<%= @item.manga.image_url %>" width="200" height="250">       
+        </div>
+        <div class="col">
+                <p><strong>Manga</strong></p>
+                <p><%= @item.manga.title %></p>
+                <p><strong>Possesseur</strong></p>
+                <p><%= @item.user.name %></p>
+                <p><strong>Description</strong></p>
+                <p><%= @item.state_description %></p>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-around pt-5">
+      <%= link_to "Retour à la page d'accueil", mangas_path, class: 'btn btn-primary' %>
+      <button class="btn btn-danger"> Je le veux !</button>
+    </div>
+    <div class="row d-flex">
+        <h2>D'autres manga de <%= @item.user.name %></h2>
+    </div>
+     <div class="row d-flex">
+        <% @item.user.mangas.each do |manga| %>
+            <% if manga.title != @item.manga.title %>
+                <%= manga.title %><br/>
+            <% end  %>
+        <% end %>
+    </div>
+</div>

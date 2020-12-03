@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
   
+  before_action :authenticate_user!
+  before_action :is_user?
+
   def show
     @user = User.find(params[:id])
 
@@ -13,4 +16,15 @@ class UsersController < ApplicationController
 
     puts @user_collection
   end
+
+  private
+  
+  def is_user?
+    @user = User.find(params[:id])
+    unless current_user == @user
+      flash[:alert] = "action impossible !"
+      redirect_to "/"
+    end
+  end
+
 end

@@ -1,12 +1,15 @@
-<p> Salut <%= @user.name %>, modifie ton profil </p>
+<p> Salut <%= current_user.name %>, modifie ton profil <%= current_user.id %> </p>
 
 
 
 
 <ul>
 <% @user_collection.each do |item| %>
-    <li> <%= item.manga.title %> <%= item.manga.author %> <%= item.id %>  <%= link_to "Supprimer de ma bibliothèque", library_item_path(item.id), method: "delete",  :data => {:confirm => 'Are you sure?'} %></li>
+    <li> <%= item.manga.title %> <%= item.manga.author %> <%= item.id %>  <%= link_to "Supprimer de ma bibliothèque", library_item_path(item.id), method: "delete",  :data => {:confirm => 'Are you sure?'} %>
+        <br/><%= link_to "Consulter la page de votre manga", library_item_path(item.id) %>
+    </li>
 
 <% end %>
 
+<%= link_to "Ajouter un manga à votre collection", mangas_path, class: 'btn btn-primary' %>
 </ul>
