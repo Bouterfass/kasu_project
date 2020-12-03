@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   [1m[35m (5.4ms)[0m  [1m[35mCREATE DATABASE "kasu_project_development" ENCODING = 'unicode'[0m
   ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
   [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE "kasu_project_test" ENCODING = 'unicode'[0m
@@ -22078,3 +22079,5 @@ Processing by LibraryItemsController#show as HTML
 Completed 200 OK in 47ms (Views: 40.4ms | ActiveRecord: 3.2ms)
 
 
+=======
+>>>>>>> develop

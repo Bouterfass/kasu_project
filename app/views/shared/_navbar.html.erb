@@ -21,6 +21,7 @@
           <a class="dropdown-item menu-nav" <%= link_to "Sign out", destroy_user_session_path, method: :delete %></a>
           <a class="dropdown-item menu-nav" <%= link_to "Profil", user_path(current_user) %></a>
         </div>
+      <% else %>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Se Connecter/S'inscrire</a>

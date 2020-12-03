@@ -18,7 +18,10 @@ User.reset_pk_sequence
 LibraryItem.delete_all
 LibraryItem.reset_pk_sequence
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> develop
 Manga.delete_all
 Manga.reset_pk_sequence
 
