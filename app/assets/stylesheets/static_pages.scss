@@ -4,27 +4,18 @@
 }
 
 #fond{
-  background-color: white;
-  max-width: 100vh;
-  height: 300px;
- 
-}
-
-.pos-alert{
-  position: sticky;
-  max-width: 100%;
-  z-index: 23;
-  left: 10%;
-  top: 10%;
+  background-image: url('https://dw9to29mmj727.cloudfront.net/sections/2016/24907-READ_header_2000x800_options_colours_grey30.png');
+  position: relative;
+  padding-top: 50px;
 }
 
 .rectangle1{
-  position: absolute;
+  position: relative;
   object-fit: cover;
   max-width: 75%;
   z-index: 23;
   left: 8%;
-  top: 0;
+  
 }
 
 .rouge1{
@@ -32,7 +23,7 @@
   max-width: 80%;
   z-index: 22;
   left: 7%;
-  top: -1%;
+  top: 9%;
 }
 
 .rouge2{
@@ -40,15 +31,15 @@
   max-width: 80%;
   z-index: 24;
   right: 7%;
-  top: 0;
+  top: 55px;
 }
 
 .rectangle2{
   position: absolute;
   max-width: 75%;
   z-index: 24;
-  left: 15%;
-  top: 0;
+  left: 14%;
+  top: 55px;
 }
 
 .rectangle3{
@@ -56,7 +47,7 @@
   max-width: 80%;
   z-index: 25;
   left: 10%;
-  top: 0;
+  top: 55px;
 }
 
 .rectangle4{
@@ -64,15 +55,15 @@
   max-width: 75%;
   z-index: 26;
   right: 12%;
-  top: 1%;
+  top: 55px;
 }
 
 .rectangle5{
   position: absolute;
   max-width: 80%;
   z-index: 27;
-  right: 8%;
-  top: 0;
+  right: 9%;
+  top: 55px;
 }
 
 .rectangle6{
@@ -80,5 +71,144 @@
   max-width: 75%;
   z-index: 28;
   right: 8%;
-  top: -2%;
+  top: 40px;
 }
+
+.section1{
+  margin-top: 50px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.all-icon{
+  margin-top: 80px;
+}
+
+.icon-explication{
+  width: 80%;
+}
+
+.icon1{
+  border-radius: 200px;
+  transition: 200ms linear;
+}
+
+.icon1:hover{
+  transition: 200ms linear;
+  border-radius: 200px;
+  width: 90%;
+  -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+}
+
+.section2{
+  padding: 30px;
+  margin-bottom: 20px;
+  background-color: rgb(219, 217, 217);
+}
+
+.section2 h2{
+  color: rgb(73, 73, 73);
+  margin: 30px 0;
+}
+
+.card-all{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card__img {
+visibility: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 235px;
+border-top-left-radius: 12px;
+border-top-right-radius: 12px;
+
+}
+
+.card__info-hover {
+  position: absolute;
+  padding: 16px;
+width: 100%;
+opacity: 0;
+top: 0;
+}
+
+.card__img--hover {
+transition: 0.2s all ease-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+position: absolute;
+  height: 235px;
+border-top-left-radius: 12px;
+border-top-right-radius: 12px;
+top: 0;
+
+}
+.card-last-manga {
+margin-right: 25px;
+margin-top: 50px;
+margin-bottom: 70px;
+transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+background-color: #fff;
+  width: 33.3%;
+position: relative;
+border-radius: 12px;
+overflow: hidden;
+box-shadow: 0px 13px 10px -7px rgba(0, 0, 0,0.1);
+max-width: 300px;
+border: 2px solid;
+}
+
+.card-last-manga:hover {
+box-shadow: 0px 30px 18px -8px rgba(0, 0, 0,0.1);
+  transform: scale(1.10, 1.10);
+}
+
+.card__info {
+z-index: 2;
+background-color: #fff;
+border-bottom-left-radius: 12px;
+border-bottom-right-radius: 12px;
+ padding: 16px 24px 24px 24px;
+}
+
+.card__title {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: rgb(73, 73, 73);
+}
+
+.card__by {
+  font-size: 12px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+}
+
+.card__author {
+  font-weight: 600;
+  text-decoration: none;
+  color: #ff1016;
+}
+
+.card-last-manga:hover .card__img--hover {
+  height: 100%;
+  opacity: 0.3;
+}
+
+.card-last-manga:hover .card__info {
+  background-color: transparent;
+  position: relative;
+}
+
+.card-last-manga:hover .card__info-hover {
+  opacity: 1;
+}
+
