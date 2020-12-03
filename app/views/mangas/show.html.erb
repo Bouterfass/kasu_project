@@ -7,3 +7,5 @@
 <%= @manga.title %>
 <%= @manga.description %>
 <%= @manga.author %>
+
+<%= link_to "Ajouter à ma Bibliothèque", manga_library_items_path(@manga.id), method: "POST" %>

@@ -5,7 +5,7 @@
 
 <ul>
 <% @user_collection.each do |item| %>
-    <li> <%= item.manga.title %> <%= item.manga.author %>   <%= link_to "Supprimer de votre liste", library_item_path(item.id), method: "delete",  :data => {:confirm => 'Are you sure?'} %></li>
+    <li> <%= item.manga.title %> <%= item.manga.author %> <%= item.id %>  <%= link_to "Supprimer de ma bibliothèque", library_item_path(item.id), method: "delete",  :data => {:confirm => 'Are you sure?'} %></li>
 
 <% end %>
 
