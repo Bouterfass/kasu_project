@@ -32560,3 +32560,1517 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 125ms (Views: 79.6ms | ActiveRecord: 35.4ms)
 
 
+Started GET "/users/6" for ::1 at 2020-12-04 17:13:55 +0100
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:8
+  [1m[36mLibraryItem Load (2.9ms)[0m  [1m[34mSELECT "library_items".* FROM "library_items" WHERE "library_items"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/views/users/show.html.erb:36
+  [1m[36mManga Load (1.0ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:38
+  [1m[36mManga Load (1.7ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:38
+  [1m[36mManga Load (1.2ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:38
+  [1m[36mManga Load (0.6ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:38
+  [1m[36mManga Load (0.4ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:38
+  [1m[36mCACHE Manga Load (0.0ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:38
+  [1m[36mCACHE Manga Load (0.0ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:38
+  Rendered users/show.html.erb within layouts/application (360.4ms)
+  Rendered shared/_navbar.html.erb (15.7ms)
+  Rendered shared/_footer.html.erb (1.3ms)
+Completed 200 OK in 4472ms (Views: 4379.4ms | ActiveRecord: 41.2ms)
+
+
+Started DELETE "/library_items/51" for ::1 at 2020-12-04 17:14:25 +0100
+Processing by LibraryItemsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NWH5N1WuzsJSBb3o6PcDLR/CbzV3D6vMRiiN7XqC2daYiIasecYIO4g/oZjg4Iq7IBKtOWjRCntBCalWIKM0AA==", "id"=>"51"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.9ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:22
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/library_items_controller.rb:27
+  [1m[36mLibraryItem Destroy (0.6ms)[0m  [1m[31mDELETE FROM "library_items" WHERE "library_items"."id" = $1[0m  [["id", 51]]
+  ↳ app/controllers/library_items_controller.rb:27
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/library_items_controller.rb:27
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 22ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/users/6" for ::1 at 2020-12-04 17:14:25 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:8
+  [1m[36mLibraryItem Load (0.5ms)[0m  [1m[34mSELECT "library_items".* FROM "library_items" WHERE "library_items"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/views/users/show.html.erb:36
+  [1m[36mManga Load (0.5ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:38
+  [1m[36mManga Load (0.8ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:38
+  [1m[36mManga Load (0.5ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:38
+  [1m[36mManga Load (0.8ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:38
+  [1m[36mCACHE Manga Load (0.0ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:38
+  [1m[36mCACHE Manga Load (0.0ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:38
+  Rendered users/show.html.erb within layouts/application (62.6ms)
+  Rendered shared/_navbar.html.erb (26.7ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 340ms (Views: 323.3ms | ActiveRecord: 5.4ms)
+
+
+Started DELETE "/library_items/56" for ::1 at 2020-12-04 17:14:30 +0100
+Processing by LibraryItemsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CbK6Hw2RcCF1Ao9NdxB8ypn9xZ7nnrHQnnBrUV+eHsykW8WEIfm22K84kz1/B/Vcpi0HkvhAEGeZUU/qBb/zGg==", "id"=>"56"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (1.6ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:22
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/library_items_controller.rb:27
+  [1m[36mLibraryItem Destroy (2.2ms)[0m  [1m[31mDELETE FROM "library_items" WHERE "library_items"."id" = $1[0m  [["id", 56]]
+  ↳ app/controllers/library_items_controller.rb:27
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/library_items_controller.rb:27
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 25ms (ActiveRecord: 12.7ms)
+
+
+Started GET "/users/6" for ::1 at 2020-12-04 17:14:30 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (2.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:8
+  [1m[36mLibraryItem Load (1.2ms)[0m  [1m[34mSELECT "library_items".* FROM "library_items" WHERE "library_items"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/views/users/show.html.erb:36
+  [1m[36mManga Load (1.0ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:38
+  [1m[36mManga Load (0.4ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:38
+  [1m[36mManga Load (0.6ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:38
+  [1m[36mManga Load (0.9ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:38
+  [1m[36mCACHE Manga Load (0.0ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:38
+  Rendered users/show.html.erb within layouts/application (33.6ms)
+  Rendered shared/_navbar.html.erb (9.0ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 248ms (Views: 224.1ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/mangas" for ::1 at 2020-12-04 17:14:38 +0100
+Processing by MangasController#index as HTML
+  [1m[35m (16.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "mangas"[0m
+  ↳ app/controllers/mangas_controller.rb:3
+  Rendering mangas/index.html.erb within layouts/application
+  [1m[36mManga Load (0.7ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/mangas/_mangaCard.html.erb:3
+  Rendered mangas/_mangaCard.html.erb (11.9ms)
+  Rendered mangas/index.html.erb within layouts/application (14.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:27
+  Rendered shared/_navbar.html.erb (15.8ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 187ms (Views: 164.6ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/mangas/3" for ::1 at 2020-12-04 17:14:40 +0100
+Processing by MangasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mManga Load (0.5ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/mangas_controller.rb:7
+  Rendering mangas/show.html.erb within layouts/application
+  [1m[36mLibraryItem Load (0.5ms)[0m  [1m[34mSELECT "library_items".* FROM "library_items" WHERE "library_items"."manga_id" = $1[0m  [["manga_id", 3]]
+  ↳ app/views/mangas/show.html.erb:36
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/mangas/show.html.erb:37
+  Rendered mangas/show.html.erb within layouts/application (11.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:27
+  Rendered shared/_navbar.html.erb (18.6ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 241ms (Views: 231.0ms | ActiveRecord: 4.5ms)
+
+
+Started POST "/mangas/3/library_items" for ::1 at 2020-12-04 17:14:43 +0100
+Processing by LibraryItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"hfIgv5Q+vm3/xnEk3WPprMr5tgSvD4r6/TlwtadpQZooG18kuFZ4lCX8bVTVdGA69Sl0CLDRK036GFQO/UisTA==", "manga_id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/library_items_controller.rb:16
+  [1m[36mManga Load (0.2ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:16
+  [1m[36mLibraryItem Create (1.4ms)[0m  [1m[32mINSERT INTO "library_items" ("state_description", "user_id", "manga_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["state_description", "une description"], ["user_id", 6], ["manga_id", 3], ["created_at", "2020-12-04 16:14:43.459505"], ["updated_at", "2020-12-04 16:14:43.459505"]]
+  ↳ app/controllers/library_items_controller.rb:16
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/library_items_controller.rb:16
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 22ms (ActiveRecord: 8.9ms)
+
+
+Started GET "/users/6" for ::1 at 2020-12-04 17:14:43 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:8
+  [1m[36mLibraryItem Load (0.4ms)[0m  [1m[34mSELECT "library_items".* FROM "library_items" WHERE "library_items"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/views/users/show.html.erb:36
+  [1m[36mManga Load (0.3ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:38
+  [1m[36mManga Load (0.3ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:38
+  [1m[36mManga Load (0.4ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:38
+  [1m[36mManga Load (0.4ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:38
+  [1m[36mCACHE Manga Load (0.0ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:38
+  [1m[36mManga Load (1.1ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:38
+  Rendered users/show.html.erb within layouts/application (36.2ms)
+  Rendered shared/_navbar.html.erb (15.8ms)
+  Rendered shared/_footer.html.erb (1.7ms)
+Completed 200 OK in 179ms (Views: 166.7ms | ActiveRecord: 4.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-12-04 17:14:52 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"aC3IWEPCCAb1qsUUcJRrQc7ebhap7u5Z0bzeNq1Y9A7FxLfDb6rO/y+Q2WR4g+LX8Q6sGrYwT+7WnfqN93kZ2A=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 189ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-12-04 17:14:52 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  [1m[36mLibraryItem Load (0.3ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" ORDER BY "library_items"."id" DESC LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/controllers/static_pages_controller.rb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 3]]
+  ↳ app/controllers/static_pages_controller.rb:4
+  Rendering static_pages/index.html.erb within layouts/application
+  [1m[36mManga Load (0.3ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mCACHE Manga Load (0.0ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mManga Load (0.4ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mManga Load (0.4ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mCACHE Manga Load (0.0ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  Rendered static_pages/_card.html.erb (11.2ms)
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card-user.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card-user.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card-user.html.erb:6
+  Rendered static_pages/_card-user.html.erb (17.4ms)
+  Rendered static_pages/index.html.erb within layouts/application (57.6ms)
+  Rendered shared/_navbar.html.erb (13.7ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 150ms (Views: 141.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-12-04 17:15:01 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.4ms)
+  Rendered users/sessions/new.html.erb within layouts/application (111.6ms)
+  Rendered shared/_navbar.html.erb (11.8ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 205ms (Views: 202.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-12-04 17:15:18 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lCyH+l/2pIQ347Rr2tQwvOi9+n+jvO3SlF1fuFYPa5vyVbu+LXM9JuAp1qoXQn0sa7B2256qXmKQgmX4np4sLQ==", "user"=>{"email"=>"jj@hotmail.fr", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "jj@hotmail.fr"], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.6ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lCyH+l/2pIQ347Rr2tQwvOi9+n+jvO3SlF1fuFYPa5vyVbu+LXM9JuAp1qoXQn0sa7B2256qXmKQgmX4np4sLQ==", "user"=>{"email"=>"jj@hotmail.fr", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (3.5ms)
+  Rendered users/sessions/new.html.erb within layouts/application (18.8ms)
+  Rendered shared/_navbar.html.erb (8.3ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 424ms (Views: 83.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-12-04 17:15:35 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.7ms)
+  Rendered users/registrations/new.html.erb within layouts/application (37.2ms)
+  Rendered shared/_navbar.html.erb (6.7ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 158ms (Views: 155.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2020-12-04 17:15:54 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iBNmorY7KpM664lNzaoI3e8iFGVSkb5fF9Zl4sjPpu5qcNwgfc/zbVFBbnKU/tpb5OWGP2vjxRKlzN/EIqDGjw==", "user"=>{"email"=>"22@23.Fr", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "22@23.fr"], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "22@23.fr"], ["encrypted_password", "$2a$12$tbZj2bfqTkEZ9UIqx7dYG.26LsHtUtIIx8.SAofQ8InI9.OgW1xOe"], ["created_at", "2020-12-04 16:15:54.663908"], ["updated_at", "2020-12-04 16:15:54.663908"]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (0.8ms)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (0.6ms)
+UserMailer#welcome_email: processed outbound mail in 41.0ms
+Sent mail to 22@23.fr (338.0ms)
+Date: Fri, 04 Dec 2020 17:15:54 +0100
+From: no-reply-to-kasu@yopmail.com
+To: 22@23.fr
+Message-ID: <5fca60bab141c_2720f0f0721de@MacBook-Pro-de-Victoria.local.mail>
+Subject: Bienvenue chez nous !
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5fca60baaf578_2720f0f0720b9";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5fca60baaf578_2720f0f0720b9
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgR3Vlc3QgZXQgYmllbnZlbnVlIGNoZXogbm91cyAhDQo9PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09DQogDQpUdSB0J2VzIGluc2NyaXQgc3VyIG1vbnNpdGUuZnIgZW4g
+dXRpbGlzYW50IGwnZS1tYWlsIHN1aXZhbnQgOiAyMkAyMy5mci4NCiANClBv
+dXIgYWNjw6lkZXIgw6AgdG9uIGVzcGFjZSBjbGllbnQsIGNvbm5lY3RlLXRv
+aSB2aWEgOiBodHRwOi8vbW9uc2l0ZS5mci9sb2dpbi4NCiANCsOAIHRyw6hz
+IHZpdGUgc3VyIG1vbnNpdGUuZnIgIQ0K
+
+----==_mimepart_5fca60baaf578_2720f0f0720b9
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+  </head>=0D
+  <body>=0D
+    <h1>Salut Guest et bienvenue chez nous !</h1>=0D
+    <p>=0D
+      Tu t'es inscrit sur monsite.fr en utilisant l'e-mail suivant : 22@2=
+3.fr.=0D
+    </p>=0D
+    <p>=0D
+      Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : http=
+://monsite.fr/login.=0D
+    </p>=0D
+    <p> =C3=80 tr=C3=A8s vite sur monsite.fr !=0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_5fca60baaf578_2720f0f0720b9--
+
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 761ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/" for ::1 at 2020-12-04 17:15:55 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  [1m[36mLibraryItem Load (0.4ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" ORDER BY "library_items"."id" DESC LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/controllers/static_pages_controller.rb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 3]]
+  ↳ app/controllers/static_pages_controller.rb:4
+  Rendering static_pages/index.html.erb within layouts/application
+  [1m[36mManga Load (0.5ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mCACHE Manga Load (0.0ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mManga Load (0.8ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mManga Load (0.3ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mCACHE Manga Load (0.0ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  Rendered static_pages/_card.html.erb (10.8ms)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card-user.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card-user.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card-user.html.erb:6
+  Rendered static_pages/_card-user.html.erb (9.5ms)
+  Rendered static_pages/index.html.erb within layouts/application (37.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:27
+  Rendered shared/_navbar.html.erb (9.3ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 110ms (Views: 101.3ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/mangas" for ::1 at 2020-12-04 17:16:06 +0100
+Processing by MangasController#index as HTML
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "mangas"[0m
+  ↳ app/controllers/mangas_controller.rb:3
+  Rendering mangas/index.html.erb within layouts/application
+  [1m[36mManga Load (1.8ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/mangas/_mangaCard.html.erb:3
+  Rendered mangas/_mangaCard.html.erb (12.1ms)
+  Rendered mangas/index.html.erb within layouts/application (14.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:27
+  Rendered shared/_navbar.html.erb (12.4ms)
+  Rendered shared/_footer.html.erb (1.1ms)
+Completed 200 OK in 176ms (Views: 168.7ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/mangas/3" for ::1 at 2020-12-04 17:16:10 +0100
+Processing by MangasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mManga Load (0.6ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/mangas_controller.rb:7
+  Rendering mangas/show.html.erb within layouts/application
+  [1m[36mLibraryItem Load (1.1ms)[0m  [1m[34mSELECT "library_items".* FROM "library_items" WHERE "library_items"."manga_id" = $1[0m  [["manga_id", 3]]
+  ↳ app/views/mangas/show.html.erb:36
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/mangas/show.html.erb:37
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/mangas/show.html.erb:37
+  Rendered mangas/show.html.erb within layouts/application (9.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:27
+  Rendered shared/_navbar.html.erb (23.8ms)
+  Rendered shared/_footer.html.erb (1.1ms)
+Completed 200 OK in 124ms (Views: 115.9ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/library_items/61" for ::1 at 2020-12-04 17:16:25 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"61"}
+  [1m[36mUser Load (28.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.7ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 61], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.4ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:1
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:1
+  [1m[36mManga Load (0.7ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/views/library_items/show.html.erb:27
+  Rendered library_items/show.html.erb within layouts/application (42.4ms)
+  Rendered shared/_navbar.html.erb (6.2ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 163ms (Views: 124.6ms | ActiveRecord: 30.6ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:16:38 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.9ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.4ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:1
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:1
+  [1m[36mManga Load (0.7ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:27
+  Rendered library_items/show.html.erb within layouts/application (8.4ms)
+  Rendered shared/_navbar.html.erb (8.8ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 110ms (Views: 100.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:21:25 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.7ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.3ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (0.5ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:29
+  Rendered library_items/show.html.erb within layouts/application (7.7ms)
+  Rendered shared/_navbar.html.erb (10.0ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 82ms (Views: 73.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:21:45 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.3ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.3ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (0.5ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:29
+  Rendered library_items/show.html.erb within layouts/application (5.7ms)
+  Rendered shared/_navbar.html.erb (7.0ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 67ms (Views: 61.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:22:27 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.3ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.4ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (0.7ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:31
+  Rendered library_items/show.html.erb within layouts/application (9.1ms)
+  Rendered shared/_navbar.html.erb (13.3ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 93ms (Views: 84.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:22:50 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.3ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.4ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (1.1ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:32
+  Rendered library_items/show.html.erb within layouts/application (10.1ms)
+  Rendered shared/_navbar.html.erb (17.9ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 88ms (Views: 79.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:23:16 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.4ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.3ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (0.6ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:32
+  Rendered library_items/show.html.erb within layouts/application (5.5ms)
+  Rendered shared/_navbar.html.erb (7.0ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 66ms (Views: 58.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:23:45 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.3ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.3ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (0.6ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:32
+  Rendered library_items/show.html.erb within layouts/application (7.9ms)
+  Rendered shared/_navbar.html.erb (5.0ms)
+  Rendered shared/_footer.html.erb (1.0ms)
+Completed 200 OK in 77ms (Views: 68.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:23:51 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.4ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.4ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (0.8ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:32
+  Rendered library_items/show.html.erb within layouts/application (13.9ms)
+  Rendered shared/_navbar.html.erb (14.1ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 124ms (Views: 112.9ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:23:57 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.4ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.3ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (0.9ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:32
+  Rendered library_items/show.html.erb within layouts/application (8.4ms)
+  Rendered shared/_navbar.html.erb (8.3ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 111ms (Views: 98.8ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:24:05 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.4ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.6ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (0.9ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:32
+  Rendered library_items/show.html.erb within layouts/application (13.2ms)
+  Rendered shared/_navbar.html.erb (9.8ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 103ms (Views: 93.5ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:24:18 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.2ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.3ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (0.5ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:32
+  Rendered library_items/show.html.erb within layouts/application (5.8ms)
+  Rendered shared/_navbar.html.erb (7.7ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 77ms (Views: 71.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:24:28 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.3ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.3ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (0.7ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:32
+  Rendered library_items/show.html.erb within layouts/application (7.1ms)
+  Rendered shared/_navbar.html.erb (6.7ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 74ms (Views: 67.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:24:30 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.3ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.3ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (0.9ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:32
+  Rendered library_items/show.html.erb within layouts/application (7.8ms)
+  Rendered shared/_navbar.html.erb (4.5ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 79ms (Views: 72.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:25:18 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.3ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.2ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (0.5ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:32
+  Rendered library_items/show.html.erb within layouts/application (5.5ms)
+  Rendered shared/_navbar.html.erb (7.1ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 75ms (Views: 68.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:25:37 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.2ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.4ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (0.6ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:33
+  Rendered library_items/show.html.erb within layouts/application (7.2ms)
+  Rendered shared/_navbar.html.erb (8.1ms)
+  Rendered shared/_footer.html.erb (1.3ms)
+Completed 200 OK in 79ms (Views: 72.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:26:00 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.3ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.3ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (1.5ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:32
+  Rendered library_items/show.html.erb within layouts/application (11.1ms)
+  Rendered shared/_navbar.html.erb (10.7ms)
+  Rendered shared/_footer.html.erb (1.1ms)
+Completed 200 OK in 86ms (Views: 79.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:26:15 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.3ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.5ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (0.6ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:32
+  Rendered library_items/show.html.erb within layouts/application (7.3ms)
+  Rendered shared/_navbar.html.erb (8.2ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 67ms (Views: 60.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:26:22 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.4ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.6ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (1.1ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:32
+  Rendered library_items/show.html.erb within layouts/application (9.3ms)
+  Rendered shared/_navbar.html.erb (11.7ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 106ms (Views: 98.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:26:31 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (1.5ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.4ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (0.8ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:32
+  Rendered library_items/show.html.erb within layouts/application (11.0ms)
+  Rendered shared/_navbar.html.erb (6.9ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 98ms (Views: 84.4ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:26:37 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (10.6ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.7ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (7.1ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:32
+  Rendered library_items/show.html.erb within layouts/application (17.3ms)
+  Rendered shared/_navbar.html.erb (87.6ms)
+  Rendered shared/_footer.html.erb (1.0ms)
+Completed 200 OK in 307ms (Views: 280.3ms | ActiveRecord: 21.5ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:27:04 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.4ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.3ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (0.8ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:32
+  Rendered library_items/show.html.erb within layouts/application (6.7ms)
+  Rendered shared/_navbar.html.erb (6.4ms)
+  Rendered shared/_footer.html.erb (1.1ms)
+Completed 200 OK in 85ms (Views: 76.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:27:12 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.3ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.4ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (1.0ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:32
+  Rendered library_items/show.html.erb within layouts/application (8.9ms)
+  Rendered shared/_navbar.html.erb (16.2ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 125ms (Views: 117.3ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:28:05 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.3ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.4ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (0.8ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:32
+  Rendered library_items/show.html.erb within layouts/application (10.4ms)
+  Rendered shared/_navbar.html.erb (7.7ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 81ms (Views: 73.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:28:24 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.3ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.3ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (2.5ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:31
+  Rendered library_items/show.html.erb within layouts/application (12.8ms)
+  Rendered shared/_navbar.html.erb (6.7ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 83ms (Views: 73.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:28:38 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.8ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.3ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (0.5ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:31
+  Rendered library_items/show.html.erb within layouts/application (6.3ms)
+  Rendered shared/_navbar.html.erb (4.7ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 68ms (Views: 60.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:28:48 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.3ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (1.5ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (0.7ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:30
+  Rendered library_items/show.html.erb within layouts/application (17.4ms)
+  Rendered shared/_navbar.html.erb (8.8ms)
+  Rendered shared/_footer.html.erb (1.5ms)
+Completed 200 OK in 82ms (Views: 69.2ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:28:58 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.4ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.3ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (0.5ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:30
+  Rendered library_items/show.html.erb within layouts/application (5.4ms)
+  Rendered shared/_navbar.html.erb (9.1ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 67ms (Views: 61.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:29:43 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.3ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.4ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (0.8ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:30
+  Rendered library_items/show.html.erb within layouts/application (10.7ms)
+  Rendered shared/_navbar.html.erb (6.9ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 78ms (Views: 72.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:32:23 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.3ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.3ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (5.1ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:29
+  Rendered library_items/show.html.erb within layouts/application (12.9ms)
+  Rendered shared/_navbar.html.erb (8.9ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 110ms (Views: 97.9ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:32:50 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.3ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.7ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (0.8ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:29
+  Rendered library_items/show.html.erb within layouts/application (10.1ms)
+  Rendered shared/_navbar.html.erb (11.4ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 99ms (Views: 92.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:33:01 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (15.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.3ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (1.2ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (1.1ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:29
+  Rendered library_items/show.html.erb within layouts/application (11.1ms)
+  Rendered shared/_navbar.html.erb (8.9ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 107ms (Views: 83.5ms | ActiveRecord: 18.8ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:33:56 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.3ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.3ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (1.4ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:30
+  Rendered library_items/show.html.erb within layouts/application (9.7ms)
+  Rendered shared/_navbar.html.erb (7.7ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 97ms (Views: 85.3ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:34:05 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.3ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.5ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (1.1ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:30
+  Rendered library_items/show.html.erb within layouts/application (9.3ms)
+  Rendered shared/_navbar.html.erb (16.9ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 113ms (Views: 105.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:34:14 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (1.2ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (2.7ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (0.7ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:30
+  Rendered library_items/show.html.erb within layouts/application (15.9ms)
+  Rendered shared/_navbar.html.erb (20.1ms)
+  Rendered shared/_footer.html.erb (4.4ms)
+Completed 200 OK in 244ms (Views: 231.8ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:34:52 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.4ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.4ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (1.0ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:30
+  Rendered library_items/show.html.erb within layouts/application (10.0ms)
+  Rendered shared/_navbar.html.erb (10.3ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 86ms (Views: 76.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:34:59 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.5ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.3ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (0.5ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:30
+  Rendered library_items/show.html.erb within layouts/application (5.3ms)
+  Rendered shared/_navbar.html.erb (8.2ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 76ms (Views: 69.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:35:07 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.3ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.3ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (0.5ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:30
+  Rendered library_items/show.html.erb within layouts/application (6.1ms)
+  Rendered shared/_navbar.html.erb (9.2ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 90ms (Views: 83.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:35:13 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.7ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (1.5ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (9.0ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:30
+  Rendered library_items/show.html.erb within layouts/application (17.9ms)
+  Rendered shared/_navbar.html.erb (16.9ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 159ms (Views: 137.7ms | ActiveRecord: 16.4ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:35:25 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.4ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.3ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (0.7ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:30
+  Rendered library_items/show.html.erb within layouts/application (7.9ms)
+  Rendered shared/_navbar.html.erb (14.5ms)
+  Rendered shared/_footer.html.erb (2.1ms)
+Completed 200 OK in 92ms (Views: 85.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:35:45 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.3ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.3ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (0.8ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:30
+  Rendered library_items/show.html.erb within layouts/application (10.9ms)
+  Rendered shared/_navbar.html.erb (9.6ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 89ms (Views: 82.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:35:51 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (1.6ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.8ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (2.5ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:30
+  Rendered library_items/show.html.erb within layouts/application (12.3ms)
+  Rendered shared/_navbar.html.erb (16.0ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 151ms (Views: 138.8ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:36:14 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.4ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.3ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (1.1ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:30
+  Rendered library_items/show.html.erb within layouts/application (16.8ms)
+  Rendered shared/_navbar.html.erb (11.2ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 120ms (Views: 109.9ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:36:35 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.3ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.3ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (0.6ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:30
+  Rendered library_items/show.html.erb within layouts/application (7.0ms)
+  Rendered shared/_navbar.html.erb (6.1ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 80ms (Views: 73.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:36:46 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.5ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.4ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (1.3ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:30
+  Rendered library_items/show.html.erb within layouts/application (10.8ms)
+  Rendered shared/_navbar.html.erb (17.6ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 106ms (Views: 95.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:37:06 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.4ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.4ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (0.7ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:30
+  Rendered library_items/show.html.erb within layouts/application (9.8ms)
+  Rendered shared/_navbar.html.erb (6.0ms)
+  Rendered shared/_footer.html.erb (1.0ms)
+Completed 200 OK in 77ms (Views: 69.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:37:12 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.2ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.3ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (1.0ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:30
+  Rendered library_items/show.html.erb within layouts/application (6.9ms)
+  Rendered shared/_navbar.html.erb (7.0ms)
+  Rendered shared/_footer.html.erb (1.2ms)
+Completed 200 OK in 69ms (Views: 62.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:37:20 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.5ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (1.6ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (1.1ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:30
+  Rendered library_items/show.html.erb within layouts/application (12.0ms)
+  Rendered shared/_navbar.html.erb (9.5ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 106ms (Views: 96.9ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:37:32 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (1.4ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.3ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (0.5ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:30
+  Rendered library_items/show.html.erb within layouts/application (5.5ms)
+  Rendered shared/_navbar.html.erb (8.9ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 81ms (Views: 72.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:38:02 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.3ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.5ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (0.6ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:29
+  Rendered library_items/show.html.erb within layouts/application (12.4ms)
+  Rendered shared/_navbar.html.erb (5.1ms)
+  Rendered shared/_footer.html.erb (1.1ms)
+Completed 200 OK in 76ms (Views: 68.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:38:26 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.3ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (0.4ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (0.8ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:29
+  Rendered library_items/show.html.erb within layouts/application (9.6ms)
+  Rendered shared/_navbar.html.erb (11.4ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 87ms (Views: 78.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:38:34 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (9.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (11.2ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (1.2ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (4.0ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:29
+  Rendered library_items/show.html.erb within layouts/application (14.3ms)
+  Rendered shared/_navbar.html.erb (13.2ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 149ms (Views: 115.9ms | ActiveRecord: 26.4ms)
+
+
+Started GET "/library_items/60" for ::1 at 2020-12-04 17:39:15 +0100
+Processing by LibraryItemsController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.3ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:10
+  Rendering library_items/show.html.erb within layouts/application
+  [1m[36mManga Load (3.9ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/library_items/show.html.erb:3
+  [1m[36mManga Load (0.6ms)[0m  [1m[34mSELECT "mangas".* FROM "mangas" INNER JOIN "library_items" ON "mangas"."id" = "library_items"."manga_id" WHERE "library_items"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/views/library_items/show.html.erb:29
+  Rendered library_items/show.html.erb within layouts/application (13.5ms)
+  Rendered shared/_navbar.html.erb (10.5ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 104ms (Views: 94.0ms | ActiveRecord: 5.5ms)
+
+
