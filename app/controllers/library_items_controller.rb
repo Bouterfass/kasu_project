@@ -14,7 +14,7 @@ class LibraryItemsController < ApplicationController
         puts "Hola!!"
         puts params
         @item = LibraryItem.create(state_description: "une description", user: current_user, manga_id:params[:manga_id])
-        redirect_to edit_user_path(current_user)
+        redirect_to user_path(current_user)
  
     end
 
@@ -24,11 +24,8 @@ class LibraryItemsController < ApplicationController
         #@item = LibraryItem.where(user: current_user, manga_id:@manga.id)
 
         puts @item
-        puts "Hello"
-
         @item.destroy
-
-        redirect_to '/users/' + current_user.id.to_s + '/edit'
+        redirect_to '/users/' + current_user.id.to_s
     end   
        
    
