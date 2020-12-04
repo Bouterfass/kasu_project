@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
     include Pagy::Backend
+    add_flash_types :info, :error, :warning, :success, :notice, :danger
     before_action :configure_devise_parameters, if: :devise_controller?
 
     def configure_devise_parameters
