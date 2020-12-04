@@ -2,11 +2,11 @@
 	<div class="row m-2">
 		<% @items.each do |item|%>
 				<div class="col-md-3 col-sm-6 ">
-					<div class="card p-3 card-block ">
-						<img src="<%= item.manga.image_url %> " alt="Photo of sunset">
-						<h4 class="card-title mt-3 mb-3"><%= item.manga.title%></h4>
-						<h5 class="card-title mt-3 mb-3"><%= item.manga.author%></h5>
-						<%= link_to 'voir', manga_path(item.manga), class:%>
+					<div class="card x p-3 card-block ">
+						<img class='img-x' src="<%= item.manga.image_url %> " alt="Photo of sunset">
+						<h4 class="card-title x-title mt-3 mb-3"><%= item.manga.title%></h4>
+						<h5 class="card-title x-title mt-3 mb-3"><%= item.manga.author%></h5>
+						<a href="<%= manga_path(item.manga)%>" class="button dsgnmoo">Voir ceux qui le possèdent </a>
 					</div>
 				</div>
 		<% end %>

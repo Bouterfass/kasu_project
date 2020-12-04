@@ -2,7 +2,7 @@
 /*==========================
     Card template
 ============================*/
-.img-card{
+.img-x{
     max-height:70%;
     max-width: 70%;
     
@@ -13,28 +13,29 @@
     padding-right:5px;
     margin: 20px;
   }
-  .card{
+  .x{
     transition:0.5s;
     cursor:pointer;
     border: 1px solid;
   }
 
-  .card-title{  
+  .x-title{  
     font-size:15px;
     transition:1s;
     cursor:pointer;
   }
 
-  .card:hover{
+  .x:hover{
     transform: scale(1.05);
     box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
   }
 
-  .card-text{
-    height:80px;  
+  .x-text{
+    height:80px;
+    font-family: system-ui;  
   }
   
-  .card::before, .card::after {
+  .x::before, .x::after {
     position: absolute;
     top: 0;
     right: 0;
@@ -47,26 +48,46 @@
     pointer-events: none;
   }
 
-  .card::before {
+  .x::before {
     transform-origin: left top;
   }
 
-  .card::after {
+  .x::after {
     transform-origin: right bottom;
   }
 
-  .card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
+  .x:hover::before, .x:hover::after, .x:focus::before, .x:focus::after {
     transform: scale3d(1, 1, 1);
   }
 
-  .btn-card{
-      background-color:  #ffffff;
-      border: 1px solid;
-      border-color:  #ff1016;
-      color: #333333;
-      padding: 10px 40px;
-      text-align: center;
-      display: inline-block;
-      border-radius: 20px;
-      font-size: 15px;
-  }
+  a.button.dsgnmoo {
+    background: #f97779;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#f97779), to(#ce2424));
+    background: -moz-linear-gradient(#f97779, #ce2424);
+    background: linear-gradient(#f97779, #ce2424);
+    border: solid 1px #be2424;
+    border-bottom: solid 3px #bd2524;
+    box-shadow: inset 0 0 0 1px #e67e7b;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    height: 40px;
+    text-shadow: 0 1px 0 #bd2524; }
+    
+a.button.dsgnmoo:hover {
+    background: #ce2424;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ce2424), to(#f97779));
+    background: -moz-linear-gradient(#ce2424, #f97779);
+    background: linear-gradient(#ce2424, #f97779);
+    border: solid 1px #be2424;
+    border-bottom: solid 3px #bd2524;
+    box-shadow: inset 0 0 0 1px #e67e7b; }
+    
+a.button.dsgnmoo:active {
+    background: #ce2424;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ce2424), to(#f97779));
+    background: -moz-linear-gradient(#ce2424, #f97779);
+    background: linear-gradient(#ce2424, #f97779);
+    border: solid 1px #be2424;
+    box-shadow: inset 0 10px 15px 0 #bd2524; }
+  
