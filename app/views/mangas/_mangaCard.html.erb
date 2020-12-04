@@ -13,8 +13,8 @@
 			</a>
 			<div class="card__info">
 			<h3 class="card__title"><%= manga.title.capitalize %></h3>
-			<span class="card__by">by <%= manga.author%></span>
-			<%= link_to "Voir les utilisateurs", manga_path(manga), class: 'btn btn-info mt-2'%>
+			<span class="card__by">by <%= manga.author%></span><br>
+			<%= link_to "Voir le manga", manga_path(manga), class: 'btn btn-info mt-2'%>
 			</div>
 		</article>
 					
