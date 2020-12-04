@@ -6,6 +6,7 @@
         <div class="row p-5">
             <div class="col d-flex justify-content-center">
                 <img class='image' style="height:170%" src="<%= @manga.image_url %>" alt="Manga-item">
+								<%= image_tag @manga.cover %>				
             </div>
             <div class="col">
                 <h1><%= @manga.title.capitalize %></h1>
@@ -31,12 +32,15 @@
     <div class="container px-5">
         <div class="row px-5">
             <div class="col px-5">
+							
                 <h2> Les Fans qui proposent ce Manga </h2>
                 <ul class=" px-5">
                     <% @items.each do |item|%>
+                    
                     <li><%= item.user.name%>
                     <%= link_to "Demander ce Manga", library_item_path(item.id) %>
                     </li>
+                    
                     <%end%>
                 </ul>
             </div>
