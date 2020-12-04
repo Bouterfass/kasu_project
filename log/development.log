@@ -20013,3 +20013,260 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 131ms (Views: 111.0ms | ActiveRecord: 14.1ms)
 
 
+Started GET "/users/14" for ::1 at 2020-12-04 16:45:09 +0100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/youcef/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ /home/youcef/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 14], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:8
+  [1m[36mActiveStorage::Blob Load (4.9ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:8
+  [1m[36mLibraryItem Load (0.5ms)[0m  [1m[34mSELECT "library_items".* FROM "library_items" WHERE "library_items"."user_id" = $1[0m  [["user_id", 14]]
+  ↳ app/views/users/show.html.erb:36
+  [1m[36mManga Load (0.7ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:38
+  [1m[36mManga Load (0.5ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:38
+  Rendered users/show.html.erb within layouts/application (127.1ms)
+  Rendered shared/_navbar.html.erb (7.0ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 483ms (Views: 394.8ms | ActiveRecord: 42.9ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--425cea96773725841592b1df15674f544f43584f/header.jpg" for ::1 at 2020-12-04 16:45:10 +0100
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--425cea96773725841592b1df15674f544f43584f", "filename"=>"header"}
+  [1m[36mActiveStorage::Blob Load (5.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/youcef/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (505.5ms) [0m[34mGenerated URL for file at key: 4AmssFcU2yw9oHq9F3oKMcSL (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRORUZ0YzNOR1kxVXllWGM1YjBoeE9VWXpiMHROWTFOTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSS9hVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlhR1ZoWkdWeUxtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuYUdWaFpHVnlMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMi0wNFQxNTo1MDoxMS4wODhaIiwicHVyIjoiYmxvYl9rZXkifX0=--157133ba9ae81760c3e6ed334685b63b85413d8f/header.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22header.jpg%22%3B+filename%2A%3DUTF-8%27%27header.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRORUZ0YzNOR1kxVXllWGM1YjBoeE9VWXpiMHROWTFOTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSS9hVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlhR1ZoWkdWeUxtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuYUdWaFpHVnlMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMi0wNFQxNTo1MDoxMS4wODhaIiwicHVyIjoiYmxvYl9rZXkifX0=--157133ba9ae81760c3e6ed334685b63b85413d8f/header.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22header.jpg%22%3B+filename%2A%3DUTF-8%27%27header.jpg
+Completed 302 Found in 516ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRORUZ0YzNOR1kxVXllWGM1YjBoeE9VWXpiMHROWTFOTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSS9hVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlhR1ZoWkdWeUxtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuYUdWaFpHVnlMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMi0wNFQxNTo1MDoxMS4wODhaIiwicHVyIjoiYmxvYl9rZXkifX0=--157133ba9ae81760c3e6ed334685b63b85413d8f/header.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22header.jpg%22%3B+filename%2A%3DUTF-8%27%27header.jpg" for ::1 at 2020-12-04 16:45:11 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"header.jpg\"; filename*=UTF-8''header.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRORUZ0YzNOR1kxVXllWGM1YjBoeE9VWXpiMHROWTFOTUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSS9hVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlhR1ZoWkdWeUxtcHdaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuYUdWaFpHVnlMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0xMi0wNFQxNTo1MDoxMS4wODhaIiwicHVyIjoiYmxvYl9rZXkifX0=--157133ba9ae81760c3e6ed334685b63b85413d8f", "filename"=>"header"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/14" for ::1 at 2020-12-04 16:45:15 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ /home/youcef/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 14], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:8
+  [1m[36mLibraryItem Load (0.4ms)[0m  [1m[34mSELECT "library_items".* FROM "library_items" WHERE "library_items"."user_id" = $1[0m  [["user_id", 14]]
+  ↳ app/views/users/show.html.erb:36
+  [1m[36mManga Load (1.5ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:38
+  [1m[36mManga Load (0.6ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:38
+  Rendered users/show.html.erb within layouts/application (18.0ms)
+  Rendered shared/_navbar.html.erb (4.9ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 67ms (Views: 57.3ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/users/edit.14" for ::1 at 2020-12-04 16:45:33 +0100
+Processing by Devise::RegistrationsController#edit as 
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ /home/youcef/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  Rendering users/registrations/edit.html.erb within layouts/application
+  Rendered users/registrations/edit.html.erb within layouts/application (36.7ms)
+  Rendered shared/_navbar.html.erb (4.6ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 99ms (Views: 96.0ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/users" for ::1 at 2020-12-04 16:45:47 +0100
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AHPcs8WRM7CNfxPwrrlFLBU5R7Xu2TO/IGW3VeowWkziQJ2+p8oSAPcme4b7y4qhr4PEcmfh+bGjKaaf8yZvrQ==", "user"=>{"email"=>"you@you.fr", "name"=>"youceff", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x00007f22f4c017a0 @tempfile=#<Tempfile:/tmp/RackMultipart20201204-249955-z4c6e1.png>, @original_filename="gon.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"gon.png\"\r\nContent-Type: image/png\r\n">, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ /home/youcef/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ /home/youcef/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/youcef/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 14], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ /home/youcef/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/youcef/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (2.1ms) [0m[32mUploaded file to key: 49FAm3jax7iU9cBqUanML4J9 (checksum: mQrzPSeqFWLvxNKWuXh0Dw==)[0m
+  [1m[36mActiveStorage::Blob Create (1.2ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "49FAm3jax7iU9cBqUanML4J9"], ["filename", "gon.png"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["byte_size", 283040], ["checksum", "mQrzPSeqFWLvxNKWuXh0Dw=="], ["created_at", "2020-12-04 15:45:47.888827"]]
+  ↳ /home/youcef/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Attachment Destroy (0.3ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 4]]
+  ↳ /home/youcef/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Attachment Create (2.8ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "avatar"], ["record_type", "User"], ["record_id", 14], ["blob_id", 5], ["created_at", "2020-12-04 15:45:47.895768"]]
+  ↳ /home/youcef/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: 6c0167cc-7d1d-49b0-b8a7-8e510026f95d) to Async(default) with arguments: #<GlobalID:0x00007f22f4f17188 @uri=#<URI::GID gid://kasu-project/ActiveStorage::Blob/4>>
+  [1m[36mUser Update (4.1ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1 WHERE "users"."id" = $2[0m  [["updated_at", "2020-12-04 15:45:47.900573"], ["id", 14]]
+  ↳ /home/youcef/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /home/youcef/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [6c0167cc-7d1d-49b0-b8a7-8e510026f95d] Performing ActiveStorage::PurgeJob (Job ID: 6c0167cc-7d1d-49b0-b8a7-8e510026f95d) from Async(default) with arguments: #<GlobalID:0x00007f22ec05ad28 @uri=#<URI::GID gid://kasu-project/ActiveStorage::Blob/4>>
+[ActiveJob] [ActiveStorage::PurgeJob] [6c0167cc-7d1d-49b0-b8a7-8e510026f95d]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [6c0167cc-7d1d-49b0-b8a7-8e510026f95d]   ↳ /home/youcef/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [6c0167cc-7d1d-49b0-b8a7-8e510026f95d]   [1m[36mActiveStorage::Attachment Exists (3.6ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 4], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [6c0167cc-7d1d-49b0-b8a7-8e510026f95d]   ↳ /home/youcef/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [6c0167cc-7d1d-49b0-b8a7-8e510026f95d]   [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [6c0167cc-7d1d-49b0-b8a7-8e510026f95d]   ↳ /home/youcef/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::PurgeJob] [6c0167cc-7d1d-49b0-b8a7-8e510026f95d] Performed ActiveStorage::PurgeJob (Job ID: 6c0167cc-7d1d-49b0-b8a7-8e510026f95d) from Async(default) in 9.91ms
+  [1m[35m (34.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/youcef/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 92b5da06-168e-42a6-aacd-8ac144c01371) to Async(default) with arguments: #<GlobalID:0x00007f22f4f37190 @uri=#<URI::GID gid://kasu-project/ActiveStorage::Blob/5>>
+Redirected to http://localhost:3000/
+Completed 302 Found in 407ms (ActiveRecord: 45.9ms)
+
+
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /home/youcef/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [92b5da06-168e-42a6-aacd-8ac144c01371] Performing ActiveStorage::AnalyzeJob (Job ID: 92b5da06-168e-42a6-aacd-8ac144c01371) from Async(default) with arguments: #<GlobalID:0x00007f22ec0cbbe0 @uri=#<URI::GID gid://kasu-project/ActiveStorage::Blob/5>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [92b5da06-168e-42a6-aacd-8ac144c01371] [36m  Disk Storage (1.4ms) [0m[34mDownloaded file from key: 49FAm3jax7iU9cBqUanML4J9[0m
+Started GET "/" for ::1 at 2020-12-04 16:45:47 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+[ActiveJob] [ActiveStorage::AnalyzeJob] [92b5da06-168e-42a6-aacd-8ac144c01371]   [1m[35m (5.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLibraryItem Load (1.3ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" ORDER BY "library_items"."id" DESC LIMIT $1[0m  [["LIMIT", 5]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [92b5da06-168e-42a6-aacd-8ac144c01371]   ↳ /home/youcef/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  ↳ app/controllers/static_pages_controller.rb:3
+[ActiveJob] [ActiveStorage::AnalyzeJob] [92b5da06-168e-42a6-aacd-8ac144c01371]   [1m[36mActiveStorage::Blob Update (2.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"width\":436,\"height\":636,\"analyzed\":true}"], ["id", 5]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 3]]
+  ↳ app/controllers/static_pages_controller.rb:4
+[ActiveJob] [ActiveStorage::AnalyzeJob] [92b5da06-168e-42a6-aacd-8ac144c01371]   ↳ /home/youcef/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  Rendering static_pages/index.html.erb within layouts/application
+[ActiveJob] [ActiveStorage::AnalyzeJob] [92b5da06-168e-42a6-aacd-8ac144c01371]   [1m[35m (21.9ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [92b5da06-168e-42a6-aacd-8ac144c01371]   ↳ /home/youcef/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [92b5da06-168e-42a6-aacd-8ac144c01371] Performed ActiveStorage::AnalyzeJob (Job ID: 92b5da06-168e-42a6-aacd-8ac144c01371) from Async(default) in 110.61ms
+  [1m[36mManga Load (2.2ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mManga Load (0.3ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mManga Load (0.5ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mManga Load (0.4ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mManga Load (0.4ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  Rendered static_pages/_card.html.erb (12.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 12], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card-user.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (1.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 13], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card-user.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 14], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card-user.html.erb:6
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card-user.html.erb:6
+  Rendered static_pages/_card-user.html.erb (18.2ms)
+  Rendered static_pages/index.html.erb within layouts/application (74.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:27
+  Rendered shared/_navbar.html.erb (6.6ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 138ms (Views: 119.5ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--378712bd16f8f70bc60c8165bdc73e6aeaf97854/gon.png" for ::1 at 2020-12-04 16:45:48 +0100
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--378712bd16f8f70bc60c8165bdc73e6aeaf97854", "filename"=>"gon"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /home/youcef/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: 49FAm3jax7iU9cBqUanML4J9 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRORGxHUVcwemFtRjROMmxWT1dOQ2NWVmhiazFNTkVvNUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlaMjl1TG5CdVp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25aMjl1TG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRPSIsImV4cCI6IjIwMjAtMTItMDRUMTU6NTA6NDguNDM4WiIsInB1ciI6ImJsb2Jfa2V5In19--0fbc209c3a1ea3e4045b34a272fc7e2329e1a2bf/gon.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22gon.png%22%3B+filename%2A%3DUTF-8%27%27gon.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRORGxHUVcwemFtRjROMmxWT1dOQ2NWVmhiazFNTkVvNUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlaMjl1TG5CdVp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25aMjl1TG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRPSIsImV4cCI6IjIwMjAtMTItMDRUMTU6NTA6NDguNDM4WiIsInB1ciI6ImJsb2Jfa2V5In19--0fbc209c3a1ea3e4045b34a272fc7e2329e1a2bf/gon.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22gon.png%22%3B+filename%2A%3DUTF-8%27%27gon.png
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRORGxHUVcwemFtRjROMmxWT1dOQ2NWVmhiazFNTkVvNUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlaMjl1TG5CdVp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25aMjl1TG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRPSIsImV4cCI6IjIwMjAtMTItMDRUMTU6NTA6NDguNDM4WiIsInB1ciI6ImJsb2Jfa2V5In19--0fbc209c3a1ea3e4045b34a272fc7e2329e1a2bf/gon.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22gon.png%22%3B+filename%2A%3DUTF-8%27%27gon.png" for ::1 at 2020-12-04 16:45:48 +0100
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"gon.png\"; filename*=UTF-8''gon.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRORGxHUVcwemFtRjROMmxWT1dOQ2NWVmhiazFNTkVvNUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlaMjl1TG5CdVp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25aMjl1TG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRPSIsImV4cCI6IjIwMjAtMTItMDRUMTU6NTA6NDguNDM4WiIsInB1ciI6ImJsb2Jfa2V5In19--0fbc209c3a1ea3e4045b34a272fc7e2329e1a2bf", "filename"=>"gon"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/14" for ::1 at 2020-12-04 16:45:52 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ /home/youcef/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (2.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 14], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:8
+  [1m[36mLibraryItem Load (0.6ms)[0m  [1m[34mSELECT "library_items".* FROM "library_items" WHERE "library_items"."user_id" = $1[0m  [["user_id", 14]]
+  ↳ app/views/users/show.html.erb:36
+  [1m[36mManga Load (0.4ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:38
+  [1m[36mManga Load (2.4ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:38
+  Rendered users/show.html.erb within layouts/application (21.6ms)
+  Rendered shared/_navbar.html.erb (4.4ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 74ms (Views: 62.4ms | ActiveRecord: 6.6ms)
+
+
+Started DELETE "/library_items/67" for ::1 at 2020-12-04 16:46:01 +0100
+Processing by LibraryItemsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"G2hhqD4oWTDTdW+lxhS4IasKjLeuzdCocmdNXf6l8OT5WyClXHN4gKksB9OTZnesEbAPcCf1GqbxK1yX57PFBQ==", "id"=>"67"}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ /home/youcef/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mLibraryItem Load (0.5ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" WHERE "library_items"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  ↳ app/controllers/library_items_controller.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/library_items_controller.rb:27
+  [1m[36mLibraryItem Destroy (0.6ms)[0m  [1m[31mDELETE FROM "library_items" WHERE "library_items"."id" = $1[0m  [["id", 67]]
+  ↳ app/controllers/library_items_controller.rb:27
+  [1m[35m (16.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/library_items_controller.rb:27
+Redirected to http://localhost:3000/users/14
+Completed 302 Found in 30ms (ActiveRecord: 20.8ms)
+
+
+Started GET "/users/14" for ::1 at 2020-12-04 16:46:01 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ /home/youcef/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 14], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:8
+  [1m[36mActiveStorage::Blob Load (1.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:8
+  [1m[36mLibraryItem Load (0.7ms)[0m  [1m[34mSELECT "library_items".* FROM "library_items" WHERE "library_items"."user_id" = $1[0m  [["user_id", 14]]
+  ↳ app/views/users/show.html.erb:36
+  [1m[36mManga Load (3.9ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:38
+  Rendered users/show.html.erb within layouts/application (18.9ms)
+  Rendered shared/_navbar.html.erb (7.6ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 66ms (Views: 50.0ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRORGxHUVcwemFtRjROMmxWT1dOQ2NWVmhiazFNTkVvNUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlaMjl1TG5CdVp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25aMjl1TG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRPSIsImV4cCI6IjIwMjAtMTItMDRUMTU6NTA6NDguNDM4WiIsInB1ciI6ImJsb2Jfa2V5In19--0fbc209c3a1ea3e4045b34a272fc7e2329e1a2bf/gon.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22gon.png%22%3B+filename%2A%3DUTF-8%27%27gon.png" for ::1 at 2020-12-04 16:46:01 +0100
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"gon.png\"; filename*=UTF-8''gon.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRORGxHUVcwemFtRjROMmxWT1dOQ2NWVmhiazFNTkVvNUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTVhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlaMjl1TG5CdVp5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25aMjl1TG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRPSIsImV4cCI6IjIwMjAtMTItMDRUMTU6NTA6NDguNDM4WiIsInB1ciI6ImJsb2Jfa2V5In19--0fbc209c3a1ea3e4045b34a272fc7e2329e1a2bf", "filename"=>"gon"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms)
+
+
