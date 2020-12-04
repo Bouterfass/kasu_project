@@ -1,72 +1,96 @@
 
-/*==========================
-    Card template
-============================*/
-.img-card{
-    max-height:70%;
-    max-width: 70%;
-    
-  }
+.backgroud-card {
+  background-color:rgb(253, 247, 247);
   
-  div [class^="col-"]{
-    padding-left:5px;
-    padding-right:5px;
-    margin: 20px;
-  }
-  .card{
-    transition:0.5s;
-    cursor:pointer;
-    border: 1px solid;
-  }
-
-  .card-title{  
-    font-size:15px;
-    transition:1s;
-    cursor:pointer;
-  }
-
-  .card:hover{
-    transform: scale(1.05);
-    box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
-  }
-
-  .card-text{
-    height:80px;  
-  }
+}
+.image-card{
+  max-height:70%;
+  max-width: 100%;
+  border: 1px solid;
   
-  .card::before, .card::after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transform: scale3d(0, 0, 1);
-    transition: transform .3s ease-out 0s;
-    background: rgba(255, 255, 255, 0.1);
-    content: '';
-    pointer-events: none;
-  }
+  
+}
 
-  .card::before {
-    transform-origin: left top;
-  }
+div [class^="card-pad"]{
+  padding-left:5px;
+  padding-right:5px;
+  margin: 20px;
+}
+.card-index-manga{
+  transition:0.5s;
+  cursor:pointer;
+  border: 2px solid;
+}
 
-  .card::after {
-    transform-origin: right bottom;
-  }
+.card-title{  
+  font-size:15px;
+  transition:1s;
+  cursor:pointer;
+}
 
-  .card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
-    transform: scale3d(1, 1, 1);
-  }
+.card-index-manga:hover{
+  transform: scale(1.05);
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+}
 
-  .btn-card{
-      background-color:  #ffffff;
-      border: 1px solid;
-      border-color:  #ff1016;
-      color: #333333;
-      padding: 10px 40px;
-      text-align: center;
-      display: inline-block;
-      border-radius: 20px;
-      font-size: 15px;
-  }
+.card-index-manga-text{
+  height:80px;
+  font-family: system-ui;  
+}
+
+.card-index-manga::before, .card::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: scale3d(0, 0, 1);
+  transition: transform .3s ease-out 0s;
+  background: rgba(255, 255, 255, 0.1);
+  content: '';
+  pointer-events: none;
+}
+
+.card-index-manga::before {
+  transform-origin: left top;
+}
+
+.card-index-manga::after {
+  transform-origin: right bottom;
+}
+
+.card-index-manga:hover::before, .card-index-manga:hover::after, .card-index-manga:focus::before, .card-index-manga:focus::after {
+  transform: scale3d(1, 1, 1);
+}
+
+a.button.dsgnmoo {
+  background: #f97779;
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#f97779), to(#ce2424));
+  background: -moz-linear-gradient(#f97779, #ce2424);
+  background: linear-gradient(#f97779, #ce2424);
+  border: solid 1px #be2424;
+  border-bottom: solid 3px #bd2524;
+  box-shadow: inset 0 0 0 1px #e67e7b;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  height: 50px;
+  text-shadow: 0 1px 0 #bd2524; }
+  
+a.button.dsgnmoo:hover {
+  background: #ce2424;
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ce2424), to(#f97779));
+  background: -moz-linear-gradient(#ce2424, #f97779);
+  background: linear-gradient(#ce2424, #f97779);
+  border: solid 1px #be2424;
+  border-bottom: solid 3px #bd2524;
+  box-shadow: inset 0 0 0 1px #e67e7b; }
+  
+a.button.dsgnmoo:active {
+  background: #ce2424;
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ce2424), to(#f97779));
+  background: -moz-linear-gradient(#ce2424, #f97779);
+  background: linear-gradient(#ce2424, #f97779);
+  border: solid 1px #be2424;
+  box-shadow: inset 0 10px 15px 0 #bd2524; }
+
