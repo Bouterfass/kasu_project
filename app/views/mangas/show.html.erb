@@ -1,0 +1,55 @@
+
+
+      <!--Photo + Infos principales -->
+
+    <div class="container p-5">
+        <div class="row p-5">
+            <div class="col d-flex justify-content-center">
+                <% if @manga.cover.attached? %>
+					<%= image_tag @manga.cover %>	
+                <% else %>			
+                    <img class='image' style="height:170%" src="<%= @manga.image_url %>" alt="Manga-item">
+                <% end  %>
+            </div>
+            <div class="col">
+                <h1><%= @manga.title.capitalize %></h1>
+                <h2>  Auteur : <%= @manga.author %> </h2>
+                <%= link_to "Ajouter à ma Bibliothèque", manga_library_items_path(@manga.id), method: "POST" %>
+            </div>
+        </div>
+        </div>
+    <br>
+
+          <!--Description -->
+
+    <div class="container p-5">
+    <div class="row px-5">
+        <div class="col px-5">
+        <h2> Description </h2>
+        <h6><%= @manga.description %></h6>
+        </div>
+    </div>
+
+    </div>
+
+    <div class="container px-5">
+        <div class="row px-5">
+            <div class="col px-5">
+							
+                <h2> Les Fans qui proposent ce Manga </h2>
+                <ul class=" px-5">
+                    <% @items.each do |item|%>
+                    
+                    <li><%= item.user.name%>
+                    <%= link_to "Demander ce Manga", library_item_path(item.id) %>
+                    </li>
+                    
+                    <%end%>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+        <!--comment -->
+

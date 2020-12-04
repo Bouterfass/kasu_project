@@ -1,0 +1,33 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.li-collection:hover {
+    background-color: rgba(103, 128, 159, 0.3);
+}
+
+.trash-icon{
+    text-decoration: none;
+    color: red;
+}
+
+.profile-banner {
+    background-image: url(asset-path('profile_banner.png'));
+    width: 100%;
+    height: 380px;
+}
+
+.big-circle {
+    background-color: #aba8a8;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+}
+
+.small-circle {
+    background-color: red;
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+}

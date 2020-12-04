@@ -1,0 +1,93 @@
+/*
+.backgroud-card {
+  background-color:rgb(253, 247, 247);
+  
+}
+
+
+div [class^="card-pad"]{
+  padding-left:5px;
+  padding-right:5px;
+  margin: 20px;
+  -webkit-box-shadow: 0px 0px 18px -5px #000000; 
+box-shadow: 0px 0px 18px -5px #000000;
+}
+.card-index-manga{
+  transition:0.5s;
+  cursor:pointer;
+  
+}
+
+.card-title{  
+  font-size:15px;
+  transition:1s;
+  cursor:pointer;
+}
+
+.card-index-manga:hover{
+  transform: scale(1.05);
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+}
+
+.card-index-manga-text{
+  height:80px;
+  font-family: system-ui;  
+}
+
+.card-index-manga::before, .card::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: scale3d(0, 0, 1);
+  transition: transform .3s ease-out 0s;
+  background: rgba(255, 255, 255, 0.1);
+  content: '';
+  pointer-events: none;
+}
+
+.card-index-manga::before {
+  transform-origin: left top;
+}
+
+.card-index-manga::after {
+  transform-origin: right bottom;
+}
+
+.card-index-manga:hover::before, .card-index-manga:hover::after, .card-index-manga:focus::before, .card-index-manga:focus::after {
+  transform: scale3d(1, 1, 1);
+}
+
+a.button.dark_grey {
+  background: #d1d1d1;
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#d1d1d1), to(#afafaf));
+  background: -moz-linear-gradient(#d1d1d1, #afafaf);
+  background: linear-gradient(#d1d1d1, #afafaf);
+  border: solid 1px #b4b4b4;
+  border-bottom: solid 3px #878787;
+  box-shadow: inset 0 0 0 1px #e3e3e3;
+  color: #555;
+  height: 50px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #d6d6d6; 
+  border-radius: 1px;
+}
+  
+a.button.dark_grey:hover {
+  background: #b7b7b7;
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#b7b7b7), to(#c2c2c2));
+  background: -moz-linear-gradient(#b7b7b7, #c2c2c2);
+  background: linear-gradient(#b7b7b7, #c2c2c2);
+  border: solid 1px #a2a2a2;
+  border-bottom: solid 3px #878787;
+  box-shadow: inset 0 0 0 1px #d4d4d4; }
+  
+a.button.dark_grey:active {
+  background: #afafaf;
+  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#afafaf), to(#a9a9a9));
+  background: -moz-linear-gradient(#afafaf, #a9a9a9);
+  background: linear-gradient(#afafaf, #a9a9a9);
+  border: solid 1px #757575;
+  box-shadow: inset 0 10px 15px 0 #9a9a9a; }
+  */
