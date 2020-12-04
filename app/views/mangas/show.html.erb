@@ -5,6 +5,8 @@
         <div class="row p-5">
             <div class="col d-flex justify-content-center">
                 <img class='image' style="height:170%" src="<%= @manga.image_url %>" alt="Manga-item">
+                <%= image_tag @manga.cover %>
+
             </div>
             <div class="col">
                 <h1><%= @manga.title.capitalize %></h1>

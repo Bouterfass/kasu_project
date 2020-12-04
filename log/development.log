@@ -22603,3 +22603,373 @@ Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms)
 >>>>>>> 7b6078f73d51cc44ba3f733188c3685aa742d473
 
 
+Started GET "/" for ::1 at 2020-12-04 17:45:54 +0100
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  [1m[36mLibraryItem Load (0.6ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" ORDER BY "library_items"."id" DESC LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/controllers/static_pages_controller.rb:3
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 3]]
+  ↳ app/controllers/static_pages_controller.rb:4
+  Rendering static_pages/index.html.erb within layouts/application
+  [1m[36mManga Load (1.0ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mCACHE Manga Load (0.0ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mManga Load (0.4ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mManga Load (0.4ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mCACHE Manga Load (0.0ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  Rendered static_pages/_card.html.erb (48.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card-user.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card-user.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card-user.html.erb:6
+  Rendered static_pages/_card-user.html.erb (21.4ms)
+  Rendered static_pages/index.html.erb within layouts/application (259.6ms)
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:27
+  Rendered shared/_navbar.html.erb (45.7ms)
+  Rendered shared/_footer.html.erb (1.3ms)
+Completed 200 OK in 684ms (Views: 610.6ms | ActiveRecord: 24.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-04 17:46:02 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  [1m[36mLibraryItem Load (0.6ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" ORDER BY "library_items"."id" DESC LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/controllers/static_pages_controller.rb:3
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 3]]
+  ↳ app/controllers/static_pages_controller.rb:4
+  Rendering static_pages/index.html.erb within layouts/application
+  [1m[36mManga Load (2.0ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mCACHE Manga Load (0.0ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mManga Load (0.4ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mManga Load (0.7ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mCACHE Manga Load (0.0ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  Rendered static_pages/_card.html.erb (15.5ms)
+  [1m[36mActiveStorage::Attachment Load (1.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card-user.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card-user.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card-user.html.erb:6
+  Rendered static_pages/_card-user.html.erb (19.7ms)
+  Rendered static_pages/index.html.erb within layouts/application (64.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:27
+  Rendered shared/_navbar.html.erb (10.2ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 148ms (Views: 135.0ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/" for ::1 at 2020-12-04 19:05:20 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  [1m[36mLibraryItem Load (1.8ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" ORDER BY "library_items"."id" DESC LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/controllers/static_pages_controller.rb:3
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 3]]
+  ↳ app/controllers/static_pages_controller.rb:4
+  Rendering static_pages/index.html.erb within layouts/application
+  [1m[36mManga Load (1.3ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mCACHE Manga Load (0.0ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mManga Load (3.0ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mManga Load (0.4ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mCACHE Manga Load (0.0ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  Rendered static_pages/_card.html.erb (13.4ms)
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card-user.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card-user.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card-user.html.erb:6
+  Rendered static_pages/_card-user.html.erb (10.5ms)
+  Rendered static_pages/index.html.erb within layouts/application (46.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:27
+  Rendered shared/_navbar.html.erb (82.4ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 234ms (Views: 200.3ms | ActiveRecord: 21.6ms)
+
+
+Started GET "/mangas/new" for ::1 at 2020-12-04 19:05:26 +0100
+Processing by MangasController#new as HTML
+  Rendering mangas/new.html.erb within layouts/application
+  Rendered mangas/new.html.erb within layouts/application (396.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:27
+  Rendered shared/_navbar.html.erb (13.2ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 466ms (Views: 457.4ms | ActiveRecord: 5.3ms)
+
+
+Started POST "/mangas" for ::1 at 2020-12-04 19:17:40 +0100
+Processing by MangasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eEhcjwYey+FewFSGF4VEpeg55Kh86isuLmqkhZKLrxPEdAWxyl5dAj/Nf71pRcqUrCL6Fu3k6ZQgD6KMl2qG3w==", "manga"=>{"title"=>"Mon 2e manga", "cover"=>#<ActionDispatch::Http::UploadedFile:0x00007fa2f9b74208 @tempfile=#<Tempfile:/var/folders/1r/53k09c2158z7dw0cdv9094zh0000gn/T/RackMultipart20201204-10823-q9scb1.JPG>, @original_filename="P1050887.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"manga[cover]\"; filename=\"P1050887.JPG\"\r\nContent-Type: image/jpeg\r\n">, "author"=>"hjun", "description"=>"gbrgrbrgbrgrtzzbrt"}, "commit"=>"Create Manga"}
+[36m  Disk Storage (20.0ms) [0m[32mUploaded file to key: KHNHnic2Pts2erJqATWJh5bA (checksum: dxsenbNfxiAXZJbnOVexwA==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/mangas_controller.rb:17
+  [1m[36mActiveStorage::Blob Create (21.9ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "KHNHnic2Pts2erJqATWJh5bA"], ["filename", "P1050887.JPG"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 4492800], ["checksum", "dxsenbNfxiAXZJbnOVexwA=="], ["created_at", "2020-12-04 18:17:40.720225"]]
+  ↳ app/controllers/mangas_controller.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/mangas_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/mangas_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/mangas_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/mangas_controller.rb:17
+  [1m[36mManga Create (1.1ms)[0m  [1m[32mINSERT INTO "mangas" ("title", "author", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Mon 2e manga"], ["author", "hjun"], ["description", "gbrgrbrgbrgrtzzbrt"], ["created_at", "2020-12-04 18:17:40.769874"], ["updated_at", "2020-12-04 18:17:40.769874"]]
+  ↳ app/controllers/mangas_controller.rb:17
+  [1m[36mActiveStorage::Attachment Create (20.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "cover"], ["record_type", "Manga"], ["record_id", 459], ["blob_id", 1], ["created_at", "2020-12-04 18:17:40.772734"]]
+  ↳ app/controllers/mangas_controller.rb:17
+  [1m[36mManga Update (0.9ms)[0m  [1m[33mUPDATE "mangas" SET "updated_at" = $1 WHERE "mangas"."id" = $2[0m  [["updated_at", "2020-12-04 18:17:40.794086"], ["id", 459]]
+  ↳ app/controllers/mangas_controller.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/mangas_controller.rb:17
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 3790cbec-d472-4076-889c-5078b73dc33e) to Async(default) with arguments: #<GlobalID:0x00007fa2f82b8a20 @uri=#<URI::GID gid://kasu-project/ActiveStorage::Blob/1>>
+Redirected to http://localhost:3000/mangas/459
+Completed 302 Found in 174ms (ActiveRecord: 55.0ms)
+
+
+Started GET "/mangas/459" for ::1 at 2020-12-04 19:17:40 +0100
+Processing by MangasController#show as HTML
+  Parameters: {"id"=>"459"}
+  [1m[36mManga Load (0.6ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 459], ["LIMIT", 1]]
+  ↳ app/controllers/mangas_controller.rb:7
+  Rendering mangas/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLibraryItem Load (0.8ms)[0m  [1m[34mSELECT "library_items".* FROM "library_items" WHERE "library_items"."manga_id" = $1[0m  [["manga_id", 459]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  ↳ app/views/mangas/show.html.erb:35
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3790cbec-d472-4076-889c-5078b73dc33e] Performing ActiveStorage::AnalyzeJob (Job ID: 3790cbec-d472-4076-889c-5078b73dc33e) from Async(default) with arguments: #<GlobalID:0x00007fa2f827be18 @uri=#<URI::GID gid://kasu-project/ActiveStorage::Blob/1>>
+  Rendered mangas/show.html.erb within layouts/application (5.0ms)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3790cbec-d472-4076-889c-5078b73dc33e] [36m  Disk Storage (8.8ms) [0m[34mDownloaded file from key: KHNHnic2Pts2erJqATWJh5bA[0m
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:27
+  Rendered shared/_navbar.html.erb (16.3ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 94ms (Views: 83.1ms | ActiveRecord: 3.5ms)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3790cbec-d472-4076-889c-5078b73dc33e]   [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3790cbec-d472-4076-889c-5078b73dc33e]   ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3790cbec-d472-4076-889c-5078b73dc33e]   [1m[36mActiveStorage::Blob Update (0.8ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"width\":4000,\"height\":3000,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3790cbec-d472-4076-889c-5078b73dc33e]   ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3790cbec-d472-4076-889c-5078b73dc33e]   [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3790cbec-d472-4076-889c-5078b73dc33e]   ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3790cbec-d472-4076-889c-5078b73dc33e] Performed ActiveStorage::AnalyzeJob (Job ID: 3790cbec-d472-4076-889c-5078b73dc33e) from Async(default) in 1704.67ms
+Started GET "/mangas/459" for ::1 at 2020-12-04 19:18:29 +0100
+Processing by MangasController#show as HTML
+  Parameters: {"id"=>"459"}
+  [1m[36mManga Load (1.4ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 459], ["LIMIT", 1]]
+  ↳ app/controllers/mangas_controller.rb:7
+  Rendering mangas/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (2.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 459], ["record_type", "Manga"], ["name", "cover"], ["LIMIT", 1]]
+  ↳ app/views/mangas/show.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/mangas/show.html.erb:8
+  [1m[36mLibraryItem Load (0.7ms)[0m  [1m[34mSELECT "library_items".* FROM "library_items" WHERE "library_items"."manga_id" = $1[0m  [["manga_id", 459]]
+  ↳ app/views/mangas/show.html.erb:37
+  Rendered mangas/show.html.erb within layouts/application (17.4ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:27
+  Rendered shared/_navbar.html.erb (12.2ms)
+  Rendered shared/_footer.html.erb (1.0ms)
+Completed 200 OK in 87ms (Views: 74.5ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1bb5a4edef66138a24b4740f355638ce28d1aec8/P1050887.JPG" for ::1 at 2020-12-04 19:18:30 +0100
+Processing by ActiveStorage::BlobsController#show as 
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1bb5a4edef66138a24b4740f355638ce28d1aec8", "filename"=>"P1050887"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (7.6ms) [0m[34mGenerated URL for file at key: KHNHnic2Pts2erJqATWJh5bA (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRTMGhPU0c1cFl6SlFkSE15WlhKS2NVRlVWMHBvTldKQkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkRhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlVREV3TlRBNE9EY3VTbEJISWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkUU1UQTFNRGc0Tnk1S1VFY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIwLTEyLTA0VDE4OjIzOjMwLjYyMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--1a01c4136c721c1a3feac7d742fea235e0f46e67/P1050887.JPG?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22P1050887.JPG%22%3B+filename%2A%3DUTF-8%27%27P1050887.JPG)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRTMGhPU0c1cFl6SlFkSE15WlhKS2NVRlVWMHBvTldKQkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkRhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlVREV3TlRBNE9EY3VTbEJISWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkUU1UQTFNRGc0Tnk1S1VFY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIwLTEyLTA0VDE4OjIzOjMwLjYyMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--1a01c4136c721c1a3feac7d742fea235e0f46e67/P1050887.JPG?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22P1050887.JPG%22%3B+filename%2A%3DUTF-8%27%27P1050887.JPG
+Completed 302 Found in 17ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRTMGhPU0c1cFl6SlFkSE15WlhKS2NVRlVWMHBvTldKQkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkRhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlVREV3TlRBNE9EY3VTbEJISWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkUU1UQTFNRGc0Tnk1S1VFY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIwLTEyLTA0VDE4OjIzOjMwLjYyMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--1a01c4136c721c1a3feac7d742fea235e0f46e67/P1050887.JPG?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22P1050887.JPG%22%3B+filename%2A%3DUTF-8%27%27P1050887.JPG" for ::1 at 2020-12-04 19:18:30 +0100
+Processing by ActiveStorage::DiskController#show as 
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"P1050887.JPG\"; filename*=UTF-8''P1050887.JPG", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRTMGhPU0c1cFl6SlFkSE15WlhKS2NVRlVWMHBvTldKQkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkRhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlVREV3TlRBNE9EY3VTbEJISWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkUU1UQTFNRGc0Tnk1S1VFY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIwLTEyLTA0VDE4OjIzOjMwLjYyMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--1a01c4136c721c1a3feac7d742fea235e0f46e67", "filename"=>"P1050887"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/mangas/new" for ::1 at 2020-12-04 19:19:19 +0100
+Processing by MangasController#new as HTML
+  Rendering mangas/new.html.erb within layouts/application
+  Rendered mangas/new.html.erb within layouts/application (21.6ms)
+  [1m[36mUser Load (8.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:27
+  Rendered shared/_navbar.html.erb (36.4ms)
+  Rendered shared/_footer.html.erb (3.1ms)
+Completed 200 OK in 168ms (Views: 155.5ms | ActiveRecord: 8.0ms)
+
+
+Started POST "/mangas" for ::1 at 2020-12-04 19:19:43 +0100
+Processing by MangasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tkv1EBJNEZM9yPFxULQNje5rUG1NWoJiA9yGuBUqXIzyd6wu3g2HcFzF2koudIO8qnBO09xUQNgNuYCxEMt1QA==", "manga"=>{"title"=>"mon1000e manga", "cover"=>#<ActionDispatch::Http::UploadedFile:0x00007fa2fa385668 @tempfile=#<Tempfile:/var/folders/1r/53k09c2158z7dw0cdv9094zh0000gn/T/RackMultipart20201204-10823-1qhxrpm.JPG>, @original_filename="P1050955.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"manga[cover]\"; filename=\"P1050955.JPG\"\r\nContent-Type: image/jpeg\r\n">, "author"=>"Jules", "description"=>"bla bla"}, "commit"=>"Create Manga"}
+[36m  Disk Storage (29.4ms) [0m[32mUploaded file to key: jBh2cLCUncHB1VW97ovziRNR (checksum: kfxVv1FKHBstVBB9c5rFKg==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/mangas_controller.rb:17
+  [1m[36mActiveStorage::Blob Create (0.7ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "jBh2cLCUncHB1VW97ovziRNR"], ["filename", "P1050955.JPG"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 3995136], ["checksum", "kfxVv1FKHBstVBB9c5rFKg=="], ["created_at", "2020-12-04 18:19:43.466649"]]
+  ↳ app/controllers/mangas_controller.rb:17
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/mangas_controller.rb:17
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/mangas_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/mangas_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/mangas_controller.rb:17
+  [1m[36mManga Create (0.5ms)[0m  [1m[32mINSERT INTO "mangas" ("title", "author", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "mon1000e manga"], ["author", "Jules"], ["description", "bla bla"], ["created_at", "2020-12-04 18:19:43.479907"], ["updated_at", "2020-12-04 18:19:43.479907"]]
+  ↳ app/controllers/mangas_controller.rb:17
+  [1m[36mActiveStorage::Attachment Create (0.7ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "cover"], ["record_type", "Manga"], ["record_id", 460], ["blob_id", 2], ["created_at", "2020-12-04 18:19:43.481944"]]
+  ↳ app/controllers/mangas_controller.rb:17
+  [1m[36mManga Update (0.4ms)[0m  [1m[33mUPDATE "mangas" SET "updated_at" = $1 WHERE "mangas"."id" = $2[0m  [["updated_at", "2020-12-04 18:19:43.483947"], ["id", 460]]
+  ↳ app/controllers/mangas_controller.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/mangas_controller.rb:17
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: e8bc62d6-d73e-49e4-90e5-cf089a9c20ee) to Async(default) with arguments: #<GlobalID:0x00007fa2f9c57350 @uri=#<URI::GID gid://kasu-project/ActiveStorage::Blob/2>>
+Redirected to http://localhost:3000/mangas/460
+Completed 302 Found in 72ms (ActiveRecord: 10.0ms)
+
+
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e8bc62d6-d73e-49e4-90e5-cf089a9c20ee] Performing ActiveStorage::AnalyzeJob (Job ID: e8bc62d6-d73e-49e4-90e5-cf089a9c20ee) from Async(default) with arguments: #<GlobalID:0x00007fa2f84d1758 @uri=#<URI::GID gid://kasu-project/ActiveStorage::Blob/2>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e8bc62d6-d73e-49e4-90e5-cf089a9c20ee] [36m  Disk Storage (5.8ms) [0m[34mDownloaded file from key: jBh2cLCUncHB1VW97ovziRNR[0m
+Started GET "/mangas/460" for ::1 at 2020-12-04 19:19:43 +0100
+Processing by MangasController#show as HTML
+  Parameters: {"id"=>"460"}
+  [1m[36mManga Load (0.4ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 460], ["LIMIT", 1]]
+  ↳ app/controllers/mangas_controller.rb:7
+  Rendering mangas/show.html.erb within layouts/application
+  Rendered mangas/show.html.erb within layouts/application (28.2ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+     5:         <div class="row p-5">
+     6:             <div class="col d-flex justify-content-center">
+     7:                 <img class='image' style="height:170%" src="<%= @manga.image_url %>" alt="Manga-item">
+     8:                 <%= image_tag @manga.image_url class: "small-circle" %>
+     9: 
+    10:             </div>
+    11:             <div class="col">
+  
+app/views/mangas/show.html.erb:8:in `_app_views_mangas_show_html_erb___2159783635587693591_71820'
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e8bc62d6-d73e-49e4-90e5-cf089a9c20ee]   [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e8bc62d6-d73e-49e4-90e5-cf089a9c20ee]   ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e8bc62d6-d73e-49e4-90e5-cf089a9c20ee]   [1m[36mActiveStorage::Blob Update (1.0ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"width\":4000,\"height\":3000,\"analyzed\":true}"], ["id", 2]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e8bc62d6-d73e-49e4-90e5-cf089a9c20ee]   ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e8bc62d6-d73e-49e4-90e5-cf089a9c20ee]   [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e8bc62d6-d73e-49e4-90e5-cf089a9c20ee]   ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e8bc62d6-d73e-49e4-90e5-cf089a9c20ee] Performed ActiveStorage::AnalyzeJob (Job ID: e8bc62d6-d73e-49e4-90e5-cf089a9c20ee) from Async(default) in 1053.59ms
+Started GET "/mangas/460" for ::1 at 2020-12-04 19:20:00 +0100
+Processing by MangasController#show as HTML
+  Parameters: {"id"=>"460"}
+  [1m[36mManga Load (0.4ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 460], ["LIMIT", 1]]
+  ↳ app/controllers/mangas_controller.rb:7
+  Rendering mangas/show.html.erb within layouts/application
+  Rendered mangas/show.html.erb within layouts/application (6.7ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+     5:         <div class="row p-5">
+     6:             <div class="col d-flex justify-content-center">
+     7:                 <img class='image' style="height:170%" src="<%= @manga.image_url %>" alt="Manga-item">
+     8:                 <%= image_tag @manga.cover class: "small-circle" %>
+     9: 
+    10:             </div>
+    11:             <div class="col">
+  
+app/views/mangas/show.html.erb:8:in `_app_views_mangas_show_html_erb___2159783635587693591_72340'
+Started GET "/mangas/460" for ::1 at 2020-12-04 19:20:12 +0100
+Processing by MangasController#show as HTML
+  Parameters: {"id"=>"460"}
+  [1m[36mManga Load (1.0ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 460], ["LIMIT", 1]]
+  ↳ app/controllers/mangas_controller.rb:7
+  Rendering mangas/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 460], ["record_type", "Manga"], ["name", "cover"], ["LIMIT", 1]]
+  ↳ app/views/mangas/show.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/mangas/show.html.erb:8
+  [1m[36mLibraryItem Load (0.7ms)[0m  [1m[34mSELECT "library_items".* FROM "library_items" WHERE "library_items"."manga_id" = $1[0m  [["manga_id", 460]]
+  ↳ app/views/mangas/show.html.erb:37
+  Rendered mangas/show.html.erb within layouts/application (12.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:27
+  Rendered shared/_navbar.html.erb (12.4ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 85ms (Views: 78.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0fa774ce061931d387c902211d204874b42f47cd/P1050955.JPG" for ::1 at 2020-12-04 19:20:13 +0100
+Processing by ActiveStorage::BlobsController#show as 
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0fa774ce061931d387c902211d204874b42f47cd", "filename"=>"P1050955"}
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (1.0ms) [0m[34mGenerated URL for file at key: jBh2cLCUncHB1VW97ovziRNR (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRha0pvTW1OTVExVnVZMGhDTVZaWE9UZHZkbnBwVWs1U0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkRhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlVREV3TlRBNU5UVXVTbEJISWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkUU1UQTFNRGsxTlM1S1VFY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIwLTEyLTA0VDE4OjI1OjEzLjEwNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f73877cd593387503aac4bc616793d6389b588b0/P1050955.JPG?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22P1050955.JPG%22%3B+filename%2A%3DUTF-8%27%27P1050955.JPG)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRha0pvTW1OTVExVnVZMGhDTVZaWE9UZHZkbnBwVWs1U0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkRhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlVREV3TlRBNU5UVXVTbEJISWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkUU1UQTFNRGsxTlM1S1VFY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIwLTEyLTA0VDE4OjI1OjEzLjEwNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f73877cd593387503aac4bc616793d6389b588b0/P1050955.JPG?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22P1050955.JPG%22%3B+filename%2A%3DUTF-8%27%27P1050955.JPG
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRha0pvTW1OTVExVnVZMGhDTVZaWE9UZHZkbnBwVWs1U0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkRhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlVREV3TlRBNU5UVXVTbEJISWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkUU1UQTFNRGsxTlM1S1VFY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIwLTEyLTA0VDE4OjI1OjEzLjEwNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f73877cd593387503aac4bc616793d6389b588b0/P1050955.JPG?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22P1050955.JPG%22%3B+filename%2A%3DUTF-8%27%27P1050955.JPG" for ::1 at 2020-12-04 19:20:13 +0100
+Processing by ActiveStorage::DiskController#show as 
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"P1050955.JPG\"; filename*=UTF-8''P1050955.JPG", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRha0pvTW1OTVExVnVZMGhDTVZaWE9UZHZkbnBwVWs1U0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkRhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlVREV3TlRBNU5UVXVTbEJISWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnlkUU1UQTFNRGsxTlM1S1VFY0dPd1pVT2hGamIyNTBaVzUwWDNSNWNHVkpJZzlwYldGblpTOXFjR1ZuQmpzR1ZBPT0iLCJleHAiOiIyMDIwLTEyLTA0VDE4OjI1OjEzLjEwNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f73877cd593387503aac4bc616793d6389b588b0", "filename"=>"P1050955"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-04 19:20:43 +0100
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  [1m[36mLibraryItem Load (0.4ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" ORDER BY "library_items"."id" DESC LIMIT $1[0m  [["LIMIT", 5]]
+  ↳ app/controllers/static_pages_controller.rb:3
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 3]]
+  ↳ app/controllers/static_pages_controller.rb:4
+  Rendering static_pages/index.html.erb within layouts/application
+  [1m[36mManga Load (33.8ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mCACHE Manga Load (0.0ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mManga Load (8.8ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mManga Load (0.6ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mCACHE Manga Load (0.0ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  Rendered static_pages/_card.html.erb (56.3ms)
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card-user.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (2.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card-user.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card-user.html.erb:6
+  Rendered static_pages/_card-user.html.erb (18.8ms)
+  Rendered static_pages/index.html.erb within layouts/application (115.6ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/shared/_navbar.html.erb:27
+  Rendered shared/_navbar.html.erb (12.0ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 362ms (Views: 303.9ms | ActiveRecord: 48.8ms)
+
+
