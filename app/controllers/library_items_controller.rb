@@ -18,6 +18,22 @@ class LibraryItemsController < ApplicationController
  
     end
 
+    def update
+        @item = LibraryItem.find(params[:id])
+        token = @item.user.token_state
+        token += 1
+        current_user_token = current_user.token_state
+        current_user_token -=1
+        
+        if current_user_token < 0
+            current_user.update(token_state: 0)
+        else
+            current_user.update(token_state: current_user_token)
+        end
+        @item.user.update(token_state: token)
+        redirect_to '/'
+    end
+
     def destroy 
         @item = LibraryItem.find(params[:id])
         #@manga = Manga.find(params[:manga_id])
