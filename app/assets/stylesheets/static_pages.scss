@@ -1,7 +1,15 @@
+// **********************
+//        ALL
+// **********************
+
 *{
   padding: 0;
   margin: 0;
 }
+
+// **********************
+//        JUMBOTRON
+// **********************
 
 #fond{
   background-image: url('https://dw9to29mmj727.cloudfront.net/sections/2016/24907-READ_header_2000x800_options_colours_grey30.png');
@@ -74,10 +82,47 @@
   top: 40px;
 }
 
+.container-title{
+  position: absolute;
+  left: 7%;
+  top: 60%;
+  z-index: 29;
+  width: 35%;
+  height: 30%;
+  padding: 2%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.title{
+  color: white;
+  font-size: 2.3vw;
+  margin-bottom: 4%;
+}
+
+.container-title .btn-secondary{
+  background-color: rgb(41, 41, 41);
+  width: 32%;
+  height: 35%;
+  font-size: 1vw;
+  border: none;
+}
+
+.container-title .btn-secondary:hover{
+  background-color: white;
+  color:rgb(0, 0, 0);
+  border: none;
+}
+
+
+
+// **********************
+//    ICON EXPLICATION
+// **********************
+
 .section1{
-  margin-top: 50px;
+  margin-top: 40px;
   padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 100px;
 }
 
 .all-icon{
@@ -102,8 +147,13 @@
   box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.75);
 }
 
+// **********************
+//       LAST MANGAS
+// **********************
+
 .section2{
-  padding: 30px;
+  padding-top: 70px;
+  padding-bottom: 100px;
   margin-bottom: 20px;
   background-color: rgb(219, 217, 217);
 }
@@ -115,7 +165,7 @@
 
 .card-all{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
@@ -126,17 +176,14 @@ visibility: hidden;
   background-repeat: no-repeat;
   width: 100%;
   height: 235px;
-border-top-left-radius: 12px;
-border-top-right-radius: 12px;
-
 }
 
 .card__info-hover {
   position: absolute;
   padding: 16px;
-width: 100%;
-opacity: 0;
-top: 0;
+  width: 100%;
+  opacity: 0;
+  top: 0;
 }
 
 .card__img--hover {
@@ -147,11 +194,9 @@ transition: 0.2s all ease-out;
   width: 100%;
 position: absolute;
   height: 235px;
-border-top-left-radius: 12px;
-border-top-right-radius: 12px;
 top: 0;
-
 }
+
 .card-last-manga {
 margin-right: 25px;
 margin-top: 50px;
@@ -160,11 +205,9 @@ transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
 background-color: #fff;
   width: 33.3%;
 position: relative;
-border-radius: 12px;
 overflow: hidden;
 box-shadow: 0px 13px 10px -7px rgba(0, 0, 0,0.1);
-max-width: 300px;
-border: 2px solid;
+max-width: 230px;
 }
 
 .card-last-manga:hover {
@@ -181,6 +224,7 @@ border-bottom-right-radius: 12px;
 }
 
 .card__title {
+  font-size: 22px;
   margin-top: 5px;
   margin-bottom: 10px;
   color: rgb(73, 73, 73);
@@ -210,5 +254,22 @@ border-bottom-right-radius: 12px;
 
 .card-last-manga:hover .card__info-hover {
   opacity: 1;
+}
+
+// **********************
+//      CTA SIGN UP
+// **********************
+
+.section4{
+  margin-top: 100px;
+  background-image: url('https://dw9to29mmj727.cloudfront.net/sections/2016/24907-READ_header_2000x800_options_colours_grey30.png');
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.img-sign{
+  height: 300px;
 }
 

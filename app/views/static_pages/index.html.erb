@@ -8,23 +8,30 @@
     <%= image_tag 'rectangle5.png', class:"rectangle5 animate__animated animate__fadeInUpBig"%>
     <%= image_tag 'rouge2.png', class:"rouge2 animate__animated animate__fadeInDownBig"%>
     <%= image_tag 'rectangle6.png', class:"rectangle6 animate__animated animate__fadeInUpBig"%>
+    <div class="container-title animate__animated animate__fadeInLeftBig">
+      <h1 class="title">La marketplace des mangas !</h1>
+      <a class="btn btn-secondary">Découvrez-les</a>
+    </div>
   </div>
 </header>
 
 <main>
   <div class="container-fluid section1">
-    <h2 class="text-center">Créer une communauté grâce à l'échange de manga !</h2>
+    <h2 class="text-center">Rejoins la communauté Kasu et échange tes Mangas en toute simplicité</h2>
     <div class="container d-flex justify-content-around all-icon">
       <div class="text-center mr-5">
         <a class="" href="#"><%= image_tag 'echange.png', class:"icon-explication icon1 mb-4"%></a>
+        <h3>Échange</h3>
         <p>Met en ligne les mangas <br /> que tu ne veux plus.</p>
       </div>
       <div class="text-center mr-5">
         <a class="" href="#"><%= image_tag 'recois.png', class:"icon-explication icon1 mb-4"%></a>
+        <h3>Reçois</h3>
         <p>Reçois des kasu points<br />une fois ton vieux manga échangé.</p>
       </div>
       <div class="text-center">
         <a class="" href="#"><%= image_tag 'achete.png', class:"icon-explication icon1 mb-4"%></a>
+        <h3>Choisis</h3>
         <p>Achète les mangas que tu veux<br />grâce à tes kasu points !</p>
       </div>
     </div>
@@ -36,9 +43,16 @@
   </div>
 
   <div class="section3">
-    <h2 class="text-center">Les membres du mois</h2>
+    <h2 class="text-center">Les nouveaux membres</h2>
     <%= render "card-user" %>
   </div>
 
+  <div class="section4">
+    <%= image_tag "sig_up.png", class:"img-sign" %>
+    <h4>Toi aussi rejoins la communauté et échange en toute simplicité !</h4>
+    <a href="<%=new_user_registration_path%>" class="btn btn-danger">s'inscrire</a>
+  </div>
 
 </main>
+
+<%= javascript_include_tag 'static_pages'%>
