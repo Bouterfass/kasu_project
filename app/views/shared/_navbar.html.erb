@@ -1,12 +1,23 @@
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navbar">
-  <a class="brand text-prim" href="/">Kasu</a>
+<nav class="navbar navbar-expand-lg navbar-light py-3 sticky-top" id="navbar">
+  <%= image_tag 'logo3.png', class:"brand text-prim", size: "70x70" %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse " id="navbarColor03">
   
     <ul class="navbar-nav navbar-center">
-      
+      <li class="nav-item active">
+          <%= link_to "Home", root_path, class: 'nav-link' %>
+      </li>
+      <li class="nav-item active">
+          <%= link_to "Mangas", mangas_path, class: 'nav-link' %>
+      </li>
+      <li class="nav-item active">
+          <%= link_to "Proposer", new_manga_path, class: 'nav-link' %>
+      </li>
+      <li class="nav-item active">
+          <%= link_to "Trouver", library_items_path, class: 'nav-link' %>
+      </li>
     
     </ul>
 
@@ -14,7 +25,13 @@
     <ul class="navbar-nav ml-auto">
     <li class="nav-item active">
     <% if user_signed_in?%>
-      
+      <% if current_user.name == "Guest" %>
+            <li class="pt-2 mr-1"> <%= current_user.name %>
+              <%= link_to "changer", edit_user_path(current_user) %>
+               
+             
+            </li>
+      <% end  %>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Profil/Quitter</a>
         <div class="dropdown-menu menu-nav" aria-labelledby="dropdownMenuLink">
@@ -22,6 +39,7 @@
           <a class="dropdown-item menu-nav" <%= link_to "Profil", user_path(current_user) %></a>
         </div>
       </li>
+      <% else %>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Se Connecter/S'inscrire</a>
         <div class="dropdown-menu menu-nav" aria-labelledby="dropdownMenuLink">

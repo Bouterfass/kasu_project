@@ -1,0 +1,19 @@
+
+
+<div class="container backgroud-card  mt-2">
+	<h2 class='text-center text-white p-3 mt-3 bg-secondary'>Bibliothèque utilisateurs:</h2>
+	<div class="row  m-2">
+		<% @items.each do |item|%>
+				<div class="card-pad mx-auto col-md-3 col-sm-6 ">
+					<div class="card card-index-manga p-3 card-block ">
+						<img class='image-card' src="<%= item.manga.image_url %> " alt="Photo of sunset">
+						<h4 class="card-title card-index-manga-title mt-3 mb-3"><%= item.manga.title%></h4>
+						<h5 class="card-title card-index-manga-title  mb-3"><%= item.manga.author%></h5>
+						<a href="<%= manga_path(item.manga)%>" class="button dsgnmoo">Les utilisateurs qui le possèdent </a>
+					</div>
+				</div>
+		<% end %>
+	</div>
+	<%= pagy_bootstrap_nav(@pagy).html_safe%>
+</div>
+

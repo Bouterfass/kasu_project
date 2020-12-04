@@ -1,0 +1,20 @@
+<div class="container-fluid mt-2">
+	<div class="row m-2 card-all">
+		<% @manga.each do |manga|%>
+				
+      <article class="card-last-manga card--1">
+        <div class="card__img" style="background-image: url('<%= manga.manga.image_url %>')"></div>
+        <a href="#" class="card_link">
+          <div class="card__img--hover" style="background-image: url('<%= manga.manga.image_url %>')"></div>
+        </a>
+        <div class="card__info">
+          <h3 class="card__title"><%=manga.manga.title%></h3>
+          <span class="card__by">by <a href="#" class="card__author" title="author"><%=manga.manga.author%></a></span>
+        </div>
+      </article>
+				
+		<% end %>
+	</div>
+</div>
+
+

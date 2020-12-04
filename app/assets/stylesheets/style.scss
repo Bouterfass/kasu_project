@@ -1,0 +1,105 @@
+body {
+	margin: 0;
+	min-height: 100vh;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+}
+
+/* La typographie */
+
+h1 {
+  font-family: Nunito;
+  font-size: 30px;
+  font-weight: normal;
+}
+
+h2 {
+  font-family: Nunito;
+  font-size: 26px;
+  font-weight: normal;
+}
+
+h3 {
+  font-family: Nunito;
+  font-size: 22px;
+  color: #000000;
+  font-weight: normal;
+  margin-block-end: 0em;
+  padding-bottom: 10px;
+
+
+}
+
+h4 {
+  font-family: Nunito;
+  font-size: 20px;
+  color: #000000;
+  font-weight: normal;
+}
+
+h5 {
+  font-family: Nunito;
+  font-size: 18px;
+  color: #000000;
+  font-weight: normal;
+}
+
+h6 {
+  font-family: Nunito;
+  font-size: 16px;
+  color: #000000;
+  font-weight: normal;
+}
+
+p {
+  font-family: Nunito;
+  font-size: 16px;
+}
+
+a {
+  font-family: Nunito;
+	font-size: 16px;
+}
+
+a:hover{
+	color: #B90504;
+}
+.nav-link:hover {
+	color:#B90504 !important; 
+}
+.nav-link {
+font-weight: 600;
+color:#b1b1b1
+}
+
+
+.lead {
+  font-family: Nunito;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.blockquote {
+  font-family: Nunito;
+  font-size: 21px;
+  font-weight: lighter;
+  font-style: italic;
+}
+
+li {
+  font-size: 14px;
+  font-family: Nunito;
+  display: list-item;
+}
+
+ol {
+  font-size: 14px;
+  font-family: Nunito;
+  display: list-item;
+  padding-inline-start: 10px;
+
+}
+
+.color-text {
+  text-align:center;
+}
