@@ -14,8 +14,24 @@ class LibraryItemsController < ApplicationController
         puts "Hola!!"
         puts params
         @item = LibraryItem.create(state_description: "une description", user: current_user, manga_id:params[:manga_id])
-        redirect_to edit_user_path(current_user)
+        redirect_to user_path(current_user)
  
+    end
+
+    def update
+        @item = LibraryItem.find(params[:id])
+        token = @item.user.token_state
+        token += 1
+        current_user_token = current_user.token_state
+        current_user_token -=1
+        
+        if current_user_token < 0
+            current_user.update(token_state: 0)
+        else
+            current_user.update(token_state: current_user_token)
+        end
+        @item.user.update(token_state: token)
+        redirect_to '/', success: 'Echange réalisé avec succès'
     end
 
     def destroy 
@@ -24,11 +40,8 @@ class LibraryItemsController < ApplicationController
         #@item = LibraryItem.where(user: current_user, manga_id:@manga.id)
 
         puts @item
-        puts "Hello"
-
         @item.destroy
-
-        redirect_to '/users/' + current_user.id.to_s + '/edit'
+        redirect_to '/users/' + current_user.id.to_s
     end   
        
    
