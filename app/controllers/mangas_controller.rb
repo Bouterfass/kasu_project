@@ -5,6 +5,8 @@ class MangasController < ApplicationController
 
   def show
     @manga = Manga.find(params[:id])
+    @items = LibraryItem.where(manga:@manga)
+
   end
   
   def edit
