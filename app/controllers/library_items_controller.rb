@@ -2,12 +2,8 @@ class LibraryItemsController < ApplicationController
 
     before_action :authenticate_user!
 
-    # On peut ajouter/enlever une ligne de library_items sur les liens suivants : 
-    #localhost:3000/mon_profil/edit (destroy et redirection index mangas pour ajouter celui qu'il veut)
-    #localhost:3000/manga/16/show
-
-    def new
-        @library_item = LibraryItem.new
+    def index
+        @pagy, @items = pagy(LibraryItem.all)
     end
     
     def show
