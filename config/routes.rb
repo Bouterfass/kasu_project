@@ -6,9 +6,12 @@ Rails.application.routes.draw do
   resources :users
   
   resources :library_items
+  resources :wishlist_items, only: [:create, :destroy]
+
 
   resources :mangas, except: [:destroy] do
     resources :library_items
+    resources :wishlist_items, only: [:create, :destroy]
   end
   #========================
   # Routes Private messages
