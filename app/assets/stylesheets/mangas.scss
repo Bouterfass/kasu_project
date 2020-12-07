@@ -5,15 +5,21 @@
 // Description
 
 .img-manga-show{
-  height: 100%;
+  min-height: 300px;
+  margin-bottom: 20px;
+  border-radius: 5px;
 }
 
 .background-manga{
   background-image: url('https://dw9to29mmj727.cloudfront.net/sections/2016/24907-READ_header_2000x800_options_colours_grey30.png');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .description-manga{
-  width: 400px;
+  max-width: 700px;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 20px;
   border-radius: 5px;
