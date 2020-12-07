@@ -13,14 +13,15 @@ class MangasController < ApplicationController
     @manga = Manga.find(params[:id])
   end
 
+  def new
+    @manga = Manga.new
+  end
+
   def create
     manga = Manga.create(manga_params)
     redirect_to manga_path(manga.id)
   end
   
-  def new
-    @manga = Manga.new
-  end
 
   def update
   end
@@ -29,7 +30,7 @@ class MangasController < ApplicationController
   end
 
   def manga_params
-    manga_params = params.require(:manga).permit(:image_url, :title, :author, :description, :cover)
+      params.require(:manga).permit(:image_url, :title, :author, :description)
   end
 
 end
