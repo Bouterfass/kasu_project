@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @user_collection = LibraryItem.where(user: current_user)
+    @user_wishlist = WishlistItem.where(user: current_user)
   end
 
   def edit
