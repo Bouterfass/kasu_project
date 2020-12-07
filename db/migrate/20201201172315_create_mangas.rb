@@ -4,6 +4,7 @@ class CreateMangas < ActiveRecord::Migration[5.2]
       t.string :title
       t.string :author
       t.text :description
+      t.integer :volume
       t.string :image_url
       t.timestamps
     end
