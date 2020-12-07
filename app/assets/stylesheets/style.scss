@@ -5,7 +5,7 @@ body {
 	grid-template-rows: auto 1fr auto;
 }
 
-/* La typographie */
+/* FONT */
 
 h1 {
   font-family: Nunito;
@@ -95,4 +95,33 @@ ol {
 
 .color-text {
   text-align:center;
+}
+
+/* BTN */
+
+.btn-outline-primary{
+  border-color: #ff1016;
+  color: black;
+}
+
+.btn-outline-primary:hover{
+  background-color: #ff1016;
+  border-color: rgb(94, 94, 94);
+}
+
+.btn-secondary{
+  background-color: rgb(94, 94, 94);
+}
+
+.btn-secondary:hover{
+  background-color: rgb(41, 41, 41);
+}
+
+.btn-outline-secondary{
+  border-color: rgb(41, 41, 41);
+  color: rgb(41, 41, 41);
+}
+
+.btn-outline-secondary:hover{
+  background-color: rgb(41, 41, 41);
 }
