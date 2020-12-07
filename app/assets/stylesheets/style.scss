@@ -5,7 +5,7 @@ body {
 	grid-template-rows: auto 1fr auto;
 }
 
-/* La typographie */
+/* FONT */
 
 h1 {
   font-family: Nunito;
@@ -15,39 +15,32 @@ h1 {
 
 h2 {
   font-family: Nunito;
-  font-size: 26px;
   font-weight: normal;
 }
 
 h3 {
   font-family: Nunito;
   font-size: 22px;
-  color: #000000;
   font-weight: normal;
   margin-block-end: 0em;
   padding-bottom: 10px;
-
-
 }
 
 h4 {
   font-family: Nunito;
   font-size: 20px;
-  color: #000000;
   font-weight: normal;
 }
 
 h5 {
   font-family: Nunito;
   font-size: 18px;
-  color: #000000;
   font-weight: normal;
 }
 
 h6 {
   font-family: Nunito;
   font-size: 16px;
-  color: #000000;
   font-weight: normal;
 }
 
@@ -62,10 +55,10 @@ a {
 }
 
 a:hover{
-	color: #B90504;
+	color: #ff1016;
 }
 .nav-link:hover {
-	color:#B90504 !important; 
+	color:#ff1016 !important; 
 }
 .nav-link {
 font-weight: 600;
@@ -102,4 +95,33 @@ ol {
 
 .color-text {
   text-align:center;
+}
+
+/* BTN */
+
+.btn-outline-primary{
+  border-color: #ff1016;
+  color: black;
+}
+
+.btn-outline-primary:hover{
+  background-color: #ff1016;
+  border-color: rgb(94, 94, 94);
+}
+
+.btn-secondary{
+  background-color: rgb(94, 94, 94);
+}
+
+.btn-secondary:hover{
+  background-color: rgb(41, 41, 41);
+}
+
+.btn-outline-secondary{
+  border-color: rgb(41, 41, 41);
+  color: rgb(41, 41, 41);
+}
+
+.btn-outline-secondary:hover{
+  background-color: rgb(41, 41, 41);
 }
