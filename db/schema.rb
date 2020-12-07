@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 2020_12_07_132916) do
     t.string "state"
     t.text "state_description"
     t.integer "token_price"
+    t.integer "volume"
     t.bigint "user_id"
     t.bigint "manga_id"
     t.datetime "created_at", null: false
@@ -73,6 +74,7 @@ ActiveRecord::Schema.define(version: 2020_12_07_132916) do
     t.string "title"
     t.string "author"
     t.text "description"
+    t.integer "volume"
     t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
