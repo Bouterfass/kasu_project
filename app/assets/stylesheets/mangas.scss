@@ -1,3 +1,55 @@
-// Place all the styles related to the Mangas controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// ****************
+//      SHOW
+// ****************
+
+// Description
+
+.img-manga-show{
+  height: 100%;
+}
+
+.background-manga{
+  background-image: url('https://dw9to29mmj727.cloudfront.net/sections/2016/24907-READ_header_2000x800_options_colours_grey30.png');
+}
+
+.description-manga{
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.description-manga .btn-secondary{
+  background-color: rgb(41, 41, 41);
+  border: none;
+}
+
+.description-manga .btn-secondary:hover{
+  background-color: white;
+  color:rgb(0, 0, 0);
+  border: none;
+}
+
+// card
+
+.card-show-manga .card__img{
+  height: 200px;
+}
+
+.card-show-manga .card__img--hover{
+  height: 200px;
+}
+
+.all-show-manga{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card-show-manga .card__info{
+  background-color: rgb(243, 243, 243) ;
+  padding: 10px 20px 10px 20px;
+  color: rgb(73, 73, 73);
+}
+
+
