@@ -11,7 +11,7 @@ class LibraryItemsController < ApplicationController
     end
     
     def create
-        puts "Hola!!"
+ 
         puts params
         @item = LibraryItem.create(state_description: "une description", user: current_user, manga_id:params[:manga_id])
         redirect_to user_path(current_user)
