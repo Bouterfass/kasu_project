@@ -65,6 +65,16 @@
     <div class="row d-flex justify-content-center">
         <%= link_to "Ajouter un manga", mangas_path, class: 'btn btn-secondary mb-5' %>
     </div>
+    <ul>
+    <% @conversations.each do |conversation| %>
+			<li>
+				<%= link_to conversation.recipient(current_user).name, conversation_messages_path(conversation) %>
+				<% if !conversation.unread_message_count(current_user).zero? %>
+						(<%= conversation.unread_message_count(current_user) %>)
+				<% end %>
+			</li>
+    <% end %>
+    </ul>
 </div>
 </div>
 </div>
