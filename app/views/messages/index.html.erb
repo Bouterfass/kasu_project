@@ -1,6 +1,5 @@
-<%= @conversation.library_item.manga%>
-<div class="chat-container">
-<h3 class=" text-center">Messagerie</h3>
+<div class="chat-container mt-4">
+<h3 class=" text-center display-4">Messagerie</h3>
 <div class="messaging">
       <div class="inbox_msg">
         <div class="inbox_people">
@@ -15,11 +14,13 @@
               <div class="chat_people">
                 <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                 <div class="chat_ib mt-4">
-                      <%= link_to conversation.recipient(current_user).name, conversation_messages_path(conversation) %>
-                      <% if !conversation.unread_message_count(current_user).zero? %>
-                        (<%= conversation.unread_message_count(current_user) %>)
-                      <% end %>
-                      <%= link_to 'Confirmer la demande', library_item_path(@conversation.library_item), method: 'PUT', class: 'btn btn-danger '%>
+                  <%= link_to conversation.recipient(current_user).name, conversation_messages_path(conversation) %>
+                  <% if !conversation.unread_message_count(current_user).zero? %>
+                    (<%= conversation.unread_message_count(current_user) %>)
+                  <% end %>
+                  <% if current_user == @conversation.library_item.user %>
+                    <%= link_to 'Confirmer la demande', library_item_path(@conversation.library_item), method: 'PUT', class: 'btn btn-danger '%>
+                  <% end %>
                 </div>
               </div>
             </div>

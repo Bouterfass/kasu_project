@@ -2,6 +2,9 @@ class UsersController < ApplicationController
   
   before_action :authenticate_user!
   before_action :is_user?
+  before_action :set_conversation, only: [:show]
+    
+ 
 
   def show
     @user = User.find(params[:id])
@@ -31,5 +34,7 @@ class UsersController < ApplicationController
     end
   end
 
-  
+  def set_conversation
+    @conversation = Conversation.last
+  end
 end
