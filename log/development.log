@@ -23170,3 +23170,898 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 402ms (Views: 60.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2020-12-07 10:36:18 -0300
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  [1m[36mLibraryItem Load (1.3ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" ORDER BY "library_items"."id" DESC LIMIT $1[0m  [["LIMIT", 4]]
+  ↳ app/controllers/static_pages_controller.rb:3
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 3]]
+  ↳ app/controllers/static_pages_controller.rb:4
+  Rendering static_pages/index.html.erb within layouts/application
+  [1m[36mManga Load (1.6ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mManga Load (0.5ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mManga Load (0.6ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mCACHE Manga Load (0.0ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  Rendered static_pages/_card.html.erb (56.9ms)
+  [1m[36mActiveStorage::Attachment Load (7.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card-user.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card-user.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (3.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card-user.html.erb:8
+  Rendered static_pages/_card-user.html.erb (878.0ms)
+  Rendered static_pages/index.html.erb within layouts/application (1445.4ms)
+  Rendered shared/_navbar.html.erb (50.3ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 12934ms (Views: 12767.5ms | ActiveRecord: 59.2ms)
+
+
+Started GET "/mangas" for ::1 at 2020-12-07 10:36:55 -0300
+Processing by MangasController#index as HTML
+  [1m[35m (14.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "mangas"[0m
+  ↳ app/controllers/mangas_controller.rb:3
+  Rendering mangas/index.html.erb within layouts/application
+  [1m[36mManga Load (1.2ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/mangas/_mangaCard.html.erb:7
+  Rendered mangas/_mangaCard.html.erb (21.3ms)
+  Rendered mangas/index.html.erb within layouts/application (29.2ms)
+  Rendered shared/_navbar.html.erb (4.0ms)
+  Rendered shared/_footer.html.erb (1.1ms)
+Completed 200 OK in 138ms (Views: 110.1ms | ActiveRecord: 15.9ms)
+
+
+Started GET "/mangas/2" for ::1 at 2020-12-07 10:36:58 -0300
+Processing by MangasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mManga Load (0.9ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/mangas_controller.rb:7
+  Rendering mangas/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Manga"], ["name", "cover"], ["LIMIT", 1]]
+  ↳ app/views/mangas/show.html.erb:11
+  Rendered mangas/show.html.erb within layouts/application (14.1ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 2.2ms)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: to_model delegated to attachment, but attachment is nil):
+     8:             <div class="col d-flex justify-content-center">
+     9:                 <img class='image' style="height:170%" src="<%= @manga.image_url %>" alt="Manga-item">
+    10: <<<<<<< HEAD
+    11:                 <%= image_tag @manga.cover %>
+    12: 
+    13: =======
+    14: 								<%= image_tag @manga.cover %>				
+  
+app/views/mangas/show.html.erb:11:in `_app_views_mangas_show_html_erb___2721572514645595075_70060'
+Started GET "/users/sign_in" for ::1 at 2020-12-07 11:06:55 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.5ms)
+  Rendered users/sessions/new.html.erb within layouts/application (58.0ms)
+  Rendered shared/_navbar.html.erb (4.4ms)
+  Rendered shared/_footer.html.erb (1.1ms)
+Completed 200 OK in 121ms (Views: 117.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-12-07 11:35:39 -0300
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  [1m[36mLibraryItem Load (0.9ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" ORDER BY "library_items"."id" DESC LIMIT $1[0m  [["LIMIT", 4]]
+  ↳ app/controllers/static_pages_controller.rb:3
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 3]]
+  ↳ app/controllers/static_pages_controller.rb:4
+  Rendering static_pages/index.html.erb within layouts/application
+  [1m[36mManga Load (0.7ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mManga Load (0.3ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mManga Load (0.3ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mCACHE Manga Load (0.0ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  Rendered static_pages/_card.html.erb (10.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card-user.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card-user.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card-user.html.erb:8
+  Rendered static_pages/_card-user.html.erb (10.0ms)
+  Rendered static_pages/index.html.erb within layouts/application (65.1ms)
+  Rendered shared/_navbar.html.erb (2.1ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 107ms (Views: 96.5ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/" for ::1 at 2020-12-07 13:31:13 -0300
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  [1m[36mLibraryItem Load (0.8ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" ORDER BY "library_items"."id" DESC LIMIT $1[0m  [["LIMIT", 4]]
+  ↳ app/controllers/static_pages_controller.rb:3
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 3]]
+  ↳ app/controllers/static_pages_controller.rb:4
+  Rendering static_pages/index.html.erb within layouts/application
+  [1m[36mManga Load (0.8ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mManga Load (0.3ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mManga Load (0.5ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mCACHE Manga Load (0.0ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  Rendered static_pages/_card.html.erb (9.5ms)
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card-user.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card-user.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card-user.html.erb:8
+  Rendered static_pages/_card-user.html.erb (12.6ms)
+  Rendered static_pages/index.html.erb within layouts/application (47.3ms)
+  Rendered shared/_navbar.html.erb (4.6ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 108ms (Views: 98.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/mangas" for ::1 at 2020-12-07 13:31:20 -0300
+Processing by MangasController#index as HTML
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "mangas"[0m
+  ↳ app/controllers/mangas_controller.rb:3
+  Rendering mangas/index.html.erb within layouts/application
+  [1m[36mManga Load (0.4ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/mangas/_mangaCard.html.erb:7
+  Rendered mangas/_mangaCard.html.erb (5.3ms)
+  Rendered mangas/index.html.erb within layouts/application (6.9ms)
+  Rendered shared/_navbar.html.erb (2.8ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 57ms (Views: 53.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/mangas" for ::1 at 2020-12-07 13:31:28 -0300
+Processing by MangasController#index as HTML
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "mangas"[0m
+  ↳ app/controllers/mangas_controller.rb:3
+  Rendering mangas/index.html.erb within layouts/application
+  [1m[36mManga Load (1.2ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/mangas/_mangaCard.html.erb:7
+  Rendered mangas/_mangaCard.html.erb (7.8ms)
+  Rendered mangas/index.html.erb within layouts/application (19.8ms)
+  Rendered shared/_navbar.html.erb (3.0ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 77ms (Views: 70.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/mangas" for ::1 at 2020-12-07 13:31:36 -0300
+Processing by MangasController#index as HTML
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "mangas"[0m
+  ↳ app/controllers/mangas_controller.rb:3
+  Rendering mangas/index.html.erb within layouts/application
+  [1m[36mManga Load (0.6ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/mangas/_mangaCard.html.erb:7
+  Rendered mangas/_mangaCard.html.erb (6.6ms)
+  Rendered mangas/index.html.erb within layouts/application (8.8ms)
+  Rendered shared/_navbar.html.erb (4.4ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 65ms (Views: 61.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/mangas" for ::1 at 2020-12-07 13:32:48 -0300
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.4.4) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.4.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3359605203089069340)[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateCategories (20201207103734)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (31.1ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20201207103734_create_categories.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201207103734"]]
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateJoinMangaCategories (20201207104029)
+  [1m[35m (5.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (9.2ms)[0m  [1m[35mCREATE TABLE "join_manga_categories" ("id" bigserial primary key, "category_id" bigint, "manga_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20201207104029_create_join_manga_categories.rb:3
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX  "index_join_manga_categories_on_category_id" ON "join_manga_categories"  ("category_id")[0m
+  ↳ db/migrate/20201207104029_create_join_manga_categories.rb:3
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_join_manga_categories_on_manga_id" ON "join_manga_categories"  ("manga_id")[0m
+  ↳ db/migrate/20201207104029_create_join_manga_categories.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201207104029"]]
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateWishlistItems (20201207105329)
+  [1m[35m (6.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (11.0ms)[0m  [1m[35mCREATE TABLE "wishlist_items" ("id" bigserial primary key, "user_id" bigint, "manga_id" bigint, "volume" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20201207105329_create_wishlist_items.rb:3
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE  INDEX  "index_wishlist_items_on_user_id" ON "wishlist_items"  ("user_id")[0m
+  ↳ db/migrate/20201207105329_create_wishlist_items.rb:3
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_wishlist_items_on_manga_id" ON "wishlist_items"  ("manga_id")[0m
+  ↳ db/migrate/20201207105329_create_wishlist_items.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201207105329"]]
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateCities (20201207132916)
+  [1m[35m (6.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (16.3ms)[0m  [1m[35mCREATE TABLE "cities" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20201207132916_create_cities.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201207132916"]]
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3359605203089069340)[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Started GET "/mangas" for ::1 at 2020-12-07 13:33:09 -0300
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by MangasController#index as HTML
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "mangas"[0m
+  ↳ app/controllers/mangas_controller.rb:3
+  Rendering mangas/index.html.erb within layouts/application
+  [1m[36mManga Load (0.5ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/mangas/_mangaCard.html.erb:7
+  Rendered mangas/_mangaCard.html.erb (19.9ms)
+  Rendered mangas/index.html.erb within layouts/application (21.8ms)
+  Rendered shared/_navbar.html.erb (9.0ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 324ms (Views: 271.5ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/mangas/4" for ::1 at 2020-12-07 13:33:17 -0300
+Processing by MangasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mManga Load (2.1ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/mangas_controller.rb:7
+  Rendering mangas/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (2.9ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Manga"], ["name", "cover"], ["LIMIT", 1]]
+  ↳ app/views/mangas/show.html.erb:11
+  Rendered mangas/show.html.erb within layouts/application (36.8ms)
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 30.0ms)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: to_model delegated to attachment, but attachment is nil):
+     8:             <div class="col d-flex justify-content-center">
+     9:                 <img class='image' style="height:170%" src="<%= @manga.image_url %>" alt="Manga-item">
+    10: <<<<<<< HEAD
+    11:                 <%= image_tag @manga.cover %>
+    12: 
+    13: =======
+    14: 								<%= image_tag @manga.cover %>				
+  
+app/views/mangas/show.html.erb:11:in `_app_views_mangas_show_html_erb___1366470587069351623_69380'
+Started GET "/mangas/4" for ::1 at 2020-12-07 13:41:14 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by MangasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mManga Load (0.8ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/mangas_controller.rb:7
+  Rendering mangas/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Manga"], ["name", "cover"], ["LIMIT", 1]]
+  ↳ app/views/mangas/show.html.erb:11
+  Rendered mangas/show.html.erb within layouts/application (17.5ms)
+Completed 500 Internal Server Error in 96ms (ActiveRecord: 18.5ms)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: to_model delegated to attachment, but attachment is nil):
+     8:             <div class="col d-flex justify-content-center">
+     9:                 <img class='image' style="height:170%" src="<%= @manga.image_url %>" alt="Manga-item">
+    10: <<<<<<< HEAD
+    11:                 <%= image_tag @manga.cover %>
+    12: 
+    13: =======
+    14: 								<%= image_tag @manga.cover %>				
+  
+app/views/mangas/show.html.erb:11:in `_app_views_mangas_show_html_erb___389196857064884471_69020'
+Started GET "/" for ::1 at 2020-12-07 13:41:19 -0300
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  [1m[36mLibraryItem Load (0.6ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" ORDER BY "library_items"."id" DESC LIMIT $1[0m  [["LIMIT", 4]]
+  ↳ app/controllers/static_pages_controller.rb:3
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 3]]
+  ↳ app/controllers/static_pages_controller.rb:4
+  Rendering static_pages/index.html.erb within layouts/application
+  [1m[36mManga Load (0.5ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mManga Load (0.6ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mManga Load (0.5ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  [1m[36mCACHE Manga Load (0.0ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card.html.erb:6
+  Rendered static_pages/_card.html.erb (19.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card-user.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card-user.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/_card-user.html.erb:8
+  Rendered static_pages/_card-user.html.erb (304.7ms)
+  Rendered static_pages/index.html.erb within layouts/application (656.1ms)
+  Rendered shared/_navbar.html.erb (9.0ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 799ms (Views: 733.3ms | ActiveRecord: 27.0ms)
+
+
+Started GET "/library_items" for ::1 at 2020-12-07 13:41:38 -0300
+Processing by LibraryItemsController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-12-07 13:41:38 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.9ms)
+  Rendered users/sessions/new.html.erb within layouts/application (57.2ms)
+  Rendered shared/_navbar.html.erb (3.4ms)
+  Rendered shared/_footer.html.erb (1.3ms)
+Completed 200 OK in 146ms (Views: 140.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mangas/new" for ::1 at 2020-12-07 13:41:41 -0300
+Processing by MangasController#new as HTML
+  Rendering mangas/new.html.erb within layouts/application
+  Rendered mangas/new.html.erb within layouts/application (15.4ms)
+  Rendered shared/_navbar.html.erb (3.1ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 63ms (Views: 61.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/library_items" for ::1 at 2020-12-07 13:41:42 -0300
+Processing by LibraryItemsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-12-07 13:41:42 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.8ms)
+  Rendered users/sessions/new.html.erb within layouts/application (20.0ms)
+  Rendered shared/_navbar.html.erb (3.7ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 91ms (Views: 89.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mangas" for ::1 at 2020-12-07 13:41:45 -0300
+Processing by MangasController#index as HTML
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "mangas"[0m
+  ↳ app/controllers/mangas_controller.rb:3
+  Rendering mangas/index.html.erb within layouts/application
+  [1m[36mManga Load (0.8ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/mangas/_mangaCard.html.erb:7
+  Rendered mangas/_mangaCard.html.erb (9.5ms)
+  Rendered mangas/index.html.erb within layouts/application (13.4ms)
+  Rendered shared/_navbar.html.erb (4.7ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 94ms (Views: 88.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/mangas/6" for ::1 at 2020-12-07 13:41:53 -0300
+Processing by MangasController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mManga Load (0.5ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/mangas_controller.rb:7
+  Rendering mangas/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "Manga"], ["name", "cover"], ["LIMIT", 1]]
+  ↳ app/views/mangas/show.html.erb:11
+  Rendered mangas/show.html.erb within layouts/application (9.2ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: to_model delegated to attachment, but attachment is nil):
+     8:             <div class="col d-flex justify-content-center">
+     9:                 <img class='image' style="height:170%" src="<%= @manga.image_url %>" alt="Manga-item">
+    10: <<<<<<< HEAD
+    11:                 <%= image_tag @manga.cover %>
+    12: 
+    13: =======
+    14: 								<%= image_tag @manga.cover %>				
+  
+app/views/mangas/show.html.erb:11:in `_app_views_mangas_show_html_erb___389196857064884471_71000'
+Started GET "/mangas/6" for ::1 at 2020-12-07 13:43:50 -0300
+Processing by MangasController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mManga Load (0.5ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/mangas_controller.rb:7
+  Rendering mangas/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "Manga"], ["name", "cover"], ["LIMIT", 1]]
+  ↳ app/views/mangas/show.html.erb:4
+  [1m[36mLibraryItem Load (0.3ms)[0m  [1m[34mSELECT "library_items".* FROM "library_items" WHERE "library_items"."manga_id" = $1[0m  [["manga_id", 6]]
+  ↳ app/views/mangas/show.html.erb:23
+  Rendered mangas/show.html.erb within layouts/application (6.0ms)
+  Rendered shared/_navbar.html.erb (3.1ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 51ms (Views: 46.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/mangas/6" for ::1 at 2020-12-07 13:46:06 -0300
+Processing by MangasController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mManga Load (0.3ms)[0m  [1m[34mSELECT  "mangas".* FROM "mangas" WHERE "mangas"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/mangas_controller.rb:7
+  Rendering mangas/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "Manga"], ["name", "cover"], ["LIMIT", 1]]
+  ↳ app/views/mangas/show.html.erb:4
+  [1m[36mLibraryItem Load (0.4ms)[0m  [1m[34mSELECT "library_items".* FROM "library_items" WHERE "library_items"."manga_id" = $1[0m  [["manga_id", 6]]
+  ↳ app/views/mangas/show.html.erb:23
+  Rendered mangas/show.html.erb within layouts/application (5.3ms)
+  Rendered shared/_navbar.html.erb (2.8ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 50ms (Views: 46.8ms | ActiveRecord: 1.4ms)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mLibraryItem Destroy (12.9ms)[0m  [1m[31mDELETE FROM "library_items"[0m
+  ↳ db/seeds.rb:16
+  [1m[36mJoinMangaCategory Destroy (0.9ms)[0m  [1m[31mDELETE FROM "join_manga_categories"[0m
+  ↳ db/seeds.rb:19
+  [1m[36mUser Destroy (6.8ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:22
+  [1m[36mCategory Destroy (0.6ms)[0m  [1m[31mDELETE FROM "categories"[0m
+  ↳ db/seeds.rb:25
+  [1m[36mManga Destroy (3.5ms)[0m  [1m[31mDELETE FROM "mangas"[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mLibraryItem Destroy (0.9ms)[0m  [1m[31mDELETE FROM "library_items"[0m
+  ↳ db/seeds.rb:16
+  [1m[36mJoinMangaCategory Destroy (0.8ms)[0m  [1m[31mDELETE FROM "join_manga_categories"[0m
+  ↳ db/seeds.rb:19
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:22
+  [1m[36mCategory Destroy (0.6ms)[0m  [1m[31mDELETE FROM "categories"[0m
+  ↳ db/seeds.rb:25
+  [1m[36mManga Destroy (0.7ms)[0m  [1m[31mDELETE FROM "mangas"[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mLibraryItem Destroy (7.9ms)[0m  [1m[31mDELETE FROM "library_items"[0m
+  ↳ db/seeds.rb:16
+  [1m[36mJoinMangaCategory Destroy (7.1ms)[0m  [1m[31mDELETE FROM "join_manga_categories"[0m
+  ↳ db/seeds.rb:19
+  [1m[36mUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:22
+  [1m[36mCategory Destroy (0.6ms)[0m  [1m[31mDELETE FROM "categories"[0m
+  ↳ db/seeds.rb:25
+  [1m[36mManga Destroy (6.9ms)[0m  [1m[31mDELETE FROM "mangas"[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Create (25.8ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Romance"], ["created_at", "2020-12-08 13:02:58.820177"], ["updated_at", "2020-12-08 13:02:58.820177"]]
+  ↳ db/seeds.rb:128
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:128
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Tranche-de-vie"], ["created_at", "2020-12-08 13:02:58.849396"], ["updated_at", "2020-12-08 13:02:58.849396"]]
+  ↳ db/seeds.rb:128
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:128
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Gay-Lesbien"], ["created_at", "2020-12-08 13:02:58.851662"], ["updated_at", "2020-12-08 13:02:58.851662"]]
+  ↳ db/seeds.rb:128
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:128
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Science-fiction"], ["created_at", "2020-12-08 13:02:58.857769"], ["updated_at", "2020-12-08 13:02:58.857769"]]
+  ↳ db/seeds.rb:128
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:128
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Aventure"], ["created_at", "2020-12-08 13:02:58.860166"], ["updated_at", "2020-12-08 13:02:58.860166"]]
+  ↳ db/seeds.rb:128
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:128
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Fantastique"], ["created_at", "2020-12-08 13:02:58.862416"], ["updated_at", "2020-12-08 13:02:58.862416"]]
+  ↳ db/seeds.rb:128
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:128
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Comedie"], ["created_at", "2020-12-08 13:02:58.868532"], ["updated_at", "2020-12-08 13:02:58.868532"]]
+  ↳ db/seeds.rb:128
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:128
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Drame"], ["created_at", "2020-12-08 13:02:58.871966"], ["updated_at", "2020-12-08 13:02:58.871966"]]
+  ↳ db/seeds.rb:128
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:128
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Conte"], ["created_at", "2020-12-08 13:02:58.874008"], ["updated_at", "2020-12-08 13:02:58.874008"]]
+  ↳ db/seeds.rb:128
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:128
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Enfants"], ["created_at", "2020-12-08 13:02:58.879876"], ["updated_at", "2020-12-08 13:02:58.879876"]]
+  ↳ db/seeds.rb:128
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:128
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Sport"], ["created_at", "2020-12-08 13:02:58.882775"], ["updated_at", "2020-12-08 13:02:58.882775"]]
+  ↳ db/seeds.rb:128
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:128
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Social"], ["created_at", "2020-12-08 13:02:58.885244"], ["updated_at", "2020-12-08 13:02:58.885244"]]
+  ↳ db/seeds.rb:128
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:128
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Histoires-courtes"], ["created_at", "2020-12-08 13:02:58.889207"], ["updated_at", "2020-12-08 13:02:58.889207"]]
+  ↳ db/seeds.rb:128
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:128
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Action"], ["created_at", "2020-12-08 13:02:58.893711"], ["updated_at", "2020-12-08 13:02:58.893711"]]
+  ↳ db/seeds.rb:128
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:128
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Animaux"], ["created_at", "2020-12-08 13:02:58.896013"], ["updated_at", "2020-12-08 13:02:58.896013"]]
+  ↳ db/seeds.rb:128
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:128
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Suspense"], ["created_at", "2020-12-08 13:02:58.898176"], ["updated_at", "2020-12-08 13:02:58.898176"]]
+  ↳ db/seeds.rb:128
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:128
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Historique"], ["created_at", "2020-12-08 13:02:58.904818"], ["updated_at", "2020-12-08 13:02:58.904818"]]
+  ↳ db/seeds.rb:128
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:128
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Gastronomie"], ["created_at", "2020-12-08 13:02:58.907302"], ["updated_at", "2020-12-08 13:02:58.907302"]]
+  ↳ db/seeds.rb:128
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:128
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Erotique"], ["created_at", "2020-12-08 13:02:58.909749"], ["updated_at", "2020-12-08 13:02:58.909749"]]
+  ↳ db/seeds.rb:128
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:128
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Policier"], ["created_at", "2020-12-08 13:02:58.916716"], ["updated_at", "2020-12-08 13:02:58.916716"]]
+  ↳ db/seeds.rb:128
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:128
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Heroic-fantasy"], ["created_at", "2020-12-08 13:02:58.919263"], ["updated_at", "2020-12-08 13:02:58.919263"]]
+  ↳ db/seeds.rb:128
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:128
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Humour"], ["created_at", "2020-12-08 13:02:58.921286"], ["updated_at", "2020-12-08 13:02:58.921286"]]
+  ↳ db/seeds.rb:128
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:128
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Musique"], ["created_at", "2020-12-08 13:02:58.927282"], ["updated_at", "2020-12-08 13:02:58.927282"]]
+  ↳ db/seeds.rb:128
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:128
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Medical"], ["created_at", "2020-12-08 13:02:58.930049"], ["updated_at", "2020-12-08 13:02:58.930049"]]
+  ↳ db/seeds.rb:128
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:128
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Horreur"], ["created_at", "2020-12-08 13:02:58.932117"], ["updated_at", "2020-12-08 13:02:58.932117"]]
+  ↳ db/seeds.rb:128
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:128
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Thriller"], ["created_at", "2020-12-08 13:02:58.938657"], ["updated_at", "2020-12-08 13:02:58.938657"]]
+  ↳ db/seeds.rb:128
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:128
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Philosophique"], ["created_at", "2020-12-08 13:02:58.941312"], ["updated_at", "2020-12-08 13:02:58.941312"]]
+  ↳ db/seeds.rb:128
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:128
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Arts martiaux"], ["created_at", "2020-12-08 13:02:58.943536"], ["updated_at", "2020-12-08 13:02:58.943536"]]
+  ↳ db/seeds.rb:128
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:128
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Parodie"], ["created_at", "2020-12-08 13:02:58.950043"], ["updated_at", "2020-12-08 13:02:58.950043"]]
+  ↳ db/seeds.rb:128
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:128
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Jeux-Video"], ["created_at", "2020-12-08 13:02:58.952963"], ["updated_at", "2020-12-08 13:02:58.952963"]]
+  ↳ db/seeds.rb:128
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:128
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Documentaire"], ["created_at", "2020-12-08 13:02:58.955001"], ["updated_at", "2020-12-08 13:02:58.955001"]]
+  ↳ db/seeds.rb:128
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:128
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Emotion"], ["created_at", "2020-12-08 13:02:58.957162"], ["updated_at", "2020-12-08 13:02:58.957162"]]
+  ↳ db/seeds.rb:128
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:128
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:128
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Loisir"], ["created_at", "2020-12-08 13:02:58.963448"], ["updated_at", "2020-12-08 13:02:58.963448"]]
+  ↳ db/seeds.rb:128
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:128
+Started GET "/" for ::1 at 2020-12-08 10:13:11 -0300
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/gems/ruby-2.7.1/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#index as HTML
+  Parameters: {"page"=>"home"}
+  [1m[36mLibraryItem Load (1.0ms)[0m  [1m[34mSELECT  "library_items".* FROM "library_items" ORDER BY "library_items"."id" DESC LIMIT $1[0m  [["LIMIT", 4]]
+  ↳ app/controllers/static_pages_controller.rb:3
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 3]]
+  ↳ app/controllers/static_pages_controller.rb:4
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/_card.html.erb (1.0ms)
+  Rendered static_pages/_card-user.html.erb (0.9ms)
+  Rendered static_pages/index.html.erb within layouts/application (232.1ms)
+  Rendered shared/_navbar.html.erb (35.1ms)
+  Rendered shared/_footer.html.erb (1.7ms)
+Completed 200 OK in 576ms (Views: 543.3ms | ActiveRecord: 12.9ms)
+
+
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (17.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (33.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "kasu_project_development"[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (39.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "kasu_project_test"[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (245.4ms)[0m  [1m[35mCREATE DATABASE "kasu_project_development" ENCODING = 'unicode'[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (105.0ms)[0m  [1m[35mCREATE DATABASE "kasu_project_test" ENCODING = 'unicode'[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (19.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3359605203089069340)[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to DeviseCreateUsers (20201201170029)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (14.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "name" character varying DEFAULT 'Guest', "token_state" integer DEFAULT 1, "city_id" bigint, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20201201170029_devise_create_users.rb:5
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE  INDEX  "index_users_on_city_id" ON "users"  ("city_id")[0m
+  ↳ db/migrate/20201201170029_devise_create_users.rb:5
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20201201170029_devise_create_users.rb:44
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20201201170029_devise_create_users.rb:45
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201201170029"]]
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateLibraryItems (20201201171650)
+  [1m[35m (6.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (19.5ms)[0m  [1m[35mCREATE TABLE "library_items" ("id" bigserial primary key, "state" character varying, "state_description" text, "token_price" integer, "volume" integer, "user_id" bigint, "manga_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20201201171650_create_library_items.rb:3
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE  INDEX  "index_library_items_on_user_id" ON "library_items"  ("user_id")[0m
+  ↳ db/migrate/20201201171650_create_library_items.rb:3
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE  INDEX  "index_library_items_on_manga_id" ON "library_items"  ("manga_id")[0m
+  ↳ db/migrate/20201201171650_create_library_items.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201201171650"]]
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateMangas (20201201172315)
+  [1m[35m (6.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (17.5ms)[0m  [1m[35mCREATE TABLE "mangas" ("id" bigserial primary key, "title" character varying, "author" character varying, "description" text, "volume" integer, "image_url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20201201172315_create_mangas.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201201172315"]]
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateActiveStorageTables (20201202092002)
+  [1m[35m (6.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (35.1ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20201202092002_create_active_storage_tables.active_storage.rb:4
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_blobs_on_key" ON "active_storage_blobs"  ("key")[0m
+  ↳ db/migrate/20201202092002_create_active_storage_tables.active_storage.rb:4
+  [1m[35m (10.9ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  ↳ db/migrate/20201202092002_create_active_storage_tables.active_storage.rb:16
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments"  ("blob_id")[0m
+  ↳ db/migrate/20201202092002_create_active_storage_tables.active_storage.rb:16
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_attachments_uniqueness" ON "active_storage_attachments"  ("record_type", "record_id", "name", "blob_id")[0m
+  ↳ db/migrate/20201202092002_create_active_storage_tables.active_storage.rb:16
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201202092002"]]
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateCategories (20201207103734)
+  [1m[35m (12.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (15.5ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20201207103734_create_categories.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201207103734"]]
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateJoinMangaCategories (20201207104029)
+  [1m[35m (7.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (10.8ms)[0m  [1m[35mCREATE TABLE "join_manga_categories" ("id" bigserial primary key, "category_id" bigint, "manga_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20201207104029_create_join_manga_categories.rb:3
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE  INDEX  "index_join_manga_categories_on_category_id" ON "join_manga_categories"  ("category_id")[0m
+  ↳ db/migrate/20201207104029_create_join_manga_categories.rb:3
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE  INDEX  "index_join_manga_categories_on_manga_id" ON "join_manga_categories"  ("manga_id")[0m
+  ↳ db/migrate/20201207104029_create_join_manga_categories.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201207104029"]]
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateWishlistItems (20201207105329)
+  [1m[35m (5.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (9.4ms)[0m  [1m[35mCREATE TABLE "wishlist_items" ("id" bigserial primary key, "user_id" bigint, "manga_id" bigint, "volume" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20201207105329_create_wishlist_items.rb:3
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE  INDEX  "index_wishlist_items_on_user_id" ON "wishlist_items"  ("user_id")[0m
+  ↳ db/migrate/20201207105329_create_wishlist_items.rb:3
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_wishlist_items_on_manga_id" ON "wishlist_items"  ("manga_id")[0m
+  ↳ db/migrate/20201207105329_create_wishlist_items.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201207105329"]]
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateCities (20201207132916)
+  [1m[35m (5.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (17.1ms)[0m  [1m[35mCREATE TABLE "cities" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20201207132916_create_cities.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201207132916"]]
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-12-08 13:14:51.467233"], ["updated_at", "2020-12-08 13:14:51.467233"]]
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3359605203089069340)[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3359605203089069340)[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3359605203089069340)[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/victoriapiazzalonga/.rvm/rubies/ruby-2.7.1/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
