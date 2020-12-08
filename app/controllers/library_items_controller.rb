@@ -18,7 +18,7 @@ class LibraryItemsController < ApplicationController
             UserMailer.match_email(item.user, @item).deliver_now
         end
 
-        redirect_to user_path(current_user)
+        redirect_to user_path(current_user), success: "Manga ajouté de votre bibliothèque !"
     end
 
     def update
@@ -35,17 +35,13 @@ class LibraryItemsController < ApplicationController
         end
         @item.user.update(token_state: token)
         @item.destroy
-        redirect_to '/', success: 'Echange réalisé avec succès'
+        redirect_to '/', success: 'Echange réalisé avec succès !'
     end
 
     def destroy 
         @item = LibraryItem.find(params[:id])
-        #@manga = Manga.find(params[:manga_id])
-        #@item = LibraryItem.where(user: current_user, manga_id:@manga.id)
-
-        puts @item
         @item.destroy
-        redirect_to '/users/' + current_user.id.to_s
+        redirect_to '/users/' + current_user.id.to_s, danger: "Manga supprimé de votre bibliothèque !"
     end   
        
    
