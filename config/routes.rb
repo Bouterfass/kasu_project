@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'messages/index'
   get 'conversations/index'
   devise_for :users

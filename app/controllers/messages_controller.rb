@@ -1,10 +1,6 @@
 class MessagesController < ApplicationController
   before_action :authenticate_user!
-
-  before_action do
-    @conversation = Conversation.find(params[:conversation_id])
-    @conversations = Conversation.where("sender_id = ? OR receiver_id = ?", current_user.id, current_user.id)
-  end
+  before_action :set_conversation, only: [:index, :create]
 
   def index
     @messages = @conversation.messages
@@ -26,5 +22,10 @@ class MessagesController < ApplicationController
   private
     def message_params
       params.require(:message).permit(:body, :user_id)
+    end
+
+    def set_conversation
+      @conversation = Conversation.find(params[:conversation_id])
+      @conversations = Conversation.where("sender_id = ? OR receiver_id = ?", current_user.id, current_user.id)
     end
 end

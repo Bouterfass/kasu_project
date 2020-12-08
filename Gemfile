@@ -36,6 +36,7 @@ gem 'stripe'
 gem "mini_magick"
 gem "dotenv"
 gem "pagy"
+gem 'rails_admin'
 
 gem 'mailjet'
 # Use ActiveStorage variant

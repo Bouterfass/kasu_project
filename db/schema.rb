@@ -106,6 +106,7 @@ ActiveRecord::Schema.define(version: 2020_12_07_133504) do
     t.string "name", default: "Guest"
     t.integer "token_state", default: 1
     t.bigint "city_id"
+    t.boolean "is_admin", default: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
