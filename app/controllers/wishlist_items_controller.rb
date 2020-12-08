@@ -3,10 +3,13 @@ class WishlistItemsController < ApplicationController
     before_action :authenticate_user!
 
     def create
-        puts "*"*100
-        puts params
-        puts "*"*100
-        @item = WishlistItem.create(user: current_user, manga_id:params[:manga_id], volume: params[:manga][:volume])
+  
+     
+        if params.key?("manga")
+            @item = WishlistItem.create(user: current_user, manga_id:params[:manga_id], volume: params[:manga][:volume])
+        else
+            @item = WishlistItem.create(user: current_user, manga_id:params[:manga_id])
+        end
         redirect_to user_path(current_user)
  
     end
