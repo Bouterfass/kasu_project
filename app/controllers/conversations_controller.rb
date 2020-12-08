@@ -7,7 +7,6 @@ class ConversationsController < ApplicationController
   end
 
   def create
-    @item = params[:receiver_id]
     if Conversation.between(params[:sender_id], params[:receiver_id]).present?
       @conversation = Conversation.between(params[:sender_id], params[:receiver_id]).first
     else

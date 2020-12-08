@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2020_12_07_133504) do
-=======
-ActiveRecord::Schema.define(version: 2020_12_07_132916) do
->>>>>>> 64fc59d0ddd27850188dd915d67860ab6a631f8c
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,15 +36,6 @@ ActiveRecord::Schema.define(version: 2020_12_07_132916) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-<<<<<<< HEAD
-  create_table "conversations", force: :cascade do |t|
-    t.integer "sender_id"
-    t.integer "receiver_id"
-    t.bigint "library_item_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["library_item_id"], name: "index_conversations_on_library_item_id"
-=======
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -61,6 +48,15 @@ ActiveRecord::Schema.define(version: 2020_12_07_132916) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "conversations", force: :cascade do |t|
+    t.integer "sender_id"
+    t.integer "receiver_id"
+    t.bigint "library_item_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["library_item_id"], name: "index_conversations_on_library_item_id"
+  end
+
   create_table "join_manga_categories", force: :cascade do |t|
     t.bigint "category_id"
     t.bigint "manga_id"
@@ -68,7 +64,6 @@ ActiveRecord::Schema.define(version: 2020_12_07_132916) do
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_join_manga_categories_on_category_id"
     t.index ["manga_id"], name: "index_join_manga_categories_on_manga_id"
->>>>>>> 64fc59d0ddd27850188dd915d67860ab6a631f8c
   end
 
   create_table "library_items", force: :cascade do |t|
