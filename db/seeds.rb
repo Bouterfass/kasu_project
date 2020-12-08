@@ -32,7 +32,7 @@ Manga.reset_pk_sequence
 def manga_scraper
 
     manga_array = []
-    ("A".."Z").each do |letter|
+    ("A".."C").each do |letter|
         puts ""
         puts "Scraping mangas starting by letter : " + letter
         page = Nokogiri::HTML(URI.open("https://www.manga-news.com/index.php/series/" + letter))

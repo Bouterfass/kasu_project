@@ -1,6 +1,6 @@
 class MangasController < ApplicationController
   def index
-    @pagy, @mangas = pagy(Manga.all)
+    @pagy, @mangas = pagy(Manga.all)    
   end
 
   def show
