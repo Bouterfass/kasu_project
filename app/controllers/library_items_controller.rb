@@ -11,11 +11,14 @@ class LibraryItemsController < ApplicationController
     end
     
     def create
- 
-        puts params
         @item = LibraryItem.create(state_description: "une description", user: current_user, manga_id:params[:manga_id])
+        @all_wishlist = WishlistItem.where(manga_id: params[:manga_id])
+        
+        @all_wishlist.each do |item|
+            UserMailer.match_email(item.user, @item).deliver_now
+        end
+
         redirect_to user_path(current_user)
- 
     end
 
     def update
@@ -31,6 +34,7 @@ class LibraryItemsController < ApplicationController
             current_user.update(token_state: current_user_token)
         end
         @item.user.update(token_state: token)
+        @item.destroy
         redirect_to '/', success: 'Echange réalisé avec succès'
     end
 

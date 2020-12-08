@@ -48,6 +48,7 @@
       <h3> Description </h3>
       <p><%= @manga.description %></p>
       <%= link_to "Ajouter à ma Bibliothèque", manga_library_items_path(@manga.id), method: "POST", class:"btn btn-secondary" %>
+      <%= link_to "Ajouter à ma Wishlist", manga_wishlist_items_path(@manga.id), method: "POST", class:"btn btn-danger" %>
     </div>
   </div>
 
