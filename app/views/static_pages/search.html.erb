@@ -1,0 +1,11 @@
+  
+  <div class="container m-3 d-flex align-items-start">
+    <h3>Résultat de ta recherche</h3>  
+    <div class="result m-5">
+          <% @results.each do |result| %>  
+          <ul>
+            <li><b> <%= result.title.capitalize %> </b> de <b> <%= result.author %> </b> 	<%= link_to "Voir le manga", manga_path(result)%> </li>
+          </ul>
+      <% end %>
+    </div>
+  </div>
