@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Salut <%= @username %> !</h1>
+    <p>
+      C'est avec fierté que nous t'annoçons que tu as un match avec <%= @item.user.name %> (<%= @item.user.email %>).
+    </p><br/>
+     <p>
+        Nous te proposons de le contacter directement via notre site à l'adresse: (mettre une adresse),
+        pour récuperer son manga <%= @item.manga.title.capitalize %>.
+    </p><br/>
+    <p> À très vite sur vite sur kasu-heroku.com </p>
+  </body>
+</html>
