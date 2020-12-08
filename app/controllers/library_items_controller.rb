@@ -11,9 +11,11 @@ class LibraryItemsController < ApplicationController
     end
     
     def create
-        @item = LibraryItem.create(state_description: "une description", user: current_user, manga_id:params[:manga_id])
+        @item = LibraryItem.create(user: current_user, manga_id:params[:manga_id], state_description: params[:manga][:description], volume: params[:manga][:volume] )
         @all_wishlist = WishlistItem.where(manga_id: params[:manga_id])
-        
+        puts "*"*100
+        puts params
+        puts "*"*100
         @all_wishlist.each do |item|
             UserMailer.match_email(item.user, @item).deliver_now
         end

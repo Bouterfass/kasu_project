@@ -12,6 +12,7 @@
         <div class="col-4">
                 <p><strong>Titre</strong>: <%= @item.manga.title %></p>
                 <p><strong>Propriétaire</strong>: <%= @item.user.name %></p>
+                <p><strong>Tome</strong>: <%= @item.volume %></p>
                 <p><strong>Etat</strong>: <%= @item.state_description %></p>
         </div>
         <div class="col-4 mt-5">
@@ -28,7 +29,7 @@
      <ul class="ml-5">
         <% @item.user.mangas.each do |manga| %>
             <% if manga.title != @item.manga.title %>
-           <li>     <%= manga.title %><br/> </li>
+           <li>     <%= manga.title.capitalize %>(tomes <%= manga.volume %>)<br/> </li>
             <% end  %>
         <% end %>
     </ul>
