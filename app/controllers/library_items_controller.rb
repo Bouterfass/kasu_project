@@ -34,6 +34,7 @@ class LibraryItemsController < ApplicationController
             current_user.update(token_state: current_user_token)
         end
         @item.user.update(token_state: token)
+        @item.destroy
         redirect_to '/', success: 'Echange réalisé avec succès'
     end
 

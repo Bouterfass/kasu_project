@@ -15,7 +15,7 @@
         <h3>Propriétaire : <%= @item.user.name %></h3>
         <h3>Etat :</h3><p><%= @item.state_description %></p>
         <%= link_to 'Voir la desciption', manga_path(@item.manga), class: 'btn btn-outline-secondary'%>
-        <%= link_to 'Echanger', library_item_path(@item.id), method: 'PUT', class: 'btn btn-secondary'%>
+        <%= link_to 'Echanger', conversations_path(sender_id: current_user.id, receiver_id: @item.user.id, library_item_id: @item.id), method: :post, class: 'btn btn-danger' %>
       </div>
     </div>
   </div>
