@@ -1,47 +1,46 @@
 <div class="container-fluid">
   <div class="container-fluid p-5 background-items">
-  <div>
-    <h2 class="text-center m-1"> 
-      Le manga    <strong><%= @item.manga.title.capitalize %></strong> de <strong><%= @item.user.name %> </strong>
-    </h2>
-  </div>
-      <div class="containers-item mt-5">
-        <div class="mr-5">
-          <img src="<%= @item.manga.image_url %>">
-        </div>
+    <div>
+      <h2 class="text-center m-1"> 
+        Le manga    <strong><%= @item.manga.title.capitalize %></strong> de <strong><%= @item.user.name %> </strong>
+      </h2>
+    </div>
+    <div class="containers-item mt-5">
+      <div class="mr-5">
+        <img src="<%= @item.manga.image_url %>">
+      </div>
 
-        <div class="description-item ml-5">
-          <h3>Titre : <%= @item.manga.title %></h3>
-          <h3>Propriétaire : <%= @item.user.name %></h3>
-          <h3>Etat :</h3><p><%= @item.state_description %></p>
-          <%= link_to 'Voir la desciption', manga_path(@item.manga), class: 'btn btn-outline-secondary'%>
-          <%= link_to 'Echanger', library_item_path(@item.id), method: 'PUT', class: 'btn btn-secondary'%>
-        </div>
+      <div class="description-item ml-5">
+        <h3>Titre : <%= @item.manga.title %></h3>
+        <h3>Propriétaire : <%= @item.user.name %></h3>
+        <h3>Etat :</h3><p><%= @item.state_description %></p>
+        <%= link_to 'Voir la desciption', manga_path(@item.manga), class: 'btn btn-outline-secondary'%>
+        <%= link_to 'Echanger', library_item_path(@item.id), method: 'PUT', class: 'btn btn-secondary'%>
       </div>
     </div>
+  </div>
 
-    <div class="container-fluid py-5">
-      <h2 class="text-center"> Les autres mangas de <%= @item.user.name %></h2>
+  <div class="container-fluid py-5">
+    <h2 class="text-center"> Les autres mangas de <%= @item.user.name %></h2>
 
-      <div class="all-show-manga px-5">
-        <% @item.user.library_items.each do |item| %>
-            <% if item.manga.title != @item.manga.title %>
-            <article class="card-show-item card--1">
-          <div class="card__img" style="background-image: url('<%= item.manga.image_url %>')"></div>
-          <a href="<%=library_item_path(item.id)%>" class="card_link">
-            <div class="card__img--hover" style="background-image: url('<%= item.manga.image_url %>')"></div>
-          </a>
-          <div class="card__info">
-            <h5 class="card__title"><%= item.manga.title %></h5>
-            <h5 class="card__title">tome n° : </h5>
-            <%= link_to "Voir", library_item_path(item.id), class:"btn btn-outline-secondary my-2" %>
-          </div>
-        </article>
-          
-            <% end  %>
-        <% end %>
+    <div class="all-show-manga px-5">
+      <% @item.user.library_items.each do |item| %>
+        <% if item.manga.title != @item.manga.title %>
+
+          <article class="card-show-item card--1">
+            <div class="card__img" style="background-image: url('<%= item.manga.image_url %>')"></div>
+            <a href="<%=library_item_path(item.id)%>" class="card_link">
+              <div class="card__img--hover" style="background-image: url('<%= item.manga.image_url %>')"></div>
+            </a>
+            <div class="card__info">
+              <h5 class="card__title"><%= item.manga.title %></h5>
+              <h5 class="card__title">tome n° : </h5>
+              <%= link_to "Voir", library_item_path(item.id), class:"btn btn-outline-secondary my-2" %>
+            </div>
+          </article>
+
+        <% end  %>
+      <% end %>
     </div>
-    </div>
-
-
+  </div>
 </div>
