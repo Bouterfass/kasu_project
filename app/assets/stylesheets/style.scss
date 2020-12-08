@@ -125,3 +125,10 @@ ol {
 .btn-outline-secondary:hover{
   background-color: rgb(41, 41, 41);
 }
+
+.alert-position{
+  position: fixed;
+  z-index: 30;
+  top: 100px;
+  left: 40%;
+}
