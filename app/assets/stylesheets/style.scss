@@ -119,6 +119,10 @@ ol {
   background-color: rgb(41, 41, 41);
 }
 
+.btn-primary:focus{
+  background-color: rgb(41, 41, 41);
+}
+
 .btn-secondary{
   background-color: rgb(94, 94, 94);
 }
@@ -141,6 +145,4 @@ ol {
   z-index: 30;
   top: 100px;
   left: 40%;
-  color: rgb(41, 41, 41);
-  background-color:#FCF8E3;
 }

@@ -16,6 +16,7 @@ require 'faker'
 LibraryItem.delete_all
 LibraryItem.reset_pk_sequence
 
+<<<<<<< HEAD
 User.delete_all
 User.reset_pk_sequence
 
@@ -24,12 +25,24 @@ User.reset_pk_sequence
 JoinMangaCategory.delete_all
 JoinMangaCategory.reset_pk_sequence
 
+=======
+JoinMangaCategory.delete_all
+JoinMangaCategory.reset_pk_sequence
+
+User.delete_all
+User.reset_pk_sequence
+
+>>>>>>> develop
 Category.delete_all
 Category.reset_pk_sequence
 
 Manga.delete_all
 Manga.reset_pk_sequence
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> develop
 def manga_scraper
 
     manga_array = []
@@ -150,13 +163,20 @@ all_mangas.each do |manga|
     end
     i += 1
 end
+<<<<<<< HEAD
 =end
+=======
+>>>>>>> develop
 
 gaetan = User.create(email: "badgaga@test.com", name: "Gaetan", password: "azerty")
 stephen = User.create(email: "stephen@test.com", name: "Stephen", password: "azerty")
 jules = User.create(email: "jules@test.com", name: "Jules", password: "azerty")
 dylan = User.create(email: "dylan@test.com", name: "Dylan", password: "azerty")
+<<<<<<< HEAD
 youcef = User.create(email: "youcef@test.com", name: "Youcef", password: "azerty")
+=======
+youcef = User.create(email: "youcef@test.com", name: "Youcef", password: "azerty", is_admin: true)
+>>>>>>> develop
 
 10.times do 
     LibraryItem.create(user: gaetan, manga: Manga.find(rand(1..458)), state_description: Faker::Lorem.paragraph(sentence_count: 3))
@@ -172,4 +192,8 @@ end
     WishlistItem.create(user: jules, manga: Manga.find(rand(1..458)))
     WishlistItem.create(user: dylan, manga: Manga.find(rand(1..458)))
     WishlistItem.create(user: youcef, manga: Manga.find(rand(1..458)))
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> develop
