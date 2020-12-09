@@ -23,11 +23,11 @@
     <div class="container d-flex justify-content-around all-icon">
       <div class="text-center mr-5">
         <a class="" href="<%= mangas_path %>"><%= image_tag 'echange.png', class:"icon-explication icon1 mb-4"%></a>
-        <h3>Échange</h3>
+        <h3>1.Je crée ma bibliothèque</h3>
         <p>Met en ligne les mangas <br /> que tu ne veux plus.</p>
       </div>
       <div class="text-center mr-5">
-        <a class="" href="#"><%= image_tag 'recois.png', class:"icon-explication icon1 mb-4"%></a>
+        <a class="" href="<%=static_pages_concept_page_path%>"><%= image_tag 'recois.png', class:"icon-explication icon1 mb-4"%></a>
         <h3>Reçois</h3>
         <p>Reçois des kasu points<br />une fois ton vieux manga échangé.</p>
       </div>
@@ -44,6 +44,10 @@
     <div class="container d-flex justify-content-around">
       <%= render "card" %>
     </div>
+    <div class="d-flex justify-content-center">
+      <%= link_to "Les mangas disponibles", library_items_path, class: 'btn btn-outline-dark'%>
+
+    </div>
   </div>
 
   <div class="section3">
@@ -58,3 +62,13 @@
   </div>
 
 </main>
+
+
+
+
+
+
+
+
+
+

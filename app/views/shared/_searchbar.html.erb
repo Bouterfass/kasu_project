@@ -3,9 +3,9 @@
           <%= form_tag(search_page_path, :method => "get",   
           class: 'navbar-form navbar-left') do %>  
             <div class="input-group my-2">  
-              <%= search_field_tag :search, params[:search], placeholder: "Tape le nom du manga que tu cherches / échanges", class: "form-control" %>  
+              <%= search_field_tag :search, params[:search], placeholder: "Tape le manga que tu souhaites échanger", class: "form-control" %>  
               <div class="input-group-btn mx-3">  
-                <%= button_tag "Trouver un Manga", :class => 'btn btn-danger glyphicon glyphicon-search',:name => nil%>  
+                <%= button_tag "J'échange mon Manga", :class => 'btn btn-danger glyphicon glyphicon-search',:name => nil%>  
               </div>  
             </div>  
           <% end %>

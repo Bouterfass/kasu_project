@@ -1,6 +1,9 @@
 class CategoriesController < ApplicationController
   def show
     @category = Category.find(params[:id])
-    @pagy, @mangas = pagy(@category.mangas)    
+    @categories = Category.all
+    @mangas = @category.mangas
+    @pagy, @libraries = pagy(LibraryItem.where(manga:@mangas))
+    # @categories = Category.all  
   end
 end

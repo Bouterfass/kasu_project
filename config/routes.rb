@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
  
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  get 'messages/index'
+  get 'conversations/index'
+  get 'static_pages/concept_page'
+  get'static_pages/team_page'
+  get '/libsearch' => 'static_pages#libsearch', :as => 'libsearch_page'
 
   get '/search' => 'static_pages#search', :as => 'search_page'
 

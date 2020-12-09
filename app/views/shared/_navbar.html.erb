@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light py-3 sticky-top" id="navbar">
-  <a href='<%= root_path%>' class="brand-link"><%= image_tag 'logo3.png', class:"brand text-prim", size: "70x70" %></a>
+  <a href='<%= root_path%>' class="brand-link"><%= image_tag 'logo3.png', class:"brand text-prim", size: "60x60" %></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -7,8 +7,9 @@
   
     <ul class="navbar-nav navbar-center">
       <li class="nav-item active">
-          <%= link_to "Home", root_path, class: 'nav-link' %>
+          <%= link_to "Accueil", root_path, class: 'nav-link' %>
       </li>
+
       <li class="nav-item active">
           <%= link_to "Proposer", mangas_path, class: 'nav-link' %>
       </li>
@@ -19,17 +20,14 @@
     </ul>
 
       <ul class="navbar-nav ml-auto">
-      <% if current_user && current_user.is_admin == true%>
-        <li class="nav-item active">
-            <%= link_to "Dashboard/Admin", rails_admin_path, class: 'nav-link' %>
-        </li>
-      <% end %>
       <li class="nav-item active">
       <% if user_signed_in?%>
         <% if current_user.name == "Guest" %>
-          <li class="pt-2 mr-1"> <%= current_user.name %>
-            <%= link_to "changer", edit_user_path(current_user) %>
-          </li>
+              <li class="pt-2 mr-1"> <%= current_user.name %>
+                <%= link_to "changer", edit_user_path(current_user) %>
+                
+              
+              </li>
         <% end  %>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Profil/Quitter</a>

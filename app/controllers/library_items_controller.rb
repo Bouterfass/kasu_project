@@ -4,6 +4,10 @@ class LibraryItemsController < ApplicationController
 
     def index
         @pagy, @items = pagy(LibraryItem.all)
+        @categories = Category.all
+
+        @all_libraries = []
+        LibraryItem.all.each{|item| @all_libraries << item.manga.id}
     end
     
     def show
