@@ -28,7 +28,6 @@ Category.reset_pk_sequence
 Manga.delete_all
 Manga.reset_pk_sequence
 
-
 def manga_scraper
 
     manga_array = []

@@ -55,7 +55,8 @@ a {
 }
 
 a:hover{
-	color: #ff1016;
+  color: #ff1016;
+  text-decoration: none;
 }
 .nav-link:hover {
 	color:#ff1016 !important; 
@@ -109,6 +110,19 @@ ol {
   border-color: rgb(94, 94, 94);
 }
 
+.btn-primary{
+  background-color: #ff1016;
+  border: none;
+}
+
+.btn-primary:hover{
+  background-color: rgb(41, 41, 41);
+}
+
+.btn-primary:focus{
+  background-color: rgb(41, 41, 41);
+}
+
 .btn-secondary{
   background-color: rgb(94, 94, 94);
 }
@@ -131,6 +145,4 @@ ol {
   z-index: 30;
   top: 100px;
   left: 40%;
-  color: rgb(41, 41, 41);
-  background-color:#FCF8E3;
 }
