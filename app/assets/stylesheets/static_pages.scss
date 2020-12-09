@@ -272,6 +272,15 @@ border-bottom-right-radius: 5px;
   align-items: center;
 }
 
+.section5{
+  margin-top: 100px;
+  background-image: url('https://dw9to29mmj727.cloudfront.net/sections/2016/24907-READ_header_2000x800_options_colours_grey30.png');
+  height: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .img-sign{
   height: 300px;
 }
@@ -283,4 +292,21 @@ border-bottom-right-radius: 5px;
 
 .search_bar{
   width: 600px;
+}
+
+// **********************
+//      Search_bar
+// **********************
+
+.button-out {
+  background-color:  transparent;
+  border: 1px solid;
+  border-color:grey;
+  color: grey;
+  padding: 10px 40px;
+  text-align: center;
+  display: inline-block;
+  border-radius :20px;
+  font-size: 15px;
+  font-family:nunito;
 }
