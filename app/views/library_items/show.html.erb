@@ -11,12 +11,25 @@
       </div>
 
       <div class="description-item ml-5">
+        <div class="d-flex justify-content-between">
         <h3>Titre : <%= @item.manga.title %></h3>
+        <div class="small-circle-lib">
+           <%if @item.user.avatar.attached?%>
+              <%= image_tag @item.user.avatar, class:"small-circle-lib"%>
+                <% else %>
+              <%= image_tag "kirua.jpg", class:"small-circle-lib"%>
+            <%end%>  
+          </div>
+        </div>
         <h3>Propriétaire : <%= @item.user.name %></h3>
         <h3>Tome :</h3><p><%= @item.volume %></p>
         <h3>Etat :</h3><p><%= @item.state_description %></p>
         <%= link_to 'Voir la desciption', manga_path(@item.manga), class: 'btn btn-outline-secondary'%>
-        <%= link_to 'Echanger', conversations_path(sender_id: current_user.id, receiver_id: @item.user.id, library_item_id: @item.id), method: :post, class: 'btn btn-danger' %>
+        <% if current_user.token_state == 0%>
+          <p>Vous n'avez pas de kasu point</p>
+        <% else%>
+          <%= link_to 'Echanger', conversations_path(sender_id: current_user.id, receiver_id: @item.user.id, library_item_id: @item.id), method: :post, class: 'btn btn-danger' %>
+        <% end %>
       </div>
     </div>
   </div>

@@ -11,8 +11,8 @@ class LibraryItemsController < ApplicationController
     end
     
     def create
-
-        @item = LibraryItem.create(user: current_user, manga_id:params[:manga_id], state_description: params[:manga][:description], volume: params[:manga][:volume])
+      
+        @item = LibraryItem.create(user: current_user, manga_id:params[:manga_id], state_description: params[:library_item][:state_description], volume: params[:library_item][:volume])
         @all_wishlist = WishlistItem.where(manga_id: params[:manga_id])
         @all_wishlist.each do |item|
             UserMailer.match_email(item.user, @item).deliver_now
@@ -23,17 +23,19 @@ class LibraryItemsController < ApplicationController
 
     def update
         @item = LibraryItem.find(params[:id])
-        token = @item.user.token_state
-        token += 1
+        @conversation_sender = @item.conversations
+        token = @conversation_sender[0].sender.token_state
+        token -= 1
         current_user_token = current_user.token_state
-        current_user_token -=1
-        
+        current_user_token +=1
+
         if current_user_token < 0
             current_user.update(token_state: 0)
         else
             current_user.update(token_state: current_user_token)
         end
-        @item.user.update(token_state: token)
+        
+        @conversation_sender[0].sender.update(token_state: token)
         @item.destroy
         redirect_to '/', success: 'Echange réalisé avec succès !'
     end
@@ -41,7 +43,10 @@ class LibraryItemsController < ApplicationController
     def destroy 
         @item = LibraryItem.find(params[:id])
         @item.destroy
-        redirect_to '/users/' + current_user.id.to_s, danger: "Manga supprimé de votre bibliothèque !"
+        respond_to do |format|
+            format.html { redirect_to '/users/' + current_user.id.to_s, danger: "Manga supprimé de votre bibliothèque !" }
+            format.js {}
+        end 
     end   
        
    
