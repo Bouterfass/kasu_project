@@ -1,11 +1,12 @@
 class MangasController < ApplicationController
   def index
-    @pagy, @mangas = pagy(Manga.all)
+    @pagy, @mangas = pagy(Manga.all)    
   end
 
   def show
     @manga = Manga.find(params[:id])
     @items = LibraryItem.where(manga:@manga)
+    @all_volumes = @manga.integer_to_array(@manga.volume)
 
   end
   

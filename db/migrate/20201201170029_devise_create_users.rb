@@ -12,6 +12,9 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.string :name, default: "Guest"
       t.integer :token_state, default: 1
       t.belongs_to :city, index: true
+      ## Admin
+      t.boolean :is_admin, default: false
+
       ## Recoverable
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at
