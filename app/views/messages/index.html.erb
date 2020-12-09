@@ -1,5 +1,5 @@
-<div class="chat-container mt-3">
-  <h2 class=" text-center m-4">Messagerie</h2>
+<div class="chat-container">
+  
   <div class="messaging">
     <div class="inbox_msg">
       <div class="inbox_people">
@@ -9,25 +9,26 @@
           </div> 
         </div>
         <div class="inbox_chat">
-          <% @conversations.each_with_index do |conversation, index| %>
+          <% @conversations.reverse.each_with_index do |conversation, index| %>
           <a href="<%=conversation_messages_path(conversation)%>">
-            <div class="chat_list active_chat chat_focus" tabindex="<%= index %>">
+          
+            <div class="chat_list active_chat chat_focus" <% if conversation.id == @conversation.id %> id="chat_focus" <% end %>>
               <div class="chat_people">
                 <div class="chat_img_container"> 
-                <%if conversation.receiver.avatar.attached?%>
+                  <%if conversation.receiver.avatar.attached?%>
                     <%= image_tag conversation.receiver.avatar, class:"chat_img"%>
-                    <% else %>
-                      <%= image_tag "kirua.jpg", class:"chat_img"%>
-                    <%end%>
+                  <% else %>
+                    <%= image_tag "kirua.jpg", class:"chat_img"%>
+                  <%end%>
                  
                 </div>
                 <div class="chat_ib mt-4">
-                  <%= conversation.recipient(current_user).name%>
+                  <h5><%= conversation.recipient(current_user).name%><h5>
                   <% if !conversation.unread_message_count(current_user).zero? %>
                     (<%= conversation.unread_message_count(current_user) %>)
                   <% end %>
                   <% if current_user == @conversation.library_item.user %>
-                    <%= link_to 'Confirmer la demande', library_item_path(@conversation.library_item), method: 'PUT', class: 'btn btn-danger'%>
+                    <%= link_to 'Confirmer la demande', library_item_path(@conversation.library_item), method: 'PUT', class: 'btn btn-outline-primary'%>
                   <% end %>
                 </div>
               </div>
@@ -49,13 +50,7 @@
                 </div>
                 <% else%>
                 <div class="incoming_msg">
-                  <div class="incoming_msg_img"> 
-                    <%if message.user.avatar.attached?%>
-                      <%= image_tag message.user.avatar%>
-                    <% else %>
-                      <%= image_tag "kirua.jpg"%>
-                    <%end%>  
-                  </div>
+                  
                   <div class="received_msg">
                     <div class="received_withd_msg">
                       <p><%= message.body %></p>
@@ -71,7 +66,7 @@
             <div class="input_msg_write">
               <%= form_for [@conversation, @message] do |f| %>
                 <div class="container_msg_write">
-                <%= f.text_area :body, placeholder: "Ecris ton message", class: 'write_msg' %>
+                <%= f.text_area :body, placeholder: "Envoie un message à #{@conversation.receiver.name} pour échanger son manga, #{@conversation.library_item.manga.title}", class: 'write_msg' %>
                 <%= f.submit "Send", class: "btn btn-secondary" %>             
               <% end %>
             </div>
