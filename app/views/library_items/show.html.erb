@@ -13,6 +13,7 @@
       <div class="description-item ml-5">
         <h3>Titre : <%= @item.manga.title %></h3>
         <h3>Propriétaire : <%= @item.user.name %></h3>
+        <h3>Tome :</h3><p><%= @item.volume %></p>
         <h3>Etat :</h3><p><%= @item.state_description %></p>
         <%= link_to 'Voir la desciption', manga_path(@item.manga), class: 'btn btn-outline-secondary'%>
         <%= link_to 'Echanger', conversations_path(sender_id: current_user.id, receiver_id: @item.user.id, library_item_id: @item.id), method: :post, class: 'btn btn-danger' %>
@@ -34,7 +35,7 @@
             </a>
             <div class="card__info">
               <h5 class="card__title"><%= item.manga.title %></h5>
-              <h5 class="card__title">tome n° : </h5>
+              <h5 class="card__title">tome n° : <%= item.volume %></h5>
               <%= link_to "Voir", library_item_path(item.id), class:"btn btn-outline-secondary my-2" %>
             </div>
           </article>

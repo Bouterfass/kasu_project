@@ -1,7 +1,6 @@
 
 
 <div class='container'>
-	<h2 class='text-center display-3'> Notre collection</h2>
 	<div class="container-fluid mt-2">
 		<div class="row m-2 card-all">
 			<% @mangas.each do |manga|%>
@@ -13,6 +12,9 @@
 			</a>
 			<div class="card__info">
 			<h3 class="card__title"><%= manga.title.capitalize %></h3>
+				<% manga.categories.each do |category| %>
+				<%= link_to category.name, category_path(category.id) %>
+				<%end%>
 			<span class="card__by">by <%= manga.author%></span><br>
 			<%= link_to "Voir le manga", manga_path(manga), class: 'btn btn-info mt-2'%>
 			</div>

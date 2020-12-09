@@ -6,12 +6,11 @@
   <body>
     <h1>Salut <%= @username %> !</h1>
     <p>
-      C'est avec fierté que nous t'annoçons que tu as un match avec <%= @item.user.name %> (<%= @item.user.email %>).
+      C'est avec fierté que nous t'annonçons que tu as un match avec <%= @item.user.name %> (<%= @item.user.email %>).
     </p><br/>
      <p>
-        Nous te proposons de le contacter directement via notre site à l'adresse: (mettre une adresse),
-        pour récuperer son manga <%= @item.manga.title.capitalize %>.
+        Fais lui savoir que tu souhaites son manga en cliquant <a href="kasu-herokuapp.com/library_items/<%= @item.id %>">ici</a> !
     </p><br/>
-    <p> À très vite sur vite sur kasu-heroku.com </p>
+    <p> À très vite sur vite sur kasu-herokuapp.com </p>
   </body>
 </html>
