@@ -1,6 +1,8 @@
 class MangasController < ApplicationController
   def index
-    @pagy, @mangas = pagy(Manga.all)    
+    @pagy, @mangas = pagy(Manga.all)
+    @all_libraries = []
+    LibraryItem.all.each{|item| @all_libraries << item.manga.id}
   end
 
   def show

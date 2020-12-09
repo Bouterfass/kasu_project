@@ -41,7 +41,10 @@ class LibraryItemsController < ApplicationController
     def destroy 
         @item = LibraryItem.find(params[:id])
         @item.destroy
-        redirect_to '/users/' + current_user.id.to_s, danger: "Manga supprimé de votre bibliothèque !"
+        respond_to do |format|
+            format.html { redirect_to '/users/' + current_user.id.to_s, danger: "Manga supprimé de votre bibliothèque !" }
+            format.js {}
+        end 
     end   
        
    
