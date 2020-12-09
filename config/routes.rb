@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'messages/index'
   get 'conversations/index'
+  get '/libsearch' => 'static_pages#libsearch', :as => 'libsearch_page'
   get '/search' => 'static_pages#search', :as => 'search_page'
 
   devise_for :users

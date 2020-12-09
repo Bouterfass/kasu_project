@@ -1,6 +1,14 @@
 class MangasController < ApplicationController
   def index
-    @pagy, @mangas = pagy(Manga.all)    
+    @pagy, @mangas = pagy(Manga.all) 
+    @categories = Category.all
+
+    if params[:category_id]
+      @category = Category.includes(:mangas).find(params[:category_id])                     
+      @products = @category.mangas
+    else
+      @manga = Manga.all
+    end   
   end
 
   def show
