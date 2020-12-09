@@ -16,7 +16,7 @@
     <h2><strong><%= @user.name.capitalize %></strong></h2>
 </div>
 <div class="row d-flex justify-content-center">
-    <h2><strong><%= @user.token_state %> tokens</strong></h2>
+    <h2><strong><%= @user.token_state %> Kasu Point<% if  @user.token_state > 1  %>s<% end %></strong></h2>
 </div>
 <div class="row d-flex justify-content-center  pb-3">
     <h5><strong><%= @user.email %></strong></h5>
