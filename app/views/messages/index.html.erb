@@ -67,7 +67,7 @@
               <%= form_for [@conversation, @message] do |f| %>
                 <div class="container_msg_write">
                 <%= f.text_area :body, placeholder: "Envoie un message à #{@conversation.receiver.name} pour échanger son manga, #{@conversation.library_item.manga.title}", class: 'write_msg' %>
-                <%= f.submit "Send", class: "btn btn-secondary" %>             
+                <%= f.submit "Envoyer", class: "btn btn-secondary" %>             
               <% end %>
             </div>
           </div>
