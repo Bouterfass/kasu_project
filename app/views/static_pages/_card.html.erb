@@ -9,6 +9,9 @@
         </a>
         <div class="card__info">
           <h3 class="card__title"><%=manga.manga.title%></h3>
+          <% manga.manga.categories.each do |category| %>
+          <%= link_to category.name, category_path(category.id) %>
+          <%end%>
           <span class="card__by">by <a href="#" class="card__author" title="author"><%=manga.manga.author%></a></span>
         </div>
       </article>

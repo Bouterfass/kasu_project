@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'messages/index'
   get 'conversations/index'
   get '/search' => 'static_pages#search', :as => 'search_page'
@@ -21,4 +22,6 @@ Rails.application.routes.draw do
   resources :conversations, only: [:index, :create] do
     resources :messages, only: [:index, :create]
   end
+
+  resources :categories, only: [:index, :show]
 end
