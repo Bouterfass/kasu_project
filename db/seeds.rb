@@ -16,16 +16,17 @@ require 'faker'
 LibraryItem.delete_all
 LibraryItem.reset_pk_sequence
 
-JoinMangaCategory.delete_all
-JoinMangaCategory.reset_pk_sequence
-
 User.delete_all
 User.reset_pk_sequence
+
+
+=begin
+JoinMangaCategory.delete_all
+JoinMangaCategory.reset_pk_sequence
 
 Category.delete_all
 Category.reset_pk_sequence
 
-=begin
 Manga.delete_all
 Manga.reset_pk_sequence
 
