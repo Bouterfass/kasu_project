@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'messages/index'
   get 'conversations/index'
+  get 'static_pages/concept_page'
+  get'static_pages/team_page'
   devise_for :users
   root "static_pages#index", page: "home"
   resources :users
