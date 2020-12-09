@@ -27,11 +27,10 @@
               </button>
             </div>
             <div class="modal-body text-dark">
-             <%= simple_form_for @manga, :url => manga_library_items_path(@manga.id), :method => :post do |f| %>
+             <%= simple_form_for [@manga, @item], :url => manga_library_items_path(@manga.id), :method => :post do |f| %>
                 <%= f.input :volume, :collection => @all_volumes, :selected => [1..@manga.volume] %>
-                <%= f.input :description %>
-
-
+                <%= f.input :state_description, :label => "Etat du manga", input_html: { autocomplete: 'off' }, class: "description-form" %>
+        
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Annuler</button>

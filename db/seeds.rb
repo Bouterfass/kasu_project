@@ -32,7 +32,7 @@ Manga.reset_pk_sequence
 def manga_scraper
 
     manga_array = []
-    ("A".."C").each do |letter|
+    ("A".."Z").each do |letter|
         puts ""
         puts "Scraping mangas starting by letter : " + letter
         page = Nokogiri::HTML(URI.open("https://www.manga-news.com/index.php/series/" + letter))
@@ -154,7 +154,7 @@ gaetan = User.create(email: "badgaga@test.com", name: "Gaetan", password: "azert
 stephen = User.create(email: "stephen@test.com", name: "Stephen", password: "azerty")
 jules = User.create(email: "jules@test.com", name: "Jules", password: "azerty")
 dylan = User.create(email: "dylan@test.com", name: "Dylan", password: "azerty")
-youcef = User.create(email: "youcef@test.com", name: "Youcef", password: "azerty")
+youcef = User.create(email: "youcef@test.com", name: "Youcef", password: "azerty", is_admin: true)
 
 10.times do 
     LibraryItem.create(user: gaetan, manga: Manga.find(rand(1..458)), state_description: Faker::Lorem.paragraph(sentence_count: 3))

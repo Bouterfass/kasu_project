@@ -5,6 +5,9 @@ class LibraryItemsController < ApplicationController
     def index
         @pagy, @items = pagy(LibraryItem.all)
         @categories = Category.all
+
+        @all_libraries = []
+        LibraryItem.all.each{|item| @all_libraries << item.manga.id}
     end
     
     def show
@@ -12,8 +15,8 @@ class LibraryItemsController < ApplicationController
     end
     
     def create
-
-        @item = LibraryItem.create(user: current_user, manga_id:params[:manga_id], state_description: params[:manga][:description], volume: params[:manga][:volume])
+      
+        @item = LibraryItem.create(user: current_user, manga_id:params[:manga_id], state_description: params[:library_item][:state_description], volume: params[:library_item][:volume])
         @all_wishlist = WishlistItem.where(manga_id: params[:manga_id])
         @all_wishlist.each do |item|
             UserMailer.match_email(item.user, @item).deliver_now
@@ -42,7 +45,10 @@ class LibraryItemsController < ApplicationController
     def destroy 
         @item = LibraryItem.find(params[:id])
         @item.destroy
-        redirect_to '/users/' + current_user.id.to_s, danger: "Manga supprimé de votre bibliothèque !"
+        respond_to do |format|
+            format.html { redirect_to '/users/' + current_user.id.to_s, danger: "Manga supprimé de votre bibliothèque !" }
+            format.js {}
+        end 
     end   
        
    

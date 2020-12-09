@@ -11,7 +11,7 @@
 								<div class="card__img--hover" style="background-image: url('<%= manga.image_url %>')"></div>
 								</a>
 								<div class="card__info">
-									<%= link_to manga.title.capitalize, library_item_path(manga), class: "card__title"%>
+									<h3 class="card__title"><% if @all_libraries.include?(manga.id) %><%= image_tag 'available.png', class:"available mb-1"%><% end %> <%= manga.title.capitalize %></h3>
 									<h5><span>par <%=manga.author%></span></h5>
 									<% manga.categories.each do |category| %>
 									<%= link_to category.name, category_path(category.id) %>
