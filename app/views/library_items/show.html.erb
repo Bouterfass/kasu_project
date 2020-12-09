@@ -11,7 +11,16 @@
       </div>
 
       <div class="description-item ml-5">
+        <div class="d-flex justify-content-between">
         <h3>Titre : <%= @item.manga.title %></h3>
+        <div class="small-circle-lib">
+           <%if @item.user.avatar.attached?%>
+              <%= image_tag @item.user.avatar, class:"small-circle-lib"%>
+                <% else %>
+              <%= image_tag "kirua.jpg", class:"small-circle-lib"%>
+            <%end%>  
+          </div>
+        </div>
         <h3>Propriétaire : <%= @item.user.name %></h3>
         <h3>Tome :</h3><p><%= @item.volume %></p>
         <h3>Etat :</h3><p><%= @item.state_description %></p>
