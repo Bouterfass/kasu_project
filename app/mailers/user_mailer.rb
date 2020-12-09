@@ -26,4 +26,12 @@ class UserMailer < ApplicationMailer
         # # # c'est cet appel à mail() qui permet d'envoyer l’e-mail en définissant destinataire et sujet.
         mail(to: @email, subject: 'Ta commande sur e-chaton.fr !') 
     end
+
+    def contact(name, email, message)
+      @user_name = name
+      @user_mail = email
+      @message = message
+
+      mail(to: 'kasu@yopmail.com', subject: user_name )
+    end
 end

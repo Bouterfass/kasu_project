@@ -27,17 +27,19 @@ class LibraryItemsController < ApplicationController
 
     def update
         @item = LibraryItem.find(params[:id])
-        token = @item.user.token_state
-        token += 1
+        @conversation_sender = @item.conversations
+        token = @conversation_sender[0].sender.token_state
+        token -= 1
         current_user_token = current_user.token_state
-        current_user_token -=1
-        
+        current_user_token +=1
+
         if current_user_token < 0
             current_user.update(token_state: 0)
         else
             current_user.update(token_state: current_user_token)
         end
-        @item.user.update(token_state: token)
+        
+        @conversation_sender[0].sender.update(token_state: token)
         @item.destroy
         redirect_to '/', success: 'Echange réalisé avec succès !'
     end
