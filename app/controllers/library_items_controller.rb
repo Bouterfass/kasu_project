@@ -4,6 +4,7 @@ class LibraryItemsController < ApplicationController
 
     def index
         @pagy, @items = pagy(LibraryItem.all)
+        @categories = Category.all
     end
     
     def show
