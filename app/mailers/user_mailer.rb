@@ -24,14 +24,21 @@ class UserMailer < ApplicationMailer
         @url  = 'https://kasu-develop.herokuapp.com' 
       
         # # # c'est cet appel à mail() qui permet d'envoyer l’e-mail en définissant destinataire et sujet.
-        mail(to: @email, subject: 'Ta commande sur e-chaton.fr !') 
+        mail(to: @email, subject: 'Ta commande sur kasu.com !') 
     end
 
-    def contact(name, email, message)
-      @user_name = name
-      @user_mail = email
-      @message = message
+    def transaction_email(user, library_item)
+        @email = user.email
+          
+        @item = library_item
+        @username = user.name
 
-      mail(to: 'kasu@yopmail.com', subject: user_name )
+        # # #on définit une variable @url qu'on utilisera dans la view d’e-mail
+        @url  = 'https://kasu-develop.herokuapp.com' 
+      
+        # # # c'est cet appel à mail() qui permet d'envoyer l’e-mail en définissant destinataire et sujet.
+        mail(to: @email, subject: 'Ta commande sur kasu.com !') 
     end
+
+    
 end

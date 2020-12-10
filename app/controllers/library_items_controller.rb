@@ -40,6 +40,7 @@ class LibraryItemsController < ApplicationController
         end
         
         @conversation_sender[0].sender.update(token_state: token)
+        UserMailer.transaction_email(@conversation_sender[0].sender, @item).deliver_now
         @item.destroy
         redirect_to '/', success: 'Echange réalisé avec succès !'
     end
