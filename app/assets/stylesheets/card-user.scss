@@ -1,28 +1,17 @@
 .img-user {
-  width: 150px;
-  height: 150px;
-  border: 2px solid #ff1016;
+  width: 100px;
+  height: 100px;
   background-size: cover;
   display: block;
-  border-radius: 100px;
+  border-radius: 150px;
   -webkit-border-radius: 150px;
   -moz-border-radius: 150px;
   transition: 200ms linear;
 }
 
-.img-user:hover {
-  transition: 200ms linear;
-  border-radius: 200px;
-  width: 200px;
-  height: 200px;
-  -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
-  box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
-}
 .section3 {
   padding: 30px;
   padding-bottom: 150px;
-
   background-color: rgb(247, 247, 247);
 }
 

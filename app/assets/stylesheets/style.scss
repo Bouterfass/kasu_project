@@ -51,7 +51,8 @@ p {
 
 a {
   font-family: Nunito;
-	font-size: 16px;
+  font-size: 16px;
+  color:grey
 }
 
 a:hover{
@@ -96,6 +97,12 @@ ol {
 
 .color-text {
   text-align:center;
+}
+
+.concept-title {
+  text-align:center;
+  font-size: 40px!important;
+  font-weight: 700;
 }
 
 /* BTN */
