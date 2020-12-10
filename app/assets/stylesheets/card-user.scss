@@ -1,7 +1,6 @@
 .img-user{
-  width: 200px;
-  height: 200px;
-  border: 2px solid #ff1016;
+  width: 100px;
+  height: 100px;
  background-size: cover;
  display: block;
  border-radius: 150px;
@@ -10,15 +9,15 @@
  transition: 200ms linear;
 }
 
-.img-user:hover{
-transition: 200ms linear;
-  border-radius: 200px;
-  width: 250px;
-  height: 250px;
-  -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow:    7px 7px 5px 0px rgba(50, 50, 50, 0.75);
-  box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.75);
-}
+// .img-user:hover{
+// transition: 200ms linear;
+//   border-radius: 200px;
+//   width: 150px;
+//   height: 150px;
+//   -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+//   -moz-box-shadow:    7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+//   box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+// }
 .section3{
   padding: 30px;
   margin-bottom: 20px;

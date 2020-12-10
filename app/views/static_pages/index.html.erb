@@ -21,20 +21,20 @@
   <div class="container-fluid section1">
     <h2 class="text-center">Rejoins la communauté Kasu et échange tes Mangas en toute simplicité</h2>
     <div class="container d-flex justify-content-around all-icon">
-      <div class="text-center mr-5">
+      <div class="text-center mr-5 mx-5">
         <a class="" href="<%= mangas_path %>"><%= image_tag 'echange.png', class:"icon-explication icon1 mb-4"%></a>
-        <h3>1.Je crée ma bibliothèque</h3>
-        <p>Met en ligne les mangas <br /> que tu ne veux plus.</p>
+        <h3><a href='<%= mangas_path %>'class="home_title">1. Créé ta Bibliothèque</a></b></h3>
+        <p>Met en ligne les mangas que tu souhaites échanger. </p>
       </div>
-      <div class="text-center mr-5">
-        <a class="" href="<%=static_pages_concept_page_path%>"><%= image_tag 'recois.png', class:"icon-explication icon1 mb-4"%></a>
-        <h3>Reçois</h3>
-        <p>Reçois des kasu points<br />une fois ton vieux manga échangé.</p>
+      <div class="text-center mr-5 mx-5">
+        <a class="" href="<%= library_items_path %>"><%= image_tag 'recois.png', class:"icon-explication icon1 mb-4"%></a>
+        <h3> <a class="home_title" href='<%= library_items_path %>'>2. Trouve des Mangas</a></b></h3>
+        <p>Trouve le Manga de tes rêves ou ajoute-le à ta Wishlist.
       </div>
-      <div class="text-center">
+      <div class="text-center mx-5">
         <a class="" href="<%= library_items_path %>"><%= image_tag 'achete.png', class:"icon-explication icon1 mb-4"%></a>
-        <h3>Choisis</h3>
-        <p>Achète les mangas que tu veux<br />grâce à tes kasu points !</p>
+        <h3><a href='<%= mangas_path %>'class="home_title">3. Echange</a></b></h3>
+        <p>Echange-les grâce au <b>kasu points</b> lors de DEAL entre utilisateurs.</p> 
       </div>
     </div>
   </div>
@@ -62,13 +62,3 @@
   </div>
 
 </main>
-
-
-
-
-
-
-
-
-
-

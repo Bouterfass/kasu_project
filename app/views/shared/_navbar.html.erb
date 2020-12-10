@@ -1,22 +1,24 @@
+
 <nav class="navbar navbar-expand-lg navbar-light py-3 sticky-top" id="navbar">
-  <a href='<%= root_path%>' class="brand-link"><%= image_tag 'logo3.png', class:"brand text-prim", size: "70x70" %></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+  <a href='<%= root_path%>' class="navbar-brand"><%= image_tag 'logo3.png', size: "70x70" %></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse " id="navbarColor03">
-  
-    <ul class="navbar-nav navbar-center">
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
           <%= link_to "Accueil", root_path, class: 'nav-link' %>
       </li>
-
-      <li class="nav-item active">
+      <li class="nav-item">
           <%= link_to "Proposer", mangas_path, class: 'nav-link' %>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item">
           <%= link_to "Trouver", library_items_path, class: 'nav-link' %>
       </li>
-    
+      <li class="nav-item">
+          <%= link_to "Concept?", static_pages_concept_page_path, class: 'nav-link' %>
+      </li>
     </ul>
 
       <ul class="navbar-nav ml-auto">
@@ -25,8 +27,6 @@
         <% if current_user.name == "Guest" %>
               <li class="pt-2 mr-1"> <%= current_user.name %>
                 <%= link_to "changer", edit_user_path(current_user) %>
-                
-              
               </li>
         <% end  %>
         <li class="nav-item dropdown">
@@ -43,7 +43,7 @@
             <a class="dropdown-item menu-nav" href="<%=new_user_session_path%>">Se connecter</a>
             <a class="dropdown-item menu-nav" href="<%=new_user_registration_path%>">S'inscrire</a>
           </div>
-      </ul> 
-      <% end %>
-    </div>
-  </nav>
+        <% end %>
+    </ul> 
+  </div>
+</nav>
