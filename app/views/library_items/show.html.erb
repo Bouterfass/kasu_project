@@ -18,8 +18,8 @@
         <h3>Tome : <%= @item.volume %></h3>
         <h4>Etat : <%= @item.state_description %></h4>
         <%= link_to 'Voir la description', manga_path(@item.manga), class: 'btn btn-outline-secondary'%>
-        <% if current_user.token_state == 0%>
-          <p>Vous n'avez pas de kasu point</p>
+        <% if current_user.token_state <= 0%>
+          <p class="mt-4"><strong>Vous n'avez pas assez de kasu points pour une demande à <%= @item.user.name %>.</strong></p>
         <% else%>
           <%= link_to 'Faire une demande', conversations_path(sender_id: current_user.id, receiver_id: @item.user.id, library_item_id: @item.id), method: :post, class: 'btn btn-danger' %>
         <% end %>
