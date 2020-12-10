@@ -1,25 +1,9 @@
-#navbar{
-  background-color:white;
+#navbar {
+  background-color: white;
   margin: 0;
 }
 
-.brand {
-  position: absolute;
-  left: 50%;
-  margin-left: -50px !important;  /* 50% of your logo width */
-  display: block;
-  color: #ff1016;
-  font-size: 50px;
-}
-
-.brand:hover{
+.brand:hover {
   text-decoration: none;
   color: #333333;
 }
-
-.brand-link{
-  margin-top: -35px;
-}
-
-.my-button {
-border: 2px solid #ff1016;}
