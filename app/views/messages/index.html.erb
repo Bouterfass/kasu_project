@@ -9,7 +9,7 @@
           </div> 
         </div>
         <div class="inbox_chat">
-          <% @conversations.reverse.each_with_index do |conversation, index| %>
+          <% @conversations.reverse.each do |conversation| %>
           <a href="<%=conversation_messages_path(conversation)%>">
           
             <div class="chat_list active_chat chat_focus" <% if conversation.id == @conversation.id %> id="chat_focus" <% end %>>
