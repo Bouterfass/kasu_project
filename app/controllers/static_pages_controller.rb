@@ -2,6 +2,9 @@ class StaticPagesController < ApplicationController
   def index
     @manga = LibraryItem.last(4)
     @user = User.last(3)
+    @most_wish = WishlistItem.all.group_by(&:manga_id).values.max_by(3) {|x| x.size }
+    @most_lib = LibraryItem.all.group_by(&:manga_id).values.max_by(3) {|x| x.size }
+    @discovery = LibraryItem.all.sample(3)
   end
 
   def search  

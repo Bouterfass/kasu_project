@@ -50,9 +50,51 @@
     </div>
   </div>
 
+  <div class="section5">
+    <ul class="group-list-home">
+      <li class="list-title">Les mangas les plus demandés</li>
+      <% @most_wish.each_with_index do |wish, index| %>
+        <%= render "list-home", wish: wish, index: index %>
+      <% end %>
+      </ul>
+    <ul class="group-list-home">
+      <li class="list-title">
+        Les mangas les plus vendus
+      </li>
+      <% @most_lib.each_with_index do |wish, index| %>
+   
+        <%= render "list-home", wish: wish, index: index %>
+
+      <% end %>
+    </ul>
+    <ul class="group-list-home">
+      <li class="list-title">A découvrir</li>
+      <% @discovery.each_with_index do |wish, index| %>
+        <a href="<%= library_item_path(wish)%>"><li class="list-home">
+          <ul>
+            <li>
+              <%= image_tag wish.manga.image_url, class: "image-list" %>
+            </li>
+            <li class="position-num">
+              <%= index + 1 %>
+            </li>
+            <li class="cut title-list">
+              <%= wish.manga.title %>
+            </li>
+            <li>
+              <blockquote><%= wish.manga.author %></blockquote>
+            </li>
+          </ul>
+        </a>
+      <% end %>
+    </ul>
+  </div>
+
   <div class="section3">
+  <div class="container">
     <h2 class="text-center">Les nouveaux membres</h2>
     <%= render "card-user" %>
+    </div>
   </div>
 
   <div class="section4">
