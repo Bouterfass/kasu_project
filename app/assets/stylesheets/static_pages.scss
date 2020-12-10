@@ -131,6 +131,7 @@
 
 .icon-explication{
   width: 80%;
+  margin: 10px;
 }
 
 .icon1{
@@ -142,9 +143,9 @@
   transition: 200ms linear;
   border-radius: 200px;
   width: 90%;
-  -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow:    7px 7px 5px 0px rgba(50, 50, 50, 0.75);
-  box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  -webkit-box-shadow: 7px 7px 5px 0px rgba(146, 146, 146, 0.75);
+  -moz-box-shadow:    7px 7px 5px 0px rgba(146, 146, 146, 0.75);
+  box-shadow:         7px 7px 5px 0px rgba(146, 146, 146, 0.75);
 }
 
 // **********************
@@ -309,4 +310,9 @@ border-bottom-right-radius: 5px;
   border-radius :20px;
   font-size: 15px;
   font-family:nunito;
+}
+
+.home_title {
+  color: black!important;
+  font-size: 25px;
 }
