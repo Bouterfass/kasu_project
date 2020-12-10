@@ -12,7 +12,7 @@
 									<h3 class="card__title"><%= image_tag 'available.png', class:"available mb-1"%> <%= item.manga.title.capitalize %></h3>
 									<span><small><em>Tome: </em> <%= item.volume %></small></span><br/>
 									<h5><span>par <%=item.manga.author%></span></h5>
-									<p><small><em>possédé par </em> <%= item.user.name %></small></p>
+									<p><small><em>proposé par </em> <%= item.user.name %></small></p>
 									<% item.manga.categories.each do |category| %>
 									<%= link_to category.name, category_path(category.id) %>
 									<%end%>
