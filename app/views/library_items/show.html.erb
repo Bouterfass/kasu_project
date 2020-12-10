@@ -15,9 +15,9 @@
         <h3>Titre : <%= @item.manga.title %></h3>
         </div>
         <h3>Propriétaire : <%= @item.user.name %></h3>
-        <h3>Tome :</h3><p><%= @item.volume %></p>
-        <h3>Etat :</h3><p><%= @item.state_description %></p>
-        <%= link_to 'Voir la desciption', manga_path(@item.manga), class: 'btn btn-outline-secondary'%>
+        <h3>Tome : <%= @item.volume %></h3>
+        <h4>Etat : <%= @item.state_description %></h4>
+        <%= link_to 'Voir la description', manga_path(@item.manga), class: 'btn btn-outline-secondary'%>
         <% if current_user.token_state == 0%>
           <p>Vous n'avez pas de kasu point</p>
         <% else%>
