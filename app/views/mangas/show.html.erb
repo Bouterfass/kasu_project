@@ -89,7 +89,12 @@
   </div>
 
   <div class="container py-5">
+  <% if @items.length == 0 %>
+   <h2 class="text-center mb-4"> Les membres qui proposent ce Manga </h2>
+      <h5 class="text-center"> <em>Aucun utilisateur ne le propose.</em> </h5>
+  <% else %>
     <h2 class="text-center"> Les membres qui proposent ce Manga </h2>
+    <% end %>
     <div class="all-show-manga px-5">
       <% @items.each do |item|%>
         <article class="card-last-manga card-show-manga card--1">

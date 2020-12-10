@@ -63,10 +63,10 @@
             <div class="input_msg_write">
               <%= form_for [@conversation, @message] do |f| %>
                 <div class="container_msg_write">
-                <%= f.text_area :body, placeholder: "Envoie un message à #{@conversation.receiver.name} pour échanger son manga, #{@conversation.library_item.manga.title}", class: 'write_msg' %>
+                <%= f.text_area :body, placeholder: "Gère ici les modalités d'échange du manga: #{@conversation.library_item.manga.title}", class: 'write_msg' %>
                 <%= f.submit "Envoyer", class: "btn btn-secondary" %>  
                   <% if current_user == @conversation.library_item.user %>
-                    <%= link_to 'Confirmer la demande', library_item_path(@conversation.library_item), method: 'PUT', class: 'btn btn-primary '%>
+                    <%= link_to 'Confirmer la demande', library_item_path(@conversation.library_item), method: 'PUT', class: 'btn btn-primary', :data => {:confirm => 'Êtes-vous sûr d\'accepter la proposition ?'}%>
                   <% end %>           
               <% end %>
             </div>
