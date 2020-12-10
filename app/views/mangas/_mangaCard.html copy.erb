@@ -1,7 +1,6 @@
 
 
 <div class='container'>
-	<h2 class='text-center display-3'> Notre collection</h2>
 	<div class="container-fluid mt-2">
 		<div class="row m-2 card-all">
 			<% @mangas.each do |manga|%>
@@ -12,7 +11,10 @@
 			<div class="card__img--hover" style="background-image: url('<%= manga.image_url %>')"></div>
 			</a>
 			<div class="card__info">
-			<h3 class="card__title"><%= manga.title.capitalize %></h3>
+			<h3 class="card__title"><% if @all_libraries.include?(manga.id) %><%= image_tag 'available.png', class:"available mb-1"%><% end %> <%= manga.title.capitalize %></h3>
+				<% manga.categories.each do |category| %>
+				<span><small><%= link_to category.name, category_path(category.id) %></small></span>
+				<%end%><br/>
 			<span class="card__by">by <%= manga.author%></span><br>
 			<%= link_to "Voir le manga", manga_path(manga), class: 'btn btn-info mt-2'%>
 			</div>
@@ -23,3 +25,4 @@
 		<%= pagy_bootstrap_nav(@pagy).html_safe%>
 	</div>
 </div>
+

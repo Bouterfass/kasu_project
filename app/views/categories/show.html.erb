@@ -1,0 +1,36 @@
+
+<div class='container'>
+	<h1 class='pt-5'> Mangas dispo à l'échange de la catégorie : <br><b> "<%= @category.name%>" </b></h1>
+	<div class="container-fluid mt-2">
+		<div class="row m-2 card-all">
+      <div class="col-10 card-all">
+						<% @libraries.each do |item|%>
+							<article class="card-last-manga card--1">
+								<div class="card__img" style="background-image: url('<%= item.manga.image_url %>')"></div>
+									<a href="#" class="card_link">
+								<div class="card__img--hover" style="background-image: url('<%= item.manga.image_url %>')"></div>
+								</a>
+								<div class="card__info">
+                <h3 class="card__title"><%= item.manga.title.capitalize %></h3>
+									<p><span>par <%=item.manga.author%></span></p>
+									<h5><em>possédé par </em> <%= item.user.name %></h5>
+									<% item.manga.categories.each do |category| %>
+									<%= link_to category.name, category_path(category.id) %>
+									<%end%>
+								<%= link_to "Voir le manga", library_item_path(item), class: 'btn btn-info mt-2'%>
+								</div>
+							</article>	
+						<% end %>
+					</div>
+      <div class="col-2 justify-content-around">
+        <%= link_to 'all', library_items_path  %> <br>
+        <% @categories.each do |category| %>                 
+        <%= link_to category.name, category_path(category) %> <br>  
+        <% end %>
+      </div>
+		</div>
+  </div>
+    <%= pagy_bootstrap_nav(@pagy).html_safe%>
+</div>
+
+

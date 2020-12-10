@@ -1,11 +1,23 @@
 class MangasController < ApplicationController
   def index
-    @pagy, @mangas = pagy(Manga.all)
+    @pagy, @mangas = pagy(Manga.all) 
+    @categories = Category.all
+
+    if params[:category_id]
+      @category = Category.includes(:mangas).find(params[:category_id])                     
+      @products = @category.mangas
+    else
+      @manga = Manga.all
+    end   
+    @all_libraries = []
+    LibraryItem.all.each{|item| @all_libraries << item.manga.id}
   end
 
   def show
     @manga = Manga.find(params[:id])
     @items = LibraryItem.where(manga:@manga)
+    @all_volumes = @manga.integer_to_array(@manga.volume)
+    @item = LibraryItem.new
 
   end
   
@@ -32,6 +44,5 @@ class MangasController < ApplicationController
   def manga_params
       params.require(:manga).permit(:image_url, :title, :author, :description)
   end
-
 end
 

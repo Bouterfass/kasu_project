@@ -1,43 +1,53 @@
-
-
-<h4 class="container pt-5 p-3"> Demande du manga <strong><%= @item.manga.title.capitalize %></strong>  à <strong><%= @item.user.name %> </strong></h4>
-
-
-<div class="container p-5">
-
-    <div class="row">
-        <div class="col-3 d-flex justify-content-end align-items-center">
-            <img src="<%= @item.manga.image_url %>" size="10%">       
-        </div>
-        <div class="col-4">
-                <p><strong>Titre</strong>: <%= @item.manga.title %></p>
-                <p><strong>Propriétaire</strong>: <%= @item.user.name %></p>
-                <p><strong>Etat</strong>: <%= @item.state_description %></p>
-        </div>
-        <div class="col-4 mt-5">
-                <p><strong>Passer commande</strong></p>
-                <%= link_to 'Je confirme', library_item_path(@item.id), method: 'PUT', class: 'btn btn-danger'%>
-        </div>
+<div class="container-fluid">
+  <div class="container-fluid p-5 background-items">
+    <div>
+      <h2 class="text-center m-1"> 
+        Le manga    <strong><%= @item.manga.title.capitalize %></strong> de <strong><%= @item.user.name %> </strong>
+      </h2>
     </div>
+    <div class="containers-item mt-5">
+      <div class="mr-5">
+        <img src="<%= @item.manga.image_url %>">
+      </div>
 
-
-    <div class="row d-flex pt-5 pl-5">
-        <h2>D'autres manga de <%= @item.user.name %></h2> 
-    </div>
-     <div class="row d-flex ml-5">
-     <ul class="ml-5">
-        <% @item.user.mangas.each do |manga| %>
-            <% if manga.title != @item.manga.title %>
-           <li>     <%= manga.title %><br/> </li>
-            <% end  %>
+      <div class="description-item ml-5">
+        <div class="d-flex justify-content-between">
+        <h3>Titre : <%= @item.manga.title %></h3>
+        </div>
+        <h3>Propriétaire : <%= @item.user.name %></h3>
+        <h3>Tome :</h3><p><%= @item.volume %></p>
+        <h3>Etat :</h3><p><%= @item.state_description %></p>
+        <%= link_to 'Voir la desciption', manga_path(@item.manga), class: 'btn btn-outline-secondary'%>
+        <% if current_user.token_state == 0%>
+          <p>Vous n'avez pas de kasu point</p>
+        <% else%>
+          <%= link_to 'Echanger', conversations_path(sender_id: current_user.id, receiver_id: @item.user.id, library_item_id: @item.id), method: :post, class: 'btn btn-danger' %>
         <% end %>
-    </ul>
+      </div>
     </div>
+  </div>
 
+  <div class="container pt-5">
+    <h2 class="text-center"> Les autres mangas de <%= @item.user.name %></h2>
 
-        <div class="row d-flex justify-content-around p-5 pb-5">
-      <%= link_to "Retour à la page d'accueil", mangas_path, class: 'btn btn-primary' %>
+    <div class="all-show-manga px-5">
+      <% @item.user.library_items.each do |item| %>
+        <% if item.manga.title != @item.manga.title %>
+
+          <article class="card-show-item card--1">
+            <div class="card__img" style="background-image: url('<%= item.manga.image_url %>')"></div>
+            <a href="<%=library_item_path(item.id)%>" class="card_link">
+              <div class="card__img--hover" style="background-image: url('<%= item.manga.image_url %>')"></div>
+            </a>
+            <div class="card__info">
+              <h5 class="card__title"><%= item.manga.title %></h5>
+              <h5 class="card__title">tome n° : <%= item.volume %></h5>
+              <%= link_to "Voir", library_item_path(item.id), class:"btn btn-outline-secondary my-2" %>
+            </div>
+          </article>
+
+        <% end  %>
+      <% end %>
     </div>
-
-
+  </div>
 </div>

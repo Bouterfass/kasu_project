@@ -1,0 +1,19 @@
+
+  <div class="container m-3 d-flex align-items-start">
+    <h3>Résultat de ta recherche</h3>  
+    <div class="result m-5">
+      <% @items.each do |result| %>  
+        <ul>
+          <% if result.user != current_user %>
+            <li><b> <%= result.manga.title.capitalize %> </b> de <b> <%= result.manga.author %> </b>-<b> TOME N°<%= result.volume %> </b> proposé par	<%= result.user.name %> <%= link_to "Voir le manga", library_item_path(result)%> </li>
+          <% end %>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="section5">
+    <%= image_tag "sig_up.png", class:"img-sign" %>
+    <h3>Ton Manga n'y est pas ? Ajoute-le à ta whishlist  </h5>
+    <a href="<%=mangas_path%>" class="btn btn-danger">Construire ma wishlist </a>
+  </div>

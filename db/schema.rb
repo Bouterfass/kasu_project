@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_02_092002) do
+ActiveRecord::Schema.define(version: 2020_12_07_133504) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,10 +36,41 @@ ActiveRecord::Schema.define(version: 2020_12_02_092002) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cities", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "conversations", force: :cascade do |t|
+    t.integer "sender_id"
+    t.integer "receiver_id"
+    t.bigint "library_item_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["library_item_id"], name: "index_conversations_on_library_item_id"
+  end
+
+  create_table "join_manga_categories", force: :cascade do |t|
+    t.bigint "category_id"
+    t.bigint "manga_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_join_manga_categories_on_category_id"
+    t.index ["manga_id"], name: "index_join_manga_categories_on_manga_id"
+  end
+
   create_table "library_items", force: :cascade do |t|
     t.string "state"
     t.text "state_description"
     t.integer "token_price"
+    t.integer "volume"
     t.bigint "user_id"
     t.bigint "manga_id"
     t.datetime "created_at", null: false
@@ -52,9 +83,21 @@ ActiveRecord::Schema.define(version: 2020_12_02_092002) do
     t.string "title"
     t.string "author"
     t.text "description"
+    t.integer "volume"
     t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.text "body"
+    t.bigint "conversation_id"
+    t.bigint "user_id"
+    t.boolean "read", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["conversation_id"], name: "index_messages_on_conversation_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -62,14 +105,29 @@ ActiveRecord::Schema.define(version: 2020_12_02_092002) do
     t.string "encrypted_password", default: "", null: false
     t.string "name", default: "Guest"
     t.integer "token_state", default: 1
+    t.bigint "city_id"
+    t.boolean "is_admin", default: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["city_id"], name: "index_users_on_city_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "wishlist_items", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "manga_id"
+    t.integer "volume"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["manga_id"], name: "index_wishlist_items_on_manga_id"
+    t.index ["user_id"], name: "index_wishlist_items_on_user_id"
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "messages", "conversations"
+  add_foreign_key "messages", "users"
 end
