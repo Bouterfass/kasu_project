@@ -1,7 +1,7 @@
 Bienvenue sur KASU
 
 
-https://kasu-dev.herokuapp.com/
+https://kasu-project.herokuapp.com/
 
 Languages utilisés:
 

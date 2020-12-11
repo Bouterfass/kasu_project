@@ -16,14 +16,14 @@ require 'faker'
 LibraryItem.delete_all
 LibraryItem.reset_pk_sequence
 
-JoinMangaCategory.delete_all
-JoinMangaCategory.reset_pk_sequence
-
 User.delete_all
 User.reset_pk_sequence
 =begin
 Category.delete_all
 Category.reset_pk_sequence
+
+JoinMangaCategory.delete_all
+JoinMangaCategory.reset_pk_sequence
 
 Manga.delete_all
 Manga.reset_pk_sequence
@@ -157,7 +157,7 @@ jules = User.create(email: "jules@test.com", name: "Jules", password: "azerty")
 dylan = User.create(email: "dylan@test.com", name: "Dylan", password: "azerty")
 youcef = User.create(email: "youcef@test.com", name: "Youcef", password: "azerty", is_admin: true)
 
-=begin
+
 10.times do 
     LibraryItem.create(user: gaetan, manga: Manga.find(rand(1..458)), volume: 1, state_description: Faker::Lorem.paragraph(sentence_count: 3))
     LibraryItem.create(user: stephen, manga: Manga.find(rand(1..458)), volume: 1, state_description: Faker::Lorem.paragraph(sentence_count: 3))
@@ -165,7 +165,7 @@ youcef = User.create(email: "youcef@test.com", name: "Youcef", password: "azerty
     LibraryItem.create(user: dylan, manga: Manga.find(rand(1..458)), volume: 1, state_description: Faker::Lorem.paragraph(sentence_count: 3))
     LibraryItem.create(user: youcef, manga: Manga.find(rand(1..458)), volume: 1, state_description: Faker::Lorem.paragraph(sentence_count: 3))
 end
-=end
+
 5.times do 
     WishlistItem.create(user: gaetan, manga: Manga.find(rand(1..458)))
     WishlistItem.create(user: stephen, manga: Manga.find(rand(1..458)))
