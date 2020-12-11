@@ -298,6 +298,12 @@
   font-family: nunito;
 }
 
+.all-card-result {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
 // **********************
 //      LIST
 // **********************

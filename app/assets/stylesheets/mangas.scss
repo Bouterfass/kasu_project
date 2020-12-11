@@ -4,62 +4,91 @@
 
 // Description
 
-.img-manga-show{
+.img-manga-show {
   min-height: 300px;
   margin-bottom: 20px;
   border-radius: 5px;
 }
 
-.background-manga{
-  background-image: url('https://dw9to29mmj727.cloudfront.net/sections/2016/24907-READ_header_2000x800_options_colours_grey30.png');
+.background-manga {
+  background-image: url("https://dw9to29mmj727.cloudfront.net/sections/2016/24907-READ_header_2000x800_options_colours_grey30.png");
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.description-manga{
+.description-manga {
   max-width: 700px;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 20px;
   border-radius: 5px;
 }
 
-.description-manga .btn-secondary{
+.description-manga .btn-secondary {
   background-color: rgb(41, 41, 41);
   border: none;
 }
 
-.description-manga .btn-secondary:hover{
+.description-manga .btn-secondary:hover {
   background-color: white;
-  color:rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
   border: none;
 }
 
 // card
 
-.card-show-manga .card__img{
+.card-show-manga .card__img {
   height: 200px;
 }
 
-.card-show-manga .card__img--hover{
+.card-show-manga .card__img--hover {
   height: 200px;
 }
 
-.all-show-manga{
+.all-show-manga {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 
-.card-show-manga .card__info{
+.card-show-manga .card__info {
   background-color: rgb(243, 243, 243);
   padding: 10px 20px 10px 20px;
   color: rgb(73, 73, 73);
 }
 
-
 .available {
   width: 10px;
   height: 10px;
+  margin-right: 10px;
+}
+
+.research-title {
+  background-image: url("https://dw9to29mmj727.cloudfront.net/sections/2016/24907-READ_header_2000x800_options_colours_grey30.png");
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.manga-title-index {
+  background-image: url("https://dw9to29mmj727.cloudfront.net/sections/2016/24907-READ_header_2000x800_options_colours_grey30.png");
+  height: 300px;
+}
+
+.opacity-img {
+  background-color: rgba(255, 255, 255, 0.678);
+  height: 100%;
+  width: 100%;
+}
+
+.pagy-position {
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+
+.pagy-bootstrap-nav-input {
+  color: black !important;
 }
