@@ -17,7 +17,6 @@
   background-size: cover;
 }
 
-
 .rectangle1 {
   position: relative;
   object-fit: cover;
@@ -89,7 +88,7 @@
   top: 60%;
   z-index: 29;
   width: 35%;
-  height: 30%;
+  height: 35%;
   padding: 2%;
   background-color: rgba(0, 0, 0, 0.6);
 }
@@ -113,7 +112,6 @@
   color: rgb(0, 0, 0);
   border: none;
 }
-
 
 // **********************
 //    ICON EXPLICATION
@@ -301,6 +299,12 @@
   font-family: nunito;
 }
 
+.all-card-result {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
 // **********************
 //      LIST
 // **********************
@@ -346,7 +350,6 @@
   height: 150px;
 }
 
-
 .list-title {
   font-size: 20px;
   border-bottom: 1px solid;
@@ -386,21 +389,22 @@ blockquote {
 //    RESPONSIVE
 // **********************
 
-@media screen and (max-width: 700px) { /* for screen size less or equal to 700px*/
-  
+@media screen and (max-width: 700px) {
+  /* for screen size less or equal to 700px*/
+
   #fond {
-  background-image: url("https://dw9to29mmj727.cloudfront.net/sections/2016/24907-READ_header_2000x800_options_colours_grey30.png");
-  position: relative;
-  background-size: cover;
-}
-  .title{
+    background-image: url("https://dw9to29mmj727.cloudfront.net/sections/2016/24907-READ_header_2000x800_options_colours_grey30.png");
+    position: relative;
+    background-size: cover;
+  }
+  .title {
     font-size: 300%;
-    display:flex; /*Changes as per your requirement*/
-  } 
+    display: flex; /*Changes as per your requirement*/
+  }
 
   .container-title {
     position: absolute;
-    display:flex;
+    display: flex;
     left: 0%;
     top: 80%;
     z-index: 29;
@@ -412,7 +416,7 @@ blockquote {
 
   .container-title .btn-secondary {
     background-color: rgb(255, 255, 255);
-    color : black;
+    color: black;
     height: 30%;
     font-size: 150%;
     border: none;
@@ -424,26 +428,22 @@ blockquote {
   }
 
   .icon-explication {
-    width: 60%!important;
+    width: 60% !important;
     margin: 30px;
   }
 
-  .icon-text{
+  .icon-text {
     font-size: 150%;
-    display:flex;
-
+    display: flex;
   }
 
-  .home_title{
+  .home_title {
     font-size: 200%;
-    display:flex;
-    
+    display: flex;
   }
 
   .intro {
     font-size: 300%;
-    display:flex;
+    display: flex;
   }
-
-
-  }
+}
