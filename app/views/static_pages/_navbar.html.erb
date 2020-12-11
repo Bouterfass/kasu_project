@@ -33,6 +33,15 @@
             <%= link_to "Admin dashboard", rails_admin_path, class:"nav-link" %>
           </li>
         <% end %>
+          <li class="nav-item active">
+          <% if @conversation != nil %>
+            <a href='<%= conversation_messages_path(@conversation) %>' class='nav-link active' >Messages
+              <% if !@conversation.unread_message_count(current_user).zero? %>
+                (<%= @conversation.unread_message_count(current_user) %>)
+              <% end %>
+            </a>
+          <% end %>
+          </li>
         <li class="nav-item dropdown">
          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Profil/Quitter

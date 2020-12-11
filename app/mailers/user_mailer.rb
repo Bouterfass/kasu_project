@@ -6,7 +6,7 @@ class UserMailer < ApplicationMailer
       @user = user 
   
       #on définit une variable @url qu'on utilisera dans la view d’e-mail
-      @url  = 'https://kasu-develop.herokuapp.com' 
+      @url  = 'https://kasu-project.herokuapp.com' 
   
       # c'est cet appel à mail() qui permet d'envoyer l’e-mail en définissant destinataire et sujet.
       mail(to: @user.email, subject: 'Bienvenue chez nous !') 
@@ -21,7 +21,7 @@ class UserMailer < ApplicationMailer
         @username = user.name
 
         # # #on définit une variable @url qu'on utilisera dans la view d’e-mail
-        @url  = 'https://kasu-develop.herokuapp.com' 
+        @url  = 'https://kasu-project.herokuapp.com' 
       
         # # # c'est cet appel à mail() qui permet d'envoyer l’e-mail en définissant destinataire et sujet.
         mail(to: @email, subject: 'Tu as un match !') 
@@ -33,11 +33,11 @@ class UserMailer < ApplicationMailer
         @item = library_item
         @username = user.name
 
-        # on définit une variable @url qu'on utilisera dans la view d’e-mail
-        @url  = 'https://kasu-develop.herokuapp.com' 
+        # # #on définit une variable @url qu'on utilisera dans la view d’e-mail
+        @url  = 'https://kasu-project.herokuapp.com' 
       
-        # c'est cet appel à mail() qui permet d'envoyer l’e-mail en définissant destinataire et sujet.
-        mail(to: @email, subject: 'Un échange sur https://kasu-develop.herokuapp.com !') 
+        # # # c'est cet appel à mail() qui permet d'envoyer l’e-mail en définissant destinataire et sujet.
+        mail(to: @email, subject: 'Un échange sur https://kasu-project.herokuapp.com !') 
     end
 
     

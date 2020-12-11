@@ -1,5 +1,8 @@
 class StaticPagesController < ApplicationController
+  before_action :set_conversation, only: [:index]
+  
   def index
+    @conversation = Conversation.last
     @manga = LibraryItem.last(4)
     @user = User.last(3)
     @most_wish = WishlistItem.all.group_by(&:manga_id).values.max_by(3) {|x| x.size }
@@ -32,4 +35,9 @@ class StaticPagesController < ApplicationController
     end 
   end
   
+  private
+
+  def set_conversation
+    @conversation = Conversation.last
+  end
 end

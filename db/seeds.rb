@@ -21,7 +21,7 @@ JoinMangaCategory.reset_pk_sequence
 
 User.delete_all
 User.reset_pk_sequence
-
+=begin
 Category.delete_all
 Category.reset_pk_sequence
 
@@ -149,6 +149,7 @@ all_mangas.each do |manga|
     end
     i += 1
 end
+=end
 
 gaetan = User.create(email: "badgaga@test.com", name: "Gaetan", password: "azerty")
 stephen = User.create(email: "stephen@test.com", name: "Stephen", password: "azerty")
@@ -156,14 +157,15 @@ jules = User.create(email: "jules@test.com", name: "Jules", password: "azerty")
 dylan = User.create(email: "dylan@test.com", name: "Dylan", password: "azerty")
 youcef = User.create(email: "youcef@test.com", name: "Youcef", password: "azerty", is_admin: true)
 
+=begin
 10.times do 
-    LibraryItem.create(user: gaetan, manga: Manga.find(rand(1..458)), state_description: Faker::Lorem.paragraph(sentence_count: 3))
-    LibraryItem.create(user: stephen, manga: Manga.find(rand(1..458)), state_description: Faker::Lorem.paragraph(sentence_count: 3))
-    LibraryItem.create(user: jules, manga: Manga.find(rand(1..458)), state_description: Faker::Lorem.paragraph(sentence_count: 3))
-    LibraryItem.create(user: dylan, manga: Manga.find(rand(1..458)), state_description: Faker::Lorem.paragraph(sentence_count: 3))
-    LibraryItem.create(user: youcef, manga: Manga.find(rand(1..458)), state_description: Faker::Lorem.paragraph(sentence_count: 3))
+    LibraryItem.create(user: gaetan, manga: Manga.find(rand(1..458)), volume: 1, state_description: Faker::Lorem.paragraph(sentence_count: 3))
+    LibraryItem.create(user: stephen, manga: Manga.find(rand(1..458)), volume: 1, state_description: Faker::Lorem.paragraph(sentence_count: 3))
+    LibraryItem.create(user: jules, manga: Manga.find(rand(1..458)), volume: 1, state_description: Faker::Lorem.paragraph(sentence_count: 3))
+    LibraryItem.create(user: dylan, manga: Manga.find(rand(1..458)), volume: 1, state_description: Faker::Lorem.paragraph(sentence_count: 3))
+    LibraryItem.create(user: youcef, manga: Manga.find(rand(1..458)), volume: 1, state_description: Faker::Lorem.paragraph(sentence_count: 3))
 end
-
+=end
 5.times do 
     WishlistItem.create(user: gaetan, manga: Manga.find(rand(1..458)))
     WishlistItem.create(user: stephen, manga: Manga.find(rand(1..458)))
