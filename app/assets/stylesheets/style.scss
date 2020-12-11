@@ -107,6 +107,19 @@ ol {
 
 /* BTN */
 
+.btn-tercery{
+  background-color: white;
+  border: none;
+  color: black
+
+}
+
+.btn-tercery:hover{
+  background-color: black;
+  border: none;
+  color:white
+}
+
 .btn-outline-primary{
   border-color: #ff1016;
   color: black;
@@ -121,6 +134,7 @@ ol {
   background-color: #ff1016;
   border: none;
 }
+
 
 .btn-primary:hover{
   background-color: rgb(41, 41, 41);
