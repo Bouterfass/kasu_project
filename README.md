@@ -1,5 +1,6 @@
 Bienvenue sur KASU
 
+![favicon](https://user-images.githubusercontent.com/58010300/101910191-e105a280-3bbe-11eb-891e-989831b554ec.png)
 
 https://kasu-project.herokuapp.com/
 
