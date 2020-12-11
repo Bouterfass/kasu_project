@@ -4,6 +4,5 @@ class CategoriesController < ApplicationController
     @categories = Category.all
     @mangas = @category.mangas
     @pagy, @libraries = pagy(LibraryItem.where(manga:@mangas))
-    # @categories = Category.all  
   end
 end

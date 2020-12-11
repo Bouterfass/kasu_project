@@ -24,7 +24,7 @@
 <div class="row d-flex justify-content-center pb-5 mb-2">
     <%= link_to "Editer mon profil", edit_user_registration_path(@user.id), class: "btn btn-primary" %>
 	<% if @conversation != nil %>
-	<a href='<%= conversation_messages_path(@conversation) %>' class= 'mx-4 btn btn-info'>Mes messages
+	<a href='<%= conversation_messages_path(@conversation) %>' class= 'mx-4 btn btn-secondary'>Mes messages
 		<% if !@conversation.unread_message_count(current_user).zero? %>
 			(<%= @conversation.unread_message_count(current_user) %>)
 		<% end %>
@@ -32,9 +32,6 @@
 	<% end %>
 </div>
 </div>
-
-
-
 
 <div class="row pt-5 mt-5 d-flex justify-content-around">
 <div class="col">
