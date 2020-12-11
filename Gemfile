@@ -39,6 +39,7 @@ gem "pagy"
 gem 'rails_admin'
 gem 'mail_form'
 gem 'mailjet'
+gem 'aws-sdk-s3', '~> 1.38'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

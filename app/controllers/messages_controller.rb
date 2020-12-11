@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_conversation, only: [:index, :create]
+  before_action :check_user
 
   def index
     @messages = @conversation.messages
@@ -27,5 +28,10 @@ class MessagesController < ApplicationController
     def set_conversation
       @conversation = Conversation.find(params[:conversation_id])
       @conversations = Conversation.where("sender_id = ? OR receiver_id = ?", current_user.id, current_user.id)
+    end
+
+    def check_user
+      @conversation = Conversation.find(params[:conversation_id])
+      redirect_to root_path unless current_user == @conversation.sender || current_user == @conversation.receiver
     end
 end
