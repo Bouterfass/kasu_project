@@ -3,7 +3,7 @@ class LibraryItemsController < ApplicationController
     before_action :authenticate_user!
 
     def index
-        @pagy, @items = pagy(LibraryItem.all)
+        @pagy, @items = pagy(LibraryItem.all, link_extra: 'class="pagy-cust"') 
         @categories = Category.all
 
         @all_libraries = []
