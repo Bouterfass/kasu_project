@@ -17,6 +17,8 @@ class StaticPagesController < ApplicationController
       @parameter = params[:search].downcase  
       @results = Manga.all.where("lower(title) LIKE :search", search: "%#{@parameter}%")
     end   
+    @all_libraries = []
+    LibraryItem.all.each{|item| @all_libraries << item.manga.id}
   end  
 
   def libsearch  

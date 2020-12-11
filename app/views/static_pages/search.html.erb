@@ -12,7 +12,8 @@
         </a>
         <div class="card-info">
           <h3 class="card-title card-index">
-          <%= image_tag 'available.png', class:"available"%><%= result.title.capitalize %></h3>
+          <% if @all_libraries.include?(result.id) %><%= image_tag 'available.png', class:"available"%> <% end %><%= result.title.capitalize %></h3>
+         
           <h5><blockquote class="block">par <%=result.author%></blockquote></h5>            
           <%= link_to "Voir le manga", manga_path(result), class: 'btn btn-outline-secondary der'%>
         </div>
