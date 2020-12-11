@@ -6,7 +6,7 @@ class UserMailer < ApplicationMailer
       @user = user 
   
       #on définit une variable @url qu'on utilisera dans la view d’e-mail
-      @url  = 'http://monsite.fr/login' 
+      @url  = 'https://kasu-develop.herokuapp.com' 
   
       # c'est cet appel à mail() qui permet d'envoyer l’e-mail en définissant destinataire et sujet.
       mail(to: @user.email, subject: 'Bienvenue chez nous !') 
@@ -24,7 +24,7 @@ class UserMailer < ApplicationMailer
         @url  = 'https://kasu-develop.herokuapp.com' 
       
         # # # c'est cet appel à mail() qui permet d'envoyer l’e-mail en définissant destinataire et sujet.
-        mail(to: @email, subject: 'Ta commande sur kasu.com !') 
+        mail(to: @email, subject: 'Tu as un match !') 
     end
 
     def transaction_email(user, library_item)
@@ -37,7 +37,7 @@ class UserMailer < ApplicationMailer
         @url  = 'https://kasu-develop.herokuapp.com' 
       
         # # # c'est cet appel à mail() qui permet d'envoyer l’e-mail en définissant destinataire et sujet.
-        mail(to: @email, subject: 'Ta commande sur kasu.com !') 
+        mail(to: @email, subject: 'Un échange sur https://kasu-develop.herokuapp.com !') 
     end
 
     

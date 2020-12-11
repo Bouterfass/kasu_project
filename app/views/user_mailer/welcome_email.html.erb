@@ -6,11 +6,11 @@
   <body>
     <h1>Salut <%= @user.name %> et bienvenue chez nous !</h1>
     <p>
-      Tu t'es inscrit sur monsite.fr en utilisant l'e-mail suivant : <%= @user.email %>.
+      Tu t'es inscrit sur notre en utilisant l'e-mail suivant : <%= @user.email %>.
     </p>
     <p>
-      Pour accéder à ton espace client, connecte-toi via : <%= @url %>.
+      Pour accéder à ton espace personnel, connecte-toi via : http://kasu-dev.herokuapp.com/users/sign_in.
     </p>
-    <p> À très vite sur monsite.fr !
+    <p> À très vite sur <%= @url %>!
   </body>
 </html>
