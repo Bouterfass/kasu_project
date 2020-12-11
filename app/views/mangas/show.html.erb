@@ -13,18 +13,13 @@
       <h3> Description </h3>
       <p><%= @manga.description %></p>
      <!-- <%= link_to "Ajouter à ma Bibliothèque", manga_library_items_path(@manga.id), method: "POST", class:"btn btn-secondary" %> -->
-      <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">
-        Je propose
-      </button>
+     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Ajouter à ma Bibliothèque</button>
       <!-- Modal Library -->
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header text-dark">
               <h5 class="modal-title" id="exampleModalLabel"><%= @manga.title %></h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
             </div>
             <div class="modal-body text-dark">
              <%= simple_form_for [@manga, @item], :url => manga_library_items_path(@manga.id), :method => :post do |f| %>
@@ -33,7 +28,7 @@
         
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Annuler</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
               <%= f.button :submit, 'Ajouter', class: 'btn btn-secondary' %>
               <% end %>
             </div>
@@ -42,19 +37,13 @@
       </div>
       <!-- Modal END -->
 
-   
-      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal2">
-        J'ajoute à ma Wishlist
-      </button>
+   <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal2" data-bs-whatever="@mdo">Ajouter à ma Wishlist</button>
       <!-- Modal Wishlist -->
       <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header text-dark">
               <h5 class="modal-title" id="exampleModalLabel"><strong><%= @manga.title %></strong></h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
             </div>
               <% if @all_volumes.length != 0 %>
                 <div class="modal-body text-dark">
@@ -63,7 +52,7 @@
                     <%=  f.input :volume, :collection => @all_volumes, :selected => [1..@manga.volume] %>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Annuler</button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
                   <%= f.button :submit, 'Ajouter', class: 'btn btn-secondary' %>
                   <% end %>
               <% else %>
@@ -74,7 +63,7 @@
                    
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Annuler</button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
                   <%= f.button :submit, 'Ajouter', class: 'btn btn-secondary' %>
                   <% end %>
 
