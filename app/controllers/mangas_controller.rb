@@ -1,6 +1,6 @@
 class MangasController < ApplicationController
   def index
-    @pagy, @mangas = pagy(Manga.all) 
+    @pagy, @mangas = pagy(Manga.all, link_extra: 'class="pagy-cust"') 
     @categories = Category.all
 
     if params[:category_id]

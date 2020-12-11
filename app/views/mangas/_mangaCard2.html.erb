@@ -9,16 +9,13 @@
           <div class="card-info">
             <h3 class="card-title card-index"><% if @all_libraries.include?(manga.id) %><%= image_tag 'available.png', class:"available"%><% end %> <%= manga.title.capitalize %></h3>
             <h5><blockquote class="block">par <%=manga.author%></blockquote></h5>
-            <% manga.categories.each do |category| %>
-            <%= link_to category.name, category_path(category.id) %>
-            <%end%>
           <%= link_to "Voir le manga", manga_path(manga), class: 'btn btn-outline-secondary der'%>
           </div>
         </article>	
       <% end %>
     </div>
   </div>
-  <div class="container-fluid pagy-position">
-    <%= pagy_bootstrap_nav(@pagy).html_safe%>
+  <div class="container-fluid pagy-position mb-5">
+    <%= pagy_nav(@pagy).html_safe%>
   </div>
 </div>

@@ -19,10 +19,22 @@
   height: 200px;
 }
 
+.the-user {
+  padding: 0;
+  margin: 0;
+  padding-bottom: 40px;
+}
+
+.volume-manga {
+  padding: 0;
+  margin: 0;
+  padding-bottom: 5px;
+}
+
 .der {
   position: absolute;
   bottom: 0;
-  left: 50px;
+  left: 45px;
   margin-bottom: 15px;
 }
 
@@ -75,7 +87,8 @@
 .card-title {
   font-size: 22px;
   margin-top: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 0;
+  padding-bottom: 5px;
   color: rgb(73, 73, 73);
 }
 
