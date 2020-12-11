@@ -4,19 +4,18 @@
 						<% @items.each do |item|%>
             <% if item.user != current_user %>
 							<article class="card-last-manga card--1">
-								<div class="card__img" style="background-image: url('<%= item.manga.image_url %>')"></div>
-									<a href="#" class="card_link">
-								<div class="card__img--hover" style="background-image: url('<%= item.manga.image_url %>')"></div>
+								<div class="card-img" style="background-image: url('<%= item.manga.image_url %>')"></div>
+									<a href="<%= library_item_path(item) %>" class="card_link">
+								<div class="card-img-hover" style="background-image: url('<%= item.manga.image_url %>')"></div>
 								</a>
-								<div class="card__info">
-									<h3 class="card__title"><%= image_tag 'available.png', class:"available mb-1"%> <%= item.manga.title.capitalize %></h3>
-									<span><small><em>Tome: </em> <%= item.volume %></small></span><br/>
-									<h5><span>par <%=item.manga.author%></span></h5>
-									<p><small><em>proposé par </em> <%= item.user.name %></small></p>
+								<div class="card-info">
+									<h3 class="card-title"><%= image_tag 'available.png', class:"available mb-1"%> <%= item.manga.title.capitalize %></h3>
+									<blockquote>Tome : <%= item.volume %></blockquote>
+									<blockquote class="block"><small>proposé par <%= item.user.name %></small></blockquote>
 									<% item.manga.categories.each do |category| %>
 									<%= link_to category.name, category_path(category.id) %>
 									<%end%>
-									<%= link_to "Voir son manga", library_item_path(item), class: 'btn btn-info mt-2'%>
+									<%= link_to "Voir son manga", library_item_path(item), class: 'btn btn-outline-secondary der'%>
 								</div>
 							</article>	
               <% end %>	
