@@ -10,31 +10,35 @@
     <%= image_tag 'rectangle6.png', class:"rectangle6 animate__animated animate__fadeInUpBig"%>
     <div class="container-title animate__animated animate__fadeInLeftBig">
       <h1 class="title">La marketplace des mangas !</h1>
-      <a class="btn btn-secondary" href="<%= mangas_path%>">Découvrez-les</a>
+      <a class="btn btn-tercery" href="<%= mangas_path%>">Découvrez-les</a>
     </div>
   </div>
 </header>
 
+<div class="container d-flex justify-content-center">
  <%= render "shared/searchbar" %>
+</div>
 
 <main>
+  <div class="d-flex justify-content-center">
+    <h2 class="intro m-5 text-center">Rejoins la communauté Kasu et échange tes Mangas en toute simplicité</h2>
+  </div>
   <div class="container-fluid section1">
-    <h2 class="text-center">Rejoins la communauté Kasu et échange tes Mangas en toute simplicité</h2>
-    <div class="container d-flex justify-content-around all-icon">
-      <div class="text-center mr-5 mx-5">
-        <a class="" href="<%= mangas_path %>"><%= image_tag 'echange.png', class:"icon-explication icon1 mb-4"%></a>
-        <h3><a href='<%= mangas_path %>'class="home_title">1. Créé ta Bibliothèque</a></b></h3>
-        <p>Met en ligne les mangas que tu souhaites échanger. </p>
+    <div class="row d-flex justify-content-center">
+      <div class="col-xs-12 col-md-3 m-2 text-center">
+        <a class="text-center" href="<%= mangas_path %>"><%= image_tag 'echange.png', class:"icon-explication icon1 mb-4"%></a>
+        <h3><a href='<%= mangas_path %>'class="home_title text-center">1. Créé ta Bibliothèque</a></b></h3>
+        <p class="icon-text d-flex">Met en ligne les mangas que tu souhaites échanger. </p>
       </div>
-      <div class="text-center mr-5 mx-5">
-        <a class="" href="<%= library_items_path %>"><%= image_tag 'recois.png', class:"icon-explication icon1 mb-4"%></a>
-        <h3> <a class="home_title" href='<%= library_items_path %>'>2. Trouve des Mangas</a></b></h3>
-        <p>Trouve le Manga de tes rêves ou ajoute-le à ta Wishlist.
+      <div class="col-xs-12 col-md-3 m-2 text-center ">
+        <a class="text-center " href="<%= library_items_path %>"><%= image_tag 'recois.png', class:"icon-explication icon1 mb-4"%></a>
+        <h3> <a class="home_title text-center" href='<%= library_items_path %>'>2. Trouve des Mangas</a></b></h3>
+        <p class="icon-text d-flex">Trouve le Manga de tes rêves ou ajoute-le à ta Wishlist.
       </div>
-      <div class="text-center mx-5">
-        <a class="" href="<%= library_items_path %>"><%= image_tag 'achete.png', class:"icon-explication icon1 mb-4"%></a>
-        <h3><a href='<%= mangas_path %>'class="home_title">3. Echange</a></b></h3>
-        <p>Reçois des "Matchs" par email et échange grâce au <b>kasu points</b>. 
+      <div class="col-xs-12 col-md-3 m-2 text-center">
+        <a class="text-center" href="<%= library_items_path %>"><%= image_tag 'achete.png', class:"icon-explication icon1 mb-4"%></a>
+        <h3><a class="home_title text-center" href='<%= mangas_path %>'>3. Echange</a></b></h3>
+        <p class="icon-text d-flex">Reçois des "Matchs" par email et échange grâce au kasu points. </p> 
       </div>
     </div>
   </div>
@@ -59,7 +63,7 @@
       </ul>
     <ul class="group-list-home">
       <li class="list-title">
-        Les mangas les plus vendus
+        Les mangas les plus échangés
       </li>
       <% @most_lib.each_with_index do |wish, index| %>
    
