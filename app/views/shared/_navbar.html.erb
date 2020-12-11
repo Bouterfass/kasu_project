@@ -1,9 +1,8 @@
-
-<nav class="navbar navbar-expand-lg navbar-light py-3 sticky-top" id="navbar">
-  <a href='<%= root_path%>' class="brand-link"><%= image_tag 'logo3.png', class:"brand text-prim", size: "60x60" %></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<nav class="navbar navbar-expand-lg navbar-light sticky-top" id="navbar">
+  <a href='<%= root_path%>' class="brand-link mr-4"><%= image_tag 'logo3.png', class:"brand", size: "60x60" %></a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -35,7 +34,9 @@
           </li>
         <% end %>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Profil/Quitter</a>
+         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Profil/Quitter
+          </a>
           <div class="dropdown-menu menu-nav" aria-labelledby="dropdownMenuLink">
             <a class="dropdown-item menu-nav" <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %></a>
             <a class="dropdown-item menu-nav" <%= link_to "Profil", user_path(current_user) %></a>
@@ -43,7 +44,9 @@
         </li>
         <% else %>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Se Connecter/S'inscrire</a>
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Se Connecter/S'inscrire
+          </a>
           <div class="dropdown-menu menu-nav" aria-labelledby="dropdownMenuLink">
             <a class="dropdown-item menu-nav" href="<%=new_user_session_path%>">Se connecter</a>
             <a class="dropdown-item menu-nav" href="<%=new_user_registration_path%>">S'inscrire</a>

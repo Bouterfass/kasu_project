@@ -32,6 +32,4 @@ class StaticPagesController < ApplicationController
     end 
   end
   
-  # @libresults = LibraryItem.all.where("lower(self.manga.title) LIKE :search", search: "%#{@libparameter}%")  
-  # puts @libresults
 end
